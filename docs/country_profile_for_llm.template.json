@@ -1,0 +1,27 @@
+{
+  "country_profile_key": "china",
+  "summary_ja": "ここに国籍傾向の短文要約を入れる",
+  "evidence": {
+    "top_spending_categories": [
+      {
+        "category": "宿泊費",
+        "purchase_rate": 77.5,
+        "unit_spend_jpy": 0.0,
+        "source_file": "2022_Tourism_Spending_Trends_by_Nationality.csv"
+      }
+    ],
+    "stay_distribution": [
+      {
+        "stay_bin": "4-6日間",
+        "traveler_count": 52,
+        "unit_spend_jpy": 210001,
+        "source_file": "2022_Tourism_Stay_Trends_by_Nationality.csv"
+      }
+    ],
+    "notes": [
+      "日本データが別ソースの場合は source_group=japan_special として併記"
+    ]
+  },
+  "profile_version": "v1.0.0",
+  "generated_at": "2026-02-24T00:00:00Z"
+}
