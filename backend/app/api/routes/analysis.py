@@ -1,5 +1,7 @@
 ﻿from __future__ import annotations
 
+import json
+import time
 from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -12,6 +14,8 @@ from app.services.forecasting import build_forecast_payload
 from app.services.hotel_dependency import build_dependency_points
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
+FORECAST_CACHE_TTL_SECONDS = 300
+_FORECAST_CACHE: dict[str, tuple[float, dict]] = {}
 
 PREFECTURE_CENTERS: dict[str, tuple[float, float]] = {
     "kyoto": (35.0116, 135.7681),
@@ -170,7 +174,7 @@ class ForecastRequest(BaseModel):
     market: MarketKey = "china"
     year: int | None = None
     month: int = Field(ge=1, le=12)
-    horizon_months: int = Field(default=6, ge=1, le=24)
+    horizon_months: int = Field(default=3, ge=1, le=24)
     scenario_ids: list[str] | None = None
     custom_shock_rate: float = 0.0
 
@@ -223,6 +227,58 @@ def _collect_growth_rates_percent(
             continue
         values.append(_mean(point_values) * 100.0)
     return values
+
+
+def _get_forecast_payload_cached(
+    *,
+    prefecture: str,
+    market: MarketKey,
+    base_year: int | None,
+    base_month: int,
+    horizon_months: int,
+    scenario_ids: list[str] | None,
+    custom_shock_rate: float,
+) -> dict:
+    now = time.time()
+    key = json.dumps(
+        {
+            "prefecture": prefecture,
+            "market": market,
+            "base_year": base_year,
+            "base_month": base_month,
+            "horizon_months": horizon_months,
+            "scenario_ids": scenario_ids or [],
+            "custom_shock_rate": custom_shock_rate,
+        },
+        ensure_ascii=True,
+        sort_keys=True,
+    )
+
+    cached = _FORECAST_CACHE.get(key)
+    if cached is not None and now - cached[0] <= FORECAST_CACHE_TTL_SECONDS:
+        return cached[1]
+
+    payload = build_forecast_payload(
+        prefecture=prefecture,
+        market=market,
+        base_year=base_year,
+        base_month=base_month,
+        horizon_months=horizon_months,
+        scenario_ids=scenario_ids,
+        custom_shock_rate=custom_shock_rate,
+    )
+    _FORECAST_CACHE[key] = (now, payload)
+
+    if len(_FORECAST_CACHE) > 128:
+        stale_keys = [
+            cache_key
+            for cache_key, (saved_at, _) in _FORECAST_CACHE.items()
+            if now - saved_at > FORECAST_CACHE_TTL_SECONDS
+        ]
+        for stale_key in stale_keys:
+            _FORECAST_CACHE.pop(stale_key, None)
+
+    return payload
 
 
 @router.get("/dependency", response_model=DependencyResponse)
@@ -320,7 +376,7 @@ def post_forecast(
     _: User = Depends(get_current_user),
 ) -> ForecastResponse:
     try:
-        forecast_payload = build_forecast_payload(
+        forecast_payload = _get_forecast_payload_cached(
             prefecture=payload.prefecture,
             market=payload.market,
             base_year=payload.year,
@@ -382,30 +438,30 @@ def post_simulation(
     pessimistic_ids = ["infectious_disease_resurgence", "kyoto_disaster", "fx_jpy_appreciation"]
 
     try:
-        base_forecast = build_forecast_payload(
+        base_forecast = _get_forecast_payload_cached(
             prefecture=payload.prefecture,
             market="china",
             base_year=None,
             base_month=payload.month,
-            horizon_months=6,
+            horizon_months=3,
             scenario_ids=base_case_ids,
             custom_shock_rate=0.0,
         )
-        optimistic_forecast = build_forecast_payload(
+        optimistic_forecast = _get_forecast_payload_cached(
             prefecture=payload.prefecture,
             market="china",
             base_year=None,
             base_month=payload.month,
-            horizon_months=6,
+            horizon_months=3,
             scenario_ids=optimistic_ids,
             custom_shock_rate=0.01,
         )
-        pessimistic_forecast = build_forecast_payload(
+        pessimistic_forecast = _get_forecast_payload_cached(
             prefecture=payload.prefecture,
             market="china",
             base_year=None,
             base_month=payload.month,
-            horizon_months=6,
+            horizon_months=3,
             scenario_ids=pessimistic_ids,
             custom_shock_rate=-0.01,
         )

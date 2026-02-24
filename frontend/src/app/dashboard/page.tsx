@@ -5,13 +5,15 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import DependencyMetricsPanel from "@/components/DependencyMetricsPanel";
+import ForecastPanel from "@/components/ForecastPanel";
 import ResultsPanel from "@/components/ResultsPanel";
-import { fetchDependencyMetrics, fetchDependencyPoints, fetchRecommendations, fetchSimulation } from "@/features/analysis/api";
+import { fetchDependencyMetrics, fetchDependencyPoints, fetchForecast, fetchRecommendations, fetchSimulation } from "@/features/analysis/api";
 import { MONTH_OPTIONS, PREFECTURES } from "@/features/analysis/constants";
 import {
   DependencyMarketKey,
   DependencyMetricsResponse,
   FacilityInput,
+  ForecastResponse,
   HeatPoint,
   RecommendationItem,
   SimulationScenario
@@ -48,6 +50,7 @@ export default function DashboardPage() {
   const [loadingMap, setLoadingMap] = useState(false);
   const [loadingMetrics, setLoadingMetrics] = useState(false);
   const [loadingInsights, setLoadingInsights] = useState(false);
+  const [loadingForecast, setLoadingForecast] = useState(false);
 
   const [selectedPrefecture, setSelectedPrefecture] = useState("kyoto");
   const [selectedMonth, setSelectedMonth] = useState(1);
@@ -67,6 +70,7 @@ export default function DashboardPage() {
   const [heatPoints, setHeatPoints] = useState<HeatPoint[]>([]);
   const [simulations, setSimulations] = useState<SimulationScenario[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
+  const [forecast, setForecast] = useState<ForecastResponse | null>(null);
   const [dependencyMetrics, setDependencyMetrics] = useState<DependencyMetricsResponse | null>(null);
   const [metricsNote, setMetricsNote] = useState<string | null>(null);
 
@@ -208,20 +212,33 @@ export default function DashboardPage() {
       return;
     }
     setLoadingInsights(true);
+    setLoadingForecast(true);
     setIsError(false);
     try {
-      const [simData, recommendationData] = await Promise.all([
+      const [simData, recommendationData, forecastData] = await Promise.all([
         fetchSimulation(selectedPrefecture, selectedMonth, facilityInput, token),
-        fetchRecommendations(selectedPrefecture, selectedMonth, facilityInput, token)
+        fetchRecommendations(selectedPrefecture, selectedMonth, facilityInput, token),
+        fetchForecast(
+          {
+            prefecture: selectedPrefecture,
+            market: metricsMarket,
+            month: selectedMonth,
+            year: selectedYear === "latest" ? undefined : selectedYear,
+            horizon_months: 3
+          },
+          token
+        )
       ]);
       setSimulations(simData);
       setRecommendations(recommendationData);
-      setStatusMessage("シミュレーションと提案の読み込みが完了しました。");
+      setForecast(forecastData);
+      setStatusMessage("シミュレーション・提案・予測の読み込みが完了しました。");
     } catch (error) {
       setIsError(true);
       setStatusMessage(error instanceof Error ? error.message : "分析結果の取得に失敗しました。");
     } finally {
       setLoadingInsights(false);
+      setLoadingForecast(false);
     }
   };
 
@@ -382,6 +399,12 @@ export default function DashboardPage() {
         loading={loadingMetrics}
         marketLabel={MARKET_OPTIONS.find((m) => m.value === metricsMarket)?.label ?? "中国"}
         note={metricsPanelNote}
+      />
+
+      <ForecastPanel
+        forecast={forecast}
+        loading={loadingForecast}
+        marketLabel={MARKET_OPTIONS.find((m) => m.value === metricsMarket)?.label ?? "中国"}
       />
 
       <ResultsPanel recommendations={recommendations} simulations={simulations} />

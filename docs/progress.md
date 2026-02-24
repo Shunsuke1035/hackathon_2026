@@ -48,3 +48,23 @@
 1. #3 の残タスクを明確化してクローズ条件を定義
 2. #4 のスキーマ固定と前処理の再現手順整備
 3. #5 回帰モデルの最小実装（学習・評価・推論API）
+
+## 2026-02-25 Update (Issue #5 related)
+- Added reproducible model scripts:
+  - `scripts/train_lightgbm_models.py`
+  - `scripts/predict_lightgbm_scenarios.py`
+- Added script docs:
+  - `scripts/README.md`
+- Updated backend startup guidance to avoid global Python runtime issues:
+  - `README.md` now includes explicit `.venv`-based uvicorn command.
+- Confirmed data changes in:
+  - `data/hotel_allocation_biased/hotel_allocation_biased/panel_chinease_2025_with_features.csv`
+  - `data/hotel_allocation_biased/hotel_allocation_biased/panel_overseas_2025_with_features.csv`
+- Added LightGBM-backed forecast path in `backend/app/services/forecasting.py` with automatic fallback to skeleton when artifacts/dependencies are missing.
+- Added forecast UI integration:
+  - `frontend/src/features/analysis/api.ts` (`fetchForecast`)
+  - `frontend/src/components/ForecastPanel.tsx`
+  - `frontend/src/app/dashboard/page.tsx`
+- Trained local model artifacts under `models/lightgbm/` and confirmed `/api/analysis/forecast` returns `model_version=lightgbm-v1`.
+- Switched forecast default horizon to 3 months (kept configurable via request).
+- Added in-memory TTL cache (5 minutes) for forecast payload generation in `backend/app/api/routes/analysis.py`.

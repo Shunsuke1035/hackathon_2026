@@ -3,6 +3,7 @@ import {
   DependencyMarketKey,
   DependencyMetricsResponse,
   FacilityInput,
+  ForecastResponse,
   HeatPoint,
   RecommendationItem,
   SimulationScenario
@@ -26,6 +27,16 @@ type RecommendationResponse = {
   prefecture: string;
   month: number;
   recommendations: RecommendationItem[];
+};
+
+type ForecastRequest = {
+  prefecture: string;
+  market: DependencyMarketKey;
+  month: number;
+  horizon_months: number;
+  scenario_ids?: string[];
+  custom_shock_rate?: number;
+  year?: number;
 };
 
 export async function fetchDependencyPoints(
@@ -110,4 +121,22 @@ export async function fetchRecommendations(
   }
   const payload = (await response.json()) as RecommendationResponse;
   return payload.recommendations;
+}
+
+export async function fetchForecast(
+  request: ForecastRequest,
+  token: string
+): Promise<ForecastResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/analysis/forecast`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify(request)
+  });
+  if (!response.ok) {
+    throw new Error("予測データの取得に失敗しました");
+  }
+  return (await response.json()) as ForecastResponse;
 }
