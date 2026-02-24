@@ -43,7 +43,7 @@ export default function LoginPage() {
       const data = (await response.json()) as LoginResponse;
       window.localStorage.setItem("access_token", data.access_token);
       window.localStorage.setItem("current_user", JSON.stringify(data.user));
-      setMessage("ログイン成功。ダッシュボードへ移動します。");
+      setMessage("Login successful. Redirecting to dashboard...");
       router.push("/dashboard");
     } catch (error) {
       setIsError(true);
@@ -55,7 +55,7 @@ export default function LoginPage() {
 
   return (
     <main className="container">
-      <h1 className="title">ログイン</h1>
+      <h1 className="title">Login</h1>
       <form className="form" onSubmit={onSubmit}>
         <input
           className="input"
@@ -73,12 +73,10 @@ export default function LoginPage() {
           required
         />
         <button className="button" disabled={loading} type="submit">
-          {loading ? "ログイン中..." : "ログイン"}
+          {loading ? "Logging in..." : "Login"}
         </button>
       </form>
-      {message ? (
-        <p className={`message ${isError ? "error" : "ok"}`}>{message}</p>
-      ) : null}
+      {message ? <p className={`message ${isError ? "error" : "ok"}`}>{message}</p> : null}
     </main>
   );
 }
