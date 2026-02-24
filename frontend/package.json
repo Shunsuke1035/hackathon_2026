@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "next": "14.2.5",
+    "leaflet": "1.9.4",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "react-leaflet": "4.2.1"
   },
   "devDependencies": {
+    "@types/leaflet": "1.9.21",
     "@types/node": "20.19.11",
     "@types/react": "18.3.24",
     "@types/react-dom": "18.3.7",
