@@ -1,16 +1,16 @@
 ﻿from __future__ import annotations
 
 import csv
+import os
 import re
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-DATA_DIR = (
-    Path(__file__).resolve().parents[3]
-    / "data"
-    / "hotel_allocation_biased"
-    / "hotel_allocation_biased"
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DATA_DIR_CANDIDATES = (
+    PROJECT_ROOT / "data" / "hotel_allocation_biased" / "hotel_allocation_biased",
+    PROJECT_ROOT / "data" / "hotel_allocation_biased 1" / "hotel_allocation_biased",
 )
 
 LAT_CANDIDATES = ("latitude", "lat", "緯度")
@@ -46,6 +46,25 @@ class HotelRow:
     overseas_total: float
     domestic_total: float
     markets: dict[str, float]
+
+
+@lru_cache(maxsize=1)
+def _resolve_data_dir() -> Path:
+    env_path = os.getenv("HOTEL_ALLOCATION_DATA_DIR")
+    if env_path:
+        candidate = Path(env_path)
+        if candidate.exists() and candidate.is_dir():
+            return candidate
+
+    for candidate in DATA_DIR_CANDIDATES:
+        if candidate.exists() and candidate.is_dir():
+            return candidate
+
+    options = ", ".join(str(path) for path in DATA_DIR_CANDIDATES)
+    raise FileNotFoundError(
+        "Hotel allocation data directory was not found. "
+        f"Set HOTEL_ALLOCATION_DATA_DIR or place files in one of: {options}"
+    )
 
 
 def _to_float(raw: str | None) -> float:
@@ -84,8 +103,9 @@ def _read_dict_rows(path: Path) -> tuple[list[str], list[dict[str, str]]]:
 
 
 def _pick_file(month: int, year: int | None) -> tuple[Path, int]:
+    data_dir = _resolve_data_dir()
     candidates: list[tuple[int, Path]] = []
-    for file_path in DATA_DIR.glob(f"KCTA_*_{month:02d}_hotel_allocation.csv"):
+    for file_path in data_dir.glob(f"KCTA_*_{month:02d}_hotel_allocation.csv"):
         match = FILE_RE.search(file_path.name)
         if not match:
             continue
@@ -93,7 +113,7 @@ def _pick_file(month: int, year: int | None) -> tuple[Path, int]:
         candidates.append((file_year, file_path))
 
     if not candidates:
-        raise FileNotFoundError(f"No monthly file found for month={month} in {DATA_DIR}")
+        raise FileNotFoundError(f"No monthly file found for month={month} in {data_dir}")
 
     candidates.sort(key=lambda item: item[0])
     if year is None:
