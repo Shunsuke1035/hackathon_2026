@@ -20,7 +20,7 @@ type MeResponse = {
 
 export default function DashboardPage() {
   const [currentUser, setCurrentUser] = useState<MeResponse | null>(null);
-  const [statusMessage, setStatusMessage] = useState("Loading account...");
+  const [statusMessage, setStatusMessage] = useState("アカウント情報を読み込み中...");
   const [isError, setIsError] = useState(false);
   const [loadingMap, setLoadingMap] = useState(false);
   const [loadingInsights, setLoadingInsights] = useState(false);
@@ -46,7 +46,7 @@ export default function DashboardPage() {
     const token = window.localStorage.getItem("access_token");
     if (!token) {
       setIsError(true);
-      setStatusMessage("Not logged in. Please login first.");
+      setStatusMessage("未ログインです。先にログインしてください。");
       return;
     }
 
@@ -55,14 +55,14 @@ export default function DashboardPage() {
         const response = await fetch(`${API_BASE_URL}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` }
         });
-        if (!response.ok) throw new Error("Authentication failed.");
+        if (!response.ok) throw new Error("認証に失敗しました。");
         const data = (await response.json()) as MeResponse;
         setCurrentUser(data);
-        setStatusMessage("Ready. Select region and month.");
+        setStatusMessage("準備完了です。都道府県と月を選択してください。");
         setIsError(false);
       } catch (error) {
         setIsError(true);
-        setStatusMessage(error instanceof Error ? error.message : "Unknown error");
+        setStatusMessage(error instanceof Error ? error.message : "不明なエラーが発生しました。");
       }
     };
     fetchCurrentUser();
@@ -88,7 +88,7 @@ export default function DashboardPage() {
         setHeatPoints(points);
       } catch (error) {
         setIsError(true);
-        setStatusMessage(error instanceof Error ? error.message : "Failed to load map.");
+        setStatusMessage(error instanceof Error ? error.message : "地図データの取得に失敗しました。");
       } finally {
         setLoadingMap(false);
       }
@@ -99,11 +99,11 @@ export default function DashboardPage() {
   const handleFacilityApply = () => {
     if (Number.isNaN(facilityInput.lat) || Number.isNaN(facilityInput.lng)) {
       setIsError(true);
-      setStatusMessage("Latitude and longitude must be numbers.");
+      setStatusMessage("緯度・経度は数値で入力してください。");
       return;
     }
     setIsError(false);
-    setStatusMessage("Facility location updated.");
+    setStatusMessage("施設位置を更新しました。");
   };
 
   const handleAddressAssist = () => {
@@ -117,14 +117,14 @@ export default function DashboardPage() {
       lng: Number((selectedPrefectureData.center.lng + lngOffset).toFixed(6))
     }));
     setIsError(false);
-    setStatusMessage("Address-based assist applied (MVP approximation).");
+    setStatusMessage("住所補助を適用しました（MVPの簡易推定）。");
   };
 
   const handleLoadInsights = async () => {
     const token = window.localStorage.getItem("access_token");
     if (!token) {
       setIsError(true);
-      setStatusMessage("Login token is missing.");
+      setStatusMessage("ログイントークンが見つかりません。再ログインしてください。");
       return;
     }
     setLoadingInsights(true);
@@ -136,10 +136,10 @@ export default function DashboardPage() {
       ]);
       setSimulations(simData);
       setRecommendations(recommendationData);
-      setStatusMessage("Simulation and recommendations loaded.");
+      setStatusMessage("シミュレーションと提案の読み込みが完了しました。");
     } catch (error) {
       setIsError(true);
-      setStatusMessage(error instanceof Error ? error.message : "Failed to load insights.");
+      setStatusMessage(error instanceof Error ? error.message : "分析結果の取得に失敗しました。");
     } finally {
       setLoadingInsights(false);
     }
@@ -147,25 +147,25 @@ export default function DashboardPage() {
 
   return (
     <main className="container wide">
-      <h1 className="title">Tourism Dependency Dashboard</h1>
+      <h1 className="title">国籍依存度ダッシュボード</h1>
       <p className={`message ${isError ? "error" : "ok"}`}>{statusMessage}</p>
 
       {currentUser ? (
         <div className="panel">
-          <div className="panel-title">User</div>
+          <div className="panel-title">ユーザー情報</div>
           <div className="meta-row">
             <span>ID: {currentUser.id}</span>
-            <span>User: {currentUser.username}</span>
-            <span>Email: {currentUser.email}</span>
+            <span>ユーザー名: {currentUser.username}</span>
+            <span>メール: {currentUser.email}</span>
           </div>
         </div>
       ) : null}
 
       <section className="panel">
-        <h2 className="panel-title">Controls</h2>
+        <h2 className="panel-title">表示条件</h2>
         <div className="controls-grid">
           <label>
-            Prefecture
+            都道府県
             <select
               className="input"
               value={selectedPrefecture}
@@ -180,7 +180,7 @@ export default function DashboardPage() {
           </label>
 
           <label>
-            Month
+            月
             <select
               className="input"
               value={selectedMonth}
@@ -197,10 +197,10 @@ export default function DashboardPage() {
       </section>
 
       <section className="panel">
-        <h2 className="panel-title">Facility Input</h2>
+        <h2 className="panel-title">施設位置入力</h2>
         <div className="controls-grid">
           <label>
-            Latitude
+            緯度
             <input
               className="input"
               type="number"
@@ -212,7 +212,7 @@ export default function DashboardPage() {
             />
           </label>
           <label>
-            Longitude
+            経度
             <input
               className="input"
               type="number"
@@ -224,11 +224,11 @@ export default function DashboardPage() {
             />
           </label>
           <label className="full-width">
-            Address (optional)
+            住所（任意）
             <input
               className="input"
               value={facilityInput.address ?? ""}
-              placeholder="e.g. Kyoto Station area"
+              placeholder="例: 京都駅周辺"
               onChange={(event) =>
                 setFacilityInput((previous) => ({ ...previous, address: event.target.value }))
               }
@@ -237,22 +237,22 @@ export default function DashboardPage() {
         </div>
         <div className="button-row">
           <button className="button secondary" onClick={handleAddressAssist} type="button">
-            Apply Address Assist
+            住所補助を適用
           </button>
           <button className="button" onClick={handleFacilityApply} type="button">
-            Update Facility Pin
+            施設ピンを更新
           </button>
           <button className="button" disabled={loadingInsights} onClick={handleLoadInsights} type="button">
-            {loadingInsights ? "Loading..." : "Load Suggestions & Simulation"}
+            {loadingInsights ? "読み込み中..." : "提案とシミュレーションを取得"}
           </button>
         </div>
       </section>
 
       <section>
-        <h2 className="panel-title">Dependency Heatmap</h2>
+        <h2 className="panel-title">国籍依存度ヒートマップ</h2>
         {loadingMap ? (
           <div className="panel">
-            <p className="muted">Loading map data...</p>
+            <p className="muted">地図データを読み込み中...</p>
           </div>
         ) : (
           <DependencyMap
@@ -267,7 +267,7 @@ export default function DashboardPage() {
       <ResultsPanel recommendations={recommendations} simulations={simulations} />
 
       <p>
-        <Link href="/login">Back to login</Link>
+        <Link href="/login">ログイン画面へ戻る</Link>
       </p>
     </main>
   );

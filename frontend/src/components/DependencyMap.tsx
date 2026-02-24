@@ -11,6 +11,16 @@ type Props = {
   facility: { lat: number; lng: number };
 };
 
+function marketLabel(market: string): string {
+  if (market === "china") return "中国";
+  if (market === "north_america") return "北米";
+  if (market === "korea") return "韓国";
+  if (market === "europe") return "ヨーロッパ";
+  if (market === "southeast_asia") return "東南アジア";
+  if (market === "japan") return "日本";
+  return market;
+}
+
 function scoreColor(score: number): string {
   if (score >= 0.8) return "#b91c1c";
   if (score >= 0.6) return "#ea580c";
@@ -39,9 +49,9 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
             }}
           >
             <Popup>
-              market: {point.market}
+              国籍カテゴリ: {marketLabel(point.market)}
               <br />
-              dependency score: {point.dependency_score.toFixed(2)}
+              依存度スコア: {point.dependency_score.toFixed(2)}
             </Popup>
           </CircleMarker>
         ))}
@@ -50,7 +60,7 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
           radius={450}
           pathOptions={{ color: "#111827", fillColor: "#f97316", fillOpacity: 0.35, weight: 2.5 }}
         >
-          <Popup>Your facility (highlight)</Popup>
+          <Popup>自施設（強調表示）</Popup>
         </Circle>
       </MapContainer>
     </div>

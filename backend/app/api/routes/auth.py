@@ -18,7 +18,7 @@ def register(payload: RegisterRequest, db: Session = Depends(get_db)) -> UserRes
     if existing_user:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
-            detail="Username or email already exists",
+            detail="ユーザー名またはメールアドレスは既に使用されています",
         )
 
     user = User(
@@ -38,7 +38,7 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)) -> TokenResponse
     if not user or not verify_password(payload.password, user.password_hash):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
+            detail="ユーザー名またはパスワードが正しくありません",
         )
 
     token = create_access_token(subject=user.username)

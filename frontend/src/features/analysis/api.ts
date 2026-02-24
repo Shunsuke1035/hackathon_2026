@@ -29,7 +29,7 @@ export async function fetchDependencyPoints(
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!response.ok) {
-    throw new Error("Failed to load dependency map data");
+    throw new Error("依存度ヒートマップデータの取得に失敗しました");
   }
   const payload = (await response.json()) as DependencyResponse;
   return payload.points;
@@ -50,7 +50,7 @@ export async function fetchSimulation(
     body: JSON.stringify({ prefecture, month, facility })
   });
   if (!response.ok) {
-    throw new Error("Failed to load simulation result");
+    throw new Error("シミュレーション結果の取得に失敗しました");
   }
   const payload = (await response.json()) as SimulationResponse;
   return payload.scenarios;
@@ -71,7 +71,7 @@ export async function fetchRecommendations(
     body: JSON.stringify({ prefecture, month, facility })
   });
   if (!response.ok) {
-    throw new Error("Failed to load recommendations");
+    throw new Error("提案データの取得に失敗しました");
   }
   const payload = (await response.json()) as RecommendationResponse;
   return payload.recommendations;
