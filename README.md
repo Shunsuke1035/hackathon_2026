@@ -65,3 +65,8 @@ Pages:
 - Keep raw datasets under `data/` locally
 - Do not commit sensitive or contract-restricted data
 - Use relative paths only (no absolute local paths)
+
+## Project Docs
+
+- Agent operation guide: `AGENTS.md`
+- Progress tracker: `docs/progress.md`
