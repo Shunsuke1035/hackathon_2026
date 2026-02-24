@@ -15,6 +15,24 @@ Outputs:
 - `data/processed/fact_stay_profile.csv`
 - `data/mart/mart_country_profile_for_llm.jsonl`
 
+## build_dependency_metrics.py
+Build dependency metrics from monthly hotel allocation CSV files.
+
+Run:
+
+```powershell
+python scripts/build_dependency_metrics.py
+```
+
+Outputs:
+- `data/processed/fact_dependency_metrics_facility_monthly.csv`
+  - facility x month metrics (within-facility shares, HHI, entropy, top1)
+- `data/processed/fact_dependency_metrics_region_monthly.csv`
+  - ward(region) x month aggregated metrics
+- `data/processed/fact_dependency_metrics_market_facility_monthly.csv`
+  - market x month metrics across all facilities
+  - includes facility-distribution entropy (your requested perspective)
+
 ## generate_hotel_heatmaps.py
 Generate monthly folium heatmaps from hotel allocation CSV files.
 
