@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -18,6 +18,21 @@ type MeResponse = {
   email: string;
 };
 
+type MarketOption = {
+  value: HeatPoint["market"] | "all";
+  label: string;
+};
+
+const MARKET_OPTIONS: MarketOption[] = [
+  { value: "all", label: "すべて" },
+  { value: "china", label: "中国" },
+  { value: "korea", label: "韓国" },
+  { value: "north_america", label: "北米" },
+  { value: "southeast_asia", label: "東南アジア" },
+  { value: "europe", label: "ヨーロッパ" },
+  { value: "japan", label: "国内" }
+];
+
 export default function DashboardPage() {
   const [currentUser, setCurrentUser] = useState<MeResponse | null>(null);
   const [statusMessage, setStatusMessage] = useState("アカウント情報を読み込み中...");
@@ -27,6 +42,8 @@ export default function DashboardPage() {
 
   const [selectedPrefecture, setSelectedPrefecture] = useState("kyoto");
   const [selectedMonth, setSelectedMonth] = useState(1);
+  const [selectedYear, setSelectedYear] = useState<number | "latest">("latest");
+  const [selectedMarket, setSelectedMarket] = useState<MarketOption["value"]>("china");
 
   const selectedPrefectureData = useMemo(
     () => PREFECTURES.find((prefecture) => prefecture.code === selectedPrefecture) ?? PREFECTURES[0],
@@ -41,6 +58,13 @@ export default function DashboardPage() {
   const [heatPoints, setHeatPoints] = useState<HeatPoint[]>([]);
   const [simulations, setSimulations] = useState<SimulationScenario[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
+
+  const displayedHeatPoints = useMemo(() => {
+    if (selectedMarket === "all") {
+      return heatPoints;
+    }
+    return heatPoints.filter((point) => point.market === selectedMarket);
+  }, [heatPoints, selectedMarket]);
 
   useEffect(() => {
     const token = window.localStorage.getItem("access_token");
@@ -58,7 +82,7 @@ export default function DashboardPage() {
         if (!response.ok) throw new Error("認証に失敗しました。");
         const data = (await response.json()) as MeResponse;
         setCurrentUser(data);
-        setStatusMessage("準備完了です。都道府県と月を選択してください。");
+        setStatusMessage("ログイン済みです。地域と月を選択してください。");
         setIsError(false);
       } catch (error) {
         setIsError(true);
@@ -84,8 +108,18 @@ export default function DashboardPage() {
       setLoadingMap(true);
       setIsError(false);
       try {
-        const points = await fetchDependencyPoints(selectedPrefecture, selectedMonth, token);
-        setHeatPoints(points);
+        const payload = await fetchDependencyPoints(
+          selectedPrefecture,
+          selectedMonth,
+          token,
+          selectedYear === "latest" ? undefined : selectedYear
+        );
+        setHeatPoints(payload.points);
+
+        const suffix = payload.note ? ` / ${payload.note}` : "";
+        setStatusMessage(
+          `ヒートマップ更新: ${payload.year}年${selectedMonth}月, ${payload.points.length}点${suffix}`
+        );
       } catch (error) {
         setIsError(true);
         setStatusMessage(error instanceof Error ? error.message : "地図データの取得に失敗しました。");
@@ -94,7 +128,7 @@ export default function DashboardPage() {
       }
     };
     loadDependencyMap();
-  }, [selectedPrefecture, selectedMonth]);
+  }, [selectedPrefecture, selectedMonth, selectedYear]);
 
   const handleFacilityApply = () => {
     if (Number.isNaN(facilityInput.lat) || Number.isNaN(facilityInput.lng)) {
@@ -117,7 +151,7 @@ export default function DashboardPage() {
       lng: Number((selectedPrefectureData.center.lng + lngOffset).toFixed(6))
     }));
     setIsError(false);
-    setStatusMessage("住所補助を適用しました（MVPの簡易推定）。");
+    setStatusMessage("住所から位置補助を反映しました（簡易推定）。");
   };
 
   const handleLoadInsights = async () => {
@@ -180,6 +214,22 @@ export default function DashboardPage() {
           </label>
 
           <label>
+            年
+            <select
+              className="input"
+              value={selectedYear}
+              onChange={(event) => {
+                const next = event.target.value;
+                setSelectedYear(next === "latest" ? "latest" : Number(next));
+              }}
+            >
+              <option value="latest">最新</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+            </select>
+          </label>
+
+          <label>
             月
             <select
               className="input"
@@ -189,6 +239,21 @@ export default function DashboardPage() {
               {MONTH_OPTIONS.map((month) => (
                 <option key={month.value} value={month.value}>
                   {month.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label>
+            市場
+            <select
+              className="input"
+              value={selectedMarket}
+              onChange={(event) => setSelectedMarket(event.target.value as MarketOption["value"])}
+            >
+              {MARKET_OPTIONS.map((market) => (
+                <option key={market.value} value={market.value}>
+                  {market.label}
                 </option>
               ))}
             </select>
@@ -228,7 +293,7 @@ export default function DashboardPage() {
             <input
               className="input"
               value={facilityInput.address ?? ""}
-              placeholder="例: 京都駅周辺"
+              placeholder="例: 京都市下京区"
               onChange={(event) =>
                 setFacilityInput((previous) => ({ ...previous, address: event.target.value }))
               }
@@ -237,10 +302,10 @@ export default function DashboardPage() {
         </div>
         <div className="button-row">
           <button className="button secondary" onClick={handleAddressAssist} type="button">
-            住所補助を適用
+            住所から位置補助
           </button>
           <button className="button" onClick={handleFacilityApply} type="button">
-            施設ピンを更新
+            施設位置を反映
           </button>
           <button className="button" disabled={loadingInsights} onClick={handleLoadInsights} type="button">
             {loadingInsights ? "読み込み中..." : "提案とシミュレーションを取得"}
@@ -250,6 +315,7 @@ export default function DashboardPage() {
 
       <section>
         <h2 className="panel-title">国籍依存度ヒートマップ</h2>
+        <p className="muted">表示市場: {MARKET_OPTIONS.find((m) => m.value === selectedMarket)?.label ?? "-"}（{displayedHeatPoints.length} 点）</p>
         {loadingMap ? (
           <div className="panel">
             <p className="muted">地図データを読み込み中...</p>
@@ -258,7 +324,7 @@ export default function DashboardPage() {
           <DependencyMap
             center={selectedPrefectureData.center}
             facility={{ lat: facilityInput.lat, lng: facilityInput.lng }}
-            points={heatPoints}
+            points={displayedHeatPoints}
             zoom={selectedPrefectureData.zoom}
           />
         )}

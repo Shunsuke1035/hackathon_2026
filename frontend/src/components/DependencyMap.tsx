@@ -1,6 +1,8 @@
-"use client";
+﻿"use client";
 
-import { Circle, CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
+import { useEffect, useMemo, useRef } from "react";
+import L from "leaflet";
+import { Circle, MapContainer, Popup, TileLayer, useMap } from "react-leaflet";
 
 import { HeatPoint } from "@/features/analysis/types";
 
@@ -11,22 +13,62 @@ type Props = {
   facility: { lat: number; lng: number };
 };
 
-function marketLabel(market: string): string {
-  if (market === "china") return "中国";
-  if (market === "north_america") return "北米";
-  if (market === "korea") return "韓国";
-  if (market === "europe") return "ヨーロッパ";
-  if (market === "southeast_asia") return "東南アジア";
-  if (market === "japan") return "日本";
-  return market;
-}
+function HeatLayer({ points }: { points: HeatPoint[] }) {
+  const map = useMap();
+  const layerRef = useRef<L.Layer | null>(null);
 
-function scoreColor(score: number): string {
-  if (score >= 0.8) return "#b91c1c";
-  if (score >= 0.6) return "#ea580c";
-  if (score >= 0.4) return "#ca8a04";
-  if (score >= 0.2) return "#65a30d";
-  return "#0d9488";
+  const heatData = useMemo(
+    () => points.map((point) => [point.lat, point.lng, Math.max(0.05, point.dependency_score)] as [number, number, number]),
+    [points]
+  );
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const renderLayer = async () => {
+      await import("leaflet.heat");
+      if (cancelled) return;
+
+      if (layerRef.current) {
+        map.removeLayer(layerRef.current);
+        layerRef.current = null;
+      }
+
+      if (heatData.length === 0) return;
+
+      const layer = (L as unknown as { heatLayer: (data: [number, number, number][], options: Record<string, unknown>) => L.Layer }).heatLayer(
+        heatData,
+        {
+          radius: 15,
+          blur: 20,
+          maxZoom: 13,
+          minOpacity: 0.25,
+          gradient: {
+            0.2: "#2C7BB6",
+            0.4: "#00A6CA",
+            0.6: "#F9D057",
+            0.8: "#F29E2E",
+            1.0: "#D7191C"
+          }
+        }
+      );
+
+      layer.addTo(map);
+      layerRef.current = layer;
+    };
+
+    renderLayer();
+
+    return () => {
+      cancelled = true;
+      if (layerRef.current) {
+        map.removeLayer(layerRef.current);
+        layerRef.current = null;
+      }
+    };
+  }, [map, heatData]);
+
+  return null;
 }
 
 export default function DependencyMap({ center, zoom, points, facility }: Props) {
@@ -37,30 +79,13 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {points.map((point, index) => (
-          <CircleMarker
-            key={`${point.lat}-${point.lng}-${index}`}
-            center={[point.lat, point.lng]}
-            radius={8 + point.dependency_score * 10}
-            pathOptions={{
-              color: scoreColor(point.dependency_score),
-              fillColor: scoreColor(point.dependency_score),
-              fillOpacity: 0.45
-            }}
-          >
-            <Popup>
-              国籍カテゴリ: {marketLabel(point.market)}
-              <br />
-              依存度スコア: {point.dependency_score.toFixed(2)}
-            </Popup>
-          </CircleMarker>
-        ))}
+        <HeatLayer points={points} />
         <Circle
           center={[facility.lat, facility.lng]}
           radius={450}
           pathOptions={{ color: "#111827", fillColor: "#f97316", fillOpacity: 0.35, weight: 2.5 }}
         >
-          <Popup>自施設（強調表示）</Popup>
+          <Popup>自施設位置（強調表示）</Popup>
         </Circle>
       </MapContainer>
     </div>

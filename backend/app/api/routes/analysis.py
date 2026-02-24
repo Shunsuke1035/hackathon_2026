@@ -1,11 +1,14 @@
+﻿from __future__ import annotations
+
 from hashlib import sha256
 from random import Random
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel, Field
 
 from app.api.deps import get_current_user
 from app.models.user import User
+from app.services.hotel_dependency import build_dependency_points
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
 
@@ -18,8 +21,6 @@ PREFECTURE_CENTERS: dict[str, tuple[float, float]] = {
     "osaka": (34.6937, 135.5023),
 }
 
-MARKETS = ["china", "north_america", "korea", "europe", "southeast_asia", "japan"]
-
 
 class HeatPoint(BaseModel):
     lat: float
@@ -31,7 +32,9 @@ class HeatPoint(BaseModel):
 class DependencyResponse(BaseModel):
     prefecture: str
     month: int
+    year: int
     points: list[HeatPoint]
+    note: str | None = None
 
 
 class FacilityInput(BaseModel):
@@ -85,25 +88,39 @@ def _seed(prefecture: str, month: int) -> int:
 @router.get("/dependency", response_model=DependencyResponse)
 def get_dependency(
     prefecture: str,
-    month: int = 1,
+    month: int = Query(default=1, ge=1, le=12),
+    year: int | None = None,
     _: User = Depends(get_current_user),
 ) -> DependencyResponse:
-    center = PREFECTURE_CENTERS.get(prefecture, PREFECTURE_CENTERS["kyoto"])
-    rnd = Random(_seed(prefecture, month))
-    points: list[HeatPoint] = []
-    for i in range(36):
-        lat = center[0] + rnd.uniform(-0.12, 0.12)
-        lng = center[1] + rnd.uniform(-0.12, 0.12)
-        score = min(1.0, max(0.0, 0.25 + rnd.random() * 0.75))
-        points.append(
-            HeatPoint(
-                lat=round(lat, 6),
-                lng=round(lng, 6),
-                dependency_score=round(score, 3),
-                market=MARKETS[i % len(MARKETS)],
-            )
+    try:
+        selected_year, raw_points = build_dependency_points(
+            prefecture=prefecture,
+            month=month,
+            year=year,
+            max_points=2500,
         )
-    return DependencyResponse(prefecture=prefecture, month=month, points=points)
+    except FileNotFoundError:
+        return DependencyResponse(
+            prefecture=prefecture,
+            month=month,
+            year=year or 0,
+            points=[],
+            note="対象月のデータファイルが見つかりませんでした。",
+        )
+
+    points = [HeatPoint(**item) for item in raw_points]
+
+    note: str | None = None
+    if prefecture != "kyoto" and not points:
+        note = "現在の正式データは京都府中心のため、選択地域では表示点が少ない可能性があります。"
+
+    return DependencyResponse(
+        prefecture=prefecture,
+        month=month,
+        year=selected_year,
+        points=points,
+        note=note,
+    )
 
 
 @router.post("/simulation", response_model=SimulationResponse)
@@ -118,19 +135,19 @@ def post_simulation(
             name="optimistic",
             expected_growth_rate=round(base + rnd.uniform(1.2, 2.8), 2),
             risk_level="low",
-            note="需要分散が進み、為替も追い風となる想定です。",
+            note="訪日需要が回復したケース。価格と稼働率の同時改善を想定。",
         ),
         SimulationScenario(
             name="base",
             expected_growth_rate=round(base, 2),
             risk_level="medium",
-            note="現在の傾向が継続し、変動は中程度と想定します。",
+            note="現状トレンドが継続するケース。需要は横ばいから緩やかな改善。",
         ),
         SimulationScenario(
             name="pessimistic",
             expected_growth_rate=round(base - rnd.uniform(1.8, 3.4), 2),
             risk_level="high",
-            note="外部要因悪化により、高依存セグメントが減速する想定です。",
+            note="外部ショックが発生するケース。需要減少に備えた運営が必要。",
         ),
     ]
     return SimulationResponse(
@@ -151,19 +168,20 @@ def post_recommendation(
         recommendations=[
             RecommendationItem(
                 type="risk_leverage",
-                title="高収益セグメントへの集中施策",
+                title="依存市場の強みを活かす価格設計",
                 description=(
-                    "主要市場向けに月次の訴求プランを設定しつつ、"
-                    "価格下限を運用して下振れリスクを抑制します。"
+                    "主要国籍向けに販売チャネルと訴求内容を最適化し、"
+                    "繁忙期の単価向上と閑散期の稼働維持を両立します。"
                 ),
             ),
             RecommendationItem(
                 type="risk_diversification",
-                title="訪問目的別チャネルの分散",
+                title="依存度分散のための販路再配分",
                 description=(
-                    "非主要市場向けに、家族旅行・長期滞在向け商品を展開し、"
-                    "地域特性に合わせた訴求で依存を分散します。"
+                    "高依存市場に偏った集客を見直し、滞在目的が異なる市場へ"
+                    "広告配分と商品構成を段階的に移行します。"
                 ),
             ),
         ],
     )
+
