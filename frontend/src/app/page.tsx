@@ -8,6 +8,9 @@ export default function HomePage() {
       <p>
         <Link href="/login">Go to login page</Link>
       </p>
+      <p>
+        <Link href="/signup">Create account</Link>
+      </p>
     </main>
   );
 }
