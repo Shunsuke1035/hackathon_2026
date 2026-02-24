@@ -1,15 +1,14 @@
 ﻿from __future__ import annotations
 
-from hashlib import sha256
-from random import Random
 from typing import Literal
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from app.api.deps import get_current_user
 from app.models.user import User
 from app.services.dependency_metrics import build_dependency_metrics
+from app.services.forecasting import build_forecast_payload
 from app.services.hotel_dependency import build_dependency_points
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
@@ -143,9 +142,87 @@ class DependencyMetricsResponse(BaseModel):
     note: str | None = None
 
 
-def _seed(prefecture: str, month: int) -> int:
-    digest = sha256(f"{prefecture}:{month}".encode("utf-8")).hexdigest()
-    return int(digest[:8], 16)
+class ForecastPoint(BaseModel):
+    step: int
+    year: int
+    month: int
+    month_date: str
+    predicted_growth_rate: float
+    applied_shock_rate: float
+    seasonal_component: float
+
+
+class ForecastScenario(BaseModel):
+    scenario_id: str
+    scenario_name_ja: str
+    note: str
+    points: list[ForecastPoint]
+
+
+class ForecastScenarioMeta(BaseModel):
+    event_id: str
+    event_name_ja: str
+    note: str
+
+
+class ForecastRequest(BaseModel):
+    prefecture: str
+    market: MarketKey = "china"
+    year: int | None = None
+    month: int = Field(ge=1, le=12)
+    horizon_months: int = Field(default=6, ge=1, le=24)
+    scenario_ids: list[str] | None = None
+    custom_shock_rate: float = 0.0
+
+
+class ForecastResponse(BaseModel):
+    model_version: str
+    target_metric: str
+    prefecture: str
+    market: MarketKey
+    base_year: int
+    base_month: int
+    horizon_months: int
+    baseline_growth_rate: float
+    feature_snapshot: dict[str, float | int]
+    available_scenarios: list[ForecastScenarioMeta]
+    scenarios: list[ForecastScenario]
+
+
+def _mean(values: list[float]) -> float:
+    if not values:
+        return 0.0
+    return sum(values) / len(values)
+
+
+def _collect_growth_rates_percent(
+    forecast_payload: dict,
+    target_scenario_ids: set[str] | None = None,
+) -> list[float]:
+    values: list[float] = []
+    raw_scenarios = forecast_payload.get("scenarios", [])
+    if not isinstance(raw_scenarios, list):
+        return values
+
+    for raw_scenario in raw_scenarios:
+        if not isinstance(raw_scenario, dict):
+            continue
+        scenario_id = str(raw_scenario.get("scenario_id", ""))
+        if target_scenario_ids is not None and scenario_id not in target_scenario_ids:
+            continue
+
+        raw_points = raw_scenario.get("points", [])
+        if not isinstance(raw_points, list) or not raw_points:
+            continue
+        point_values = [
+            float(point.get("predicted_growth_rate", 0.0))
+            for point in raw_points
+            if isinstance(point, dict)
+        ]
+        if not point_values:
+            continue
+        values.append(_mean(point_values) * 100.0)
+    return values
 
 
 @router.get("/dependency", response_model=DependencyResponse)
@@ -237,31 +314,130 @@ def get_dependency_metrics(
     )
 
 
+@router.post("/forecast", response_model=ForecastResponse)
+def post_forecast(
+    payload: ForecastRequest,
+    _: User = Depends(get_current_user),
+) -> ForecastResponse:
+    try:
+        forecast_payload = build_forecast_payload(
+            prefecture=payload.prefecture,
+            market=payload.market,
+            base_year=payload.year,
+            base_month=payload.month,
+            horizon_months=payload.horizon_months,
+            scenario_ids=payload.scenario_ids,
+            custom_shock_rate=payload.custom_shock_rate,
+        )
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    scenarios: list[ForecastScenario] = []
+    for raw_scenario in forecast_payload.get("scenarios", []):
+        if not isinstance(raw_scenario, dict):
+            continue
+        raw_points = raw_scenario.get("points", [])
+        points = [
+            ForecastPoint(**item)
+            for item in raw_points
+            if isinstance(item, dict)
+        ]
+        scenarios.append(
+            ForecastScenario(
+                scenario_id=str(raw_scenario.get("scenario_id", "")),
+                scenario_name_ja=str(raw_scenario.get("scenario_name_ja", "")),
+                note=str(raw_scenario.get("note", "")),
+                points=points,
+            )
+        )
+
+    metas = [
+        ForecastScenarioMeta(**meta)
+        for meta in forecast_payload.get("available_scenarios", [])
+        if isinstance(meta, dict)
+    ]
+
+    return ForecastResponse(
+        model_version=str(forecast_payload.get("model_version", "skeleton-v0.1")),
+        target_metric=str(forecast_payload.get("target_metric", "guest_growth_rate")),
+        prefecture=payload.prefecture,
+        market=payload.market,
+        base_year=int(forecast_payload.get("base_year", payload.year)),
+        base_month=int(forecast_payload.get("base_month", payload.month)),
+        horizon_months=int(forecast_payload.get("horizon_months", payload.horizon_months)),
+        baseline_growth_rate=float(forecast_payload.get("baseline_growth_rate", 0.0)),
+        feature_snapshot=dict(forecast_payload.get("feature_snapshot", {})),
+        available_scenarios=metas,
+        scenarios=scenarios,
+    )
+
+
 @router.post("/simulation", response_model=SimulationResponse)
 def post_simulation(
     payload: SimulationRequest,
     _: User = Depends(get_current_user),
 ) -> SimulationResponse:
-    rnd = Random(_seed(payload.prefecture, payload.month) + 11)
-    base = rnd.uniform(-2.0, 3.0)
+    base_case_ids: list[str] = []
+    optimistic_ids = ["fx_jpy_depreciation", "international_event", "visa_relax_china"]
+    pessimistic_ids = ["infectious_disease_resurgence", "kyoto_disaster", "fx_jpy_appreciation"]
+
+    try:
+        base_forecast = build_forecast_payload(
+            prefecture=payload.prefecture,
+            market="china",
+            base_year=None,
+            base_month=payload.month,
+            horizon_months=6,
+            scenario_ids=base_case_ids,
+            custom_shock_rate=0.0,
+        )
+        optimistic_forecast = build_forecast_payload(
+            prefecture=payload.prefecture,
+            market="china",
+            base_year=None,
+            base_month=payload.month,
+            horizon_months=6,
+            scenario_ids=optimistic_ids,
+            custom_shock_rate=0.01,
+        )
+        pessimistic_forecast = build_forecast_payload(
+            prefecture=payload.prefecture,
+            market="china",
+            base_year=None,
+            base_month=payload.month,
+            horizon_months=6,
+            scenario_ids=pessimistic_ids,
+            custom_shock_rate=-0.01,
+        )
+    except FileNotFoundError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    base_values = _collect_growth_rates_percent(base_forecast, {"base"})
+    optimistic_values = _collect_growth_rates_percent(optimistic_forecast, set(optimistic_ids))
+    pessimistic_values = _collect_growth_rates_percent(pessimistic_forecast, set(pessimistic_ids))
+
+    base_growth = round(_mean(base_values), 2)
+    optimistic_growth = round(_mean(optimistic_values), 2) if optimistic_values else round(base_growth + 1.5, 2)
+    pessimistic_growth = round(_mean(pessimistic_values), 2) if pessimistic_values else round(base_growth - 1.5, 2)
+
     scenarios = [
         SimulationScenario(
             name="optimistic",
-            expected_growth_rate=round(base + rnd.uniform(1.2, 2.8), 2),
+            expected_growth_rate=optimistic_growth,
             risk_level="low",
-            note="訪日需要が回復したケース。価格と稼働率の同時改善を想定。",
+            note="円安・イベント開催・ビザ緩和が重なったケースを想定。",
         ),
         SimulationScenario(
             name="base",
-            expected_growth_rate=round(base, 2),
+            expected_growth_rate=base_growth,
             risk_level="medium",
-            note="現状トレンドが継続するケース。需要は横ばいから緩やかな改善。",
+            note="ショックを含まないベースライン推移。",
         ),
         SimulationScenario(
             name="pessimistic",
-            expected_growth_rate=round(base - rnd.uniform(1.8, 3.4), 2),
+            expected_growth_rate=pessimistic_growth,
             risk_level="high",
-            note="外部ショックが発生するケース。需要減少に備えた運営が必要。",
+            note="感染症再拡大・災害・円高を重ねた下振れケースを想定。",
         ),
     ]
     return SimulationResponse(
