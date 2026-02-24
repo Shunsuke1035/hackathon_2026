@@ -52,8 +52,7 @@ function SimpleLineChart({ title, color, yMin, yMax, series, accessor }: ChartPr
     );
   }
 
-  const xScale = (idx: number) =>
-    padding + ((width - padding * 2) * idx) / Math.max(series.length - 1, 1);
+  const xScale = (idx: number) => padding + ((width - padding * 2) * idx) / Math.max(series.length - 1, 1);
   const yScale = (value: number) => {
     const clipped = Math.max(yMin, Math.min(yMax, value));
     return height - padding - ((height - padding * 2) * (clipped - yMin)) / range;
@@ -101,28 +100,31 @@ export default function DependencyMetricsPanel({ marketLabel, current, series, l
             <span>
               対象: {current.year}年{current.month}月
             </span>
-            <span>有効施設数: {formatInt(current.facility_count_active)} / {formatInt(current.facility_count_total)}</span>
+            <span>
+              有効施設数: {formatInt(current.facility_count_active)} / {formatInt(current.facility_count_total)}
+            </span>
           </div>
+
           <div className="metric-grid">
             <div className="metric-item">
-              <div className="metric-label">市場集中度（施設分布HHI）</div>
-              <div className="metric-value">{formatFloat(current.facility_hhi)}</div>
+              <div className="metric-label">市場集中度（正規化HHI）</div>
+              <div className="metric-value">{formatFloat(current.facility_hhi_norm_active)}</div>
             </div>
             <div className="metric-item">
-              <div className="metric-label">市場分散度（正規化エントロピー）</div>
+              <div className="metric-label">市場分散度（施設分布・正規化エントロピー）</div>
               <div className="metric-value">{formatFloat(current.facility_entropy_norm_active)}</div>
             </div>
             <div className="metric-item">
-              <div className="metric-label">外国市場構成HHI</div>
-              <div className="metric-value">{formatFloat(current.foreign_hhi)}</div>
-            </div>
-            <div className="metric-item">
-              <div className="metric-label">外国市場構成エントロピー（正規化）</div>
+              <div className="metric-label">市場分散度（外国市場構成・正規化エントロピー）</div>
               <div className="metric-value">{formatFloat(current.foreign_entropy_norm)}</div>
             </div>
             <div className="metric-item">
-              <div className="metric-label">選択市場のトップ施設シェア</div>
-              <div className="metric-value">{formatPercent(current.facility_top1_share)}</div>
+              <div className="metric-label">市場分散度（全市場構成・正規化エントロピー）</div>
+              <div className="metric-value">{formatFloat(current.all_entropy_norm)}</div>
+            </div>
+            <div className="metric-item">
+              <div className="metric-label">上位10施設シェア</div>
+              <div className="metric-value">{formatPercent(current.facility_top10_share)}</div>
             </div>
             <div className="metric-item">
               <div className="metric-label">外国市場トップ国籍シェア</div>
@@ -134,20 +136,28 @@ export default function DependencyMetricsPanel({ marketLabel, current, series, l
 
           <div className="metric-charts">
             <SimpleLineChart
-              title="市場集中度（HHI）時系列"
+              title="正規化HHI（時系列）"
               color="#1d4ed8"
               yMin={0}
               yMax={1}
               series={series}
-              accessor={(point) => point.facility_hhi}
+              accessor={(point) => point.facility_hhi_norm_active}
             />
             <SimpleLineChart
-              title="市場分散度（正規化エントロピー）時系列"
+              title="施設分布エントロピー（正規化・時系列）"
               color="#047857"
               yMin={0}
               yMax={1}
               series={series}
               accessor={(point) => point.facility_entropy_norm_active}
+            />
+            <SimpleLineChart
+              title="外国市場構成エントロピー（正規化・時系列）"
+              color="#7c3aed"
+              yMin={0}
+              yMax={1}
+              series={series}
+              accessor={(point) => point.foreign_entropy_norm}
             />
           </div>
         </>

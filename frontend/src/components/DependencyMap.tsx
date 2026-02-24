@@ -17,8 +17,27 @@ function HeatLayer({ points }: { points: HeatPoint[] }) {
   const map = useMap();
   const layerRef = useRef<L.Layer | null>(null);
 
+  const clamp01 = (value: number): number => Math.max(0, Math.min(1, value));
+
   const heatData = useMemo(
-    () => points.map((point) => [point.lat, point.lng, Math.max(0.05, point.dependency_score)] as [number, number, number]),
+    () => {
+      if (points.length === 0) return [] as [number, number, number][];
+
+      return points
+        .map((point) => {
+          const dep = clamp01(Math.max(0, point.dependency_score));
+          const depBoost = clamp01(Math.pow(dep, 0.92) * 1.05);
+
+          // 固定スケールで件数重みを加える（市場ごとの再正規化はしない）。
+          const countRaw = Math.max(0, point.market_count ?? 0);
+          const countBoost = clamp01(Math.log1p(countRaw) / Math.log1p(1600));
+
+          const mixed = clamp01(depBoost * 0.85 + countBoost * 0.15);
+          const boosted = clamp01(Math.pow(mixed, 1.08) * 1.02);
+          return [point.lat, point.lng, boosted] as [number, number, number];
+        })
+        .filter((item) => item[2] >= 0.08);
+    },
     [points]
   );
 
@@ -39,15 +58,16 @@ function HeatLayer({ points }: { points: HeatPoint[] }) {
       const layer = (L as unknown as { heatLayer: (data: [number, number, number][], options: Record<string, unknown>) => L.Layer }).heatLayer(
         heatData,
         {
-          radius: 15,
-          blur: 20,
+          radius: 17,
+          blur: 23,
           maxZoom: 13,
-          minOpacity: 0.25,
+          minOpacity: 0.3,
           gradient: {
             0.2: "#2C7BB6",
             0.4: "#00A6CA",
-            0.6: "#F9D057",
-            0.8: "#F29E2E",
+            0.62: "#F9D057",
+            0.78: "#F29E2E",
+            0.9: "#E76818",
             1.0: "#D7191C"
           }
         }

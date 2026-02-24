@@ -1,0 +1,9 @@
+﻿event_id,event_name_ja,start_month,end_month,duration_months,shock_europe,shock_china,shock_north_america,shock_domestic_total,shock_southeast_asia,shock_korea,shock_overseas_total,note
+fx_jpy_appreciation,円高,1,12,3-6,-0.03,-0.08,-0.03,0.01,-0.06,-0.09,-0.06,Assume JPY appreciation by about 10%
+fx_jpy_depreciation,円安,1,12,3-6,0.04,0.1,0.05,-0.01,0.08,0.12,0.09,Assume JPY depreciation by about 10%
+visa_relax_china,中国向けビザ緩和,1,12,6-12,0.0,0.22,0.0,0.0,0.03,0.01,0.12,Relaxed visa requirement and faster issuance
+kyoto_disaster,京都での災害,1,12,1-2,-0.35,-0.4,-0.35,-0.28,-0.38,-0.4,-0.37,Transport disruption and partial closure
+infectious_disease_resurgence,感染症再拡大,1,12,3-12,-0.55,-0.6,-0.5,-0.32,-0.58,-0.6,-0.56,Travel restrictions and demand contraction
+international_event,国際イベント開催,1,12,1-3,0.12,0.06,0.1,0.14,0.08,0.06,0.09,Large conference / sports event case
+spring_festival,春節,1,2,1,0.01,0.28,0.02,0.0,0.05,0.03,0.12,Lunar New Year outbound demand spike
+gion_festival,京都祇園祭り,7,7,1,0.05,0.08,0.06,0.18,0.07,0.06,0.08,July festival and related events in Kyoto

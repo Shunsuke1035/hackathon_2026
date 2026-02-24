@@ -179,7 +179,8 @@ def build_dependency_points(
     prefecture: str,
     month: int,
     year: int | None = None,
-    max_points: int = 2500,
+    market: str | None = None,
+    max_points: int = 4000,
 ) -> tuple[int, list[dict[str, float | str]]]:
     selected_year, rows = load_rows(month=month, year=year)
     target_rows = _filter_prefecture(rows, prefecture=prefecture)
@@ -189,12 +190,15 @@ def build_dependency_points(
         denom_foreign = row.overseas_total
         denom_all = row.overseas_total + row.domestic_total
 
-        for market in MARKET_COLUMNS:
-            value = row.markets.get(market, 0.0)
+        for market_key in MARKET_COLUMNS:
+            if market and market != "all" and market_key != market:
+                continue
+
+            value = row.markets.get(market_key, 0.0)
             if value <= 0:
                 continue
 
-            denominator = denom_all if market == "japan" else denom_foreign
+            denominator = denom_all if market_key == "japan" else denom_foreign
             if denominator <= 0:
                 continue
 
@@ -207,7 +211,8 @@ def build_dependency_points(
                     "lat": row.lat,
                     "lng": row.lng,
                     "dependency_score": min(1.0, max(0.0, score)),
-                    "market": market,
+                    "market_count": value,
+                    "market": market_key,
                 }
             )
 

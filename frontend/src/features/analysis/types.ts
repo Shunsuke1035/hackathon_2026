@@ -9,6 +9,7 @@ export type HeatPoint = {
   lat: number;
   lng: number;
   dependency_score: number;
+  market_count?: number | null;
   market: string;
 };
 
@@ -28,9 +29,11 @@ export type DependencyMetricsSeriesPoint = {
   facility_count_total: number;
   facility_count_active: number;
   facility_hhi: number | null;
+  facility_hhi_norm_active: number | null;
   facility_entropy: number | null;
   facility_entropy_norm_active: number | null;
   facility_top1_share: number | null;
+  facility_top10_share: number | null;
   foreign_hhi: number | null;
   foreign_entropy: number | null;
   foreign_entropy_norm: number | null;
@@ -48,9 +51,11 @@ export type DependencyMetricsCurrent = {
   facility_count_total: number;
   facility_count_active: number;
   facility_hhi: number | null;
+  facility_hhi_norm_active: number | null;
   facility_entropy: number | null;
   facility_entropy_norm_active: number | null;
   facility_top1_share: number | null;
+  facility_top10_share: number | null;
   foreign_hhi: number | null;
   foreign_entropy: number | null;
   foreign_entropy_norm: number | null;
