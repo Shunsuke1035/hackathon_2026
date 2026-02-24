@@ -42,6 +42,8 @@ Core endpoints:
 - `POST /api/auth/login`
 - `GET /api/auth/me`
 - `GET /api/analysis/dependency?prefecture=kyoto&month=1`
+- `GET /api/analysis/dependency-metrics?prefecture=kyoto&month=1&market=china`
+- `POST /api/analysis/forecast`
 - `POST /api/analysis/simulation`
 - `POST /api/analysis/recommendation`
 
