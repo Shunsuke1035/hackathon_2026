@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-"""Generate monthly hotel heatmaps from allocation CSV files.
-
-Usage example:
-    python scripts/generate_hotel_heatmaps.py --metric dependency
-"""
+﻿#!/usr/bin/env python
+"""Generate monthly hotel heatmaps from allocation CSV files."""
 
 from __future__ import annotations
 
@@ -15,6 +11,12 @@ import folium
 import numpy as np
 import pandas as pd
 from folium.plugins import HeatMap
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+INPUT_DIR_CANDIDATES = (
+    PROJECT_ROOT / "data" / "hotel_allocation_biased" / "hotel_allocation_biased",
+    PROJECT_ROOT / "data" / "hotel_allocation_biased 1" / "hotel_allocation_biased",
+)
 
 TARGET_COLS_MASTER = [
     "中国",
@@ -30,12 +32,24 @@ LAT_CANDIDATES = ["latitude", "lat", "緯度"]
 LON_CANDIDATES = ["longitude", "lon", "経度"]
 
 
+def resolve_input_dir(custom: Path | None) -> Path:
+    if custom is not None:
+        return custom
+    for candidate in INPUT_DIR_CANDIDATES:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        "No input directory found. Expected one of: "
+        + ", ".join(str(path) for path in INPUT_DIR_CANDIDATES)
+    )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate folium heatmaps.")
     parser.add_argument(
         "--input-dir",
         type=Path,
-        default=Path("data/hotel_allocation_biased/hotel_allocation_biased"),
+        default=None,
         help="Directory with KCTA_*_hotel_allocation.csv files",
     )
     parser.add_argument(
@@ -49,9 +63,9 @@ def parse_args() -> argparse.Namespace:
         choices=["raw", "dependency"],
         default="dependency",
         help=(
-            "raw: counts, dependency: percentage ratio."
-            " For foreign segments = segment / overseas_total * 100."
-            " For domestic/overseas total = value / (domestic+overseas) * 100."
+            "raw: counts, dependency: percentage ratio. "
+            "For foreign segments = segment / overseas_total * 100. "
+            "For domestic/overseas total = value / (domestic+overseas) * 100."
         ),
     )
     parser.add_argument(
@@ -86,9 +100,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def find_col(candidates: Iterable[str], columns: pd.Index) -> str | None:
-    for c in candidates:
-        if c in columns:
-            return c
+    for col in candidates:
+        if col in columns:
+            return col
     return None
 
 
@@ -137,15 +151,16 @@ def map_center(frame: pd.DataFrame, lat_col: str, lon_col: str) -> list[float]:
 
 def main() -> None:
     args = parse_args()
+    input_dir = resolve_input_dir(args.input_dir)
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     target_cols_master = [c.strip() for c in args.columns.split(",") if c.strip()]
-    files = sorted(args.input_dir.glob("KCTA_*_hotel_allocation.csv"))
+    files = sorted(input_dir.glob("KCTA_*_hotel_allocation.csv"))
     if args.limit_files > 0:
         files = files[: args.limit_files]
 
     if not files:
-        raise FileNotFoundError(f"No target CSV files found in: {args.input_dir}")
+        raise FileNotFoundError(f"No target CSV files found in: {input_dir}")
 
     summary_records: list[dict[str, object]] = []
 
