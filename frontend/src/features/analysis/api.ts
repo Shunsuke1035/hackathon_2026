@@ -32,9 +32,10 @@ export async function fetchDependencyPoints(
   prefecture: string,
   month: number,
   token: string,
+  market: DependencyMarketKey | "all" = "all",
   year?: number
 ): Promise<DependencyResult> {
-  const params = new URLSearchParams({ prefecture, month: String(month) });
+  const params = new URLSearchParams({ prefecture, month: String(month), market });
   if (year) {
     params.set("year", String(year));
   }

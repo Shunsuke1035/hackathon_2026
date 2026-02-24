@@ -70,12 +70,7 @@ export default function DashboardPage() {
   const [dependencyMetrics, setDependencyMetrics] = useState<DependencyMetricsResponse | null>(null);
   const [metricsNote, setMetricsNote] = useState<string | null>(null);
 
-  const displayedHeatPoints = useMemo(() => {
-    if (selectedMarket === "all") {
-      return heatPoints;
-    }
-    return heatPoints.filter((point) => point.market === selectedMarket);
-  }, [heatPoints, selectedMarket]);
+  const displayedHeatPoints = heatPoints;
 
   const metricsMarket = useMemo<DependencyMarketKey>(
     () => (selectedMarket === "all" ? "china" : selectedMarket),
@@ -137,6 +132,7 @@ export default function DashboardPage() {
           selectedPrefecture,
           selectedMonth,
           token,
+          selectedMarket,
           selectedYear === "latest" ? undefined : selectedYear
         );
         setHeatPoints(payload.points);
@@ -153,7 +149,7 @@ export default function DashboardPage() {
       }
     };
     loadDependencyMap();
-  }, [selectedPrefecture, selectedMonth, selectedYear]);
+  }, [selectedPrefecture, selectedMonth, selectedYear, selectedMarket]);
 
   useEffect(() => {
     const token = window.localStorage.getItem("access_token");

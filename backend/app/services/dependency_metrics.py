@@ -143,27 +143,37 @@ def _build_market_snapshot(
             "facility_count_total": facility_count_total,
             "facility_count_active": facility_count_active,
             "facility_hhi": None,
+            "facility_hhi_norm_active": None,
             "facility_entropy": None,
             "facility_entropy_norm_active": None,
             "facility_top1_share": None,
+            "facility_top10_share": None,
         }
 
     shares, _ = _normalize_shares(market_values)
     facility_hhi = _hhi_from_shares(shares)
+    if facility_count_active > 1:
+        hhi_floor = 1.0 / float(facility_count_active)
+        facility_hhi_norm_active = (facility_hhi - hhi_floor) / (1.0 - hhi_floor)
+    else:
+        facility_hhi_norm_active = 0.0
     facility_entropy = _entropy_from_shares(shares)
     if facility_count_active > 1:
         entropy_norm_active = facility_entropy / log(facility_count_active)
     else:
         entropy_norm_active = 0.0
+    top10_share = sum(sorted(shares, reverse=True)[:10]) if shares else None
 
     return {
         "market_total": market_total,
         "facility_count_total": facility_count_total,
         "facility_count_active": facility_count_active,
         "facility_hhi": facility_hhi,
+        "facility_hhi_norm_active": facility_hhi_norm_active,
         "facility_entropy": facility_entropy,
         "facility_entropy_norm_active": entropy_norm_active,
         "facility_top1_share": max(shares) if shares else None,
+        "facility_top10_share": top10_share,
     }
 
 
@@ -271,9 +281,11 @@ def build_dependency_metrics(
                 "facility_count_total": market_metrics["facility_count_total"],
                 "facility_count_active": market_metrics["facility_count_active"],
                 "facility_hhi": market_metrics["facility_hhi"],
+                "facility_hhi_norm_active": market_metrics["facility_hhi_norm_active"],
                 "facility_entropy": market_metrics["facility_entropy"],
                 "facility_entropy_norm_active": market_metrics["facility_entropy_norm_active"],
                 "facility_top1_share": market_metrics["facility_top1_share"],
+                "facility_top10_share": market_metrics["facility_top10_share"],
                 "foreign_hhi": row["foreign_hhi"],
                 "foreign_entropy": row["foreign_entropy"],
                 "foreign_entropy_norm": row["foreign_entropy_norm"],
@@ -293,9 +305,11 @@ def build_dependency_metrics(
         "facility_count_total": current_market_metrics["facility_count_total"],
         "facility_count_active": current_market_metrics["facility_count_active"],
         "facility_hhi": current_market_metrics["facility_hhi"],
+        "facility_hhi_norm_active": current_market_metrics["facility_hhi_norm_active"],
         "facility_entropy": current_market_metrics["facility_entropy"],
         "facility_entropy_norm_active": current_market_metrics["facility_entropy_norm_active"],
         "facility_top1_share": current_market_metrics["facility_top1_share"],
+        "facility_top10_share": current_market_metrics["facility_top10_share"],
         "foreign_hhi": selected["foreign_hhi"],
         "foreign_entropy": selected["foreign_entropy"],
         "foreign_entropy_norm": selected["foreign_entropy_norm"],

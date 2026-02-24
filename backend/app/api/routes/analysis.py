@@ -28,6 +28,7 @@ class HeatPoint(BaseModel):
     lat: float
     lng: float
     dependency_score: float = Field(ge=0, le=1)
+    market_count: float | None = None
     market: str
 
 
@@ -93,9 +94,11 @@ class DependencyMetricsSeriesPoint(BaseModel):
     facility_count_total: int
     facility_count_active: int
     facility_hhi: float | None = None
+    facility_hhi_norm_active: float | None = None
     facility_entropy: float | None = None
     facility_entropy_norm_active: float | None = None
     facility_top1_share: float | None = None
+    facility_top10_share: float | None = None
     foreign_hhi: float | None = None
     foreign_entropy: float | None = None
     foreign_entropy_norm: float | None = None
@@ -113,9 +116,11 @@ class DependencyMetricsCurrent(BaseModel):
     facility_count_total: int
     facility_count_active: int
     facility_hhi: float | None = None
+    facility_hhi_norm_active: float | None = None
     facility_entropy: float | None = None
     facility_entropy_norm_active: float | None = None
     facility_top1_share: float | None = None
+    facility_top10_share: float | None = None
     foreign_hhi: float | None = None
     foreign_entropy: float | None = None
     foreign_entropy_norm: float | None = None
@@ -147,6 +152,7 @@ def _seed(prefecture: str, month: int) -> int:
 def get_dependency(
     prefecture: str,
     month: int = Query(default=1, ge=1, le=12),
+    market: MarketKey | Literal["all"] = Query(default="all"),
     year: int | None = None,
     _: User = Depends(get_current_user),
 ) -> DependencyResponse:
@@ -155,7 +161,8 @@ def get_dependency(
             prefecture=prefecture,
             month=month,
             year=year,
-            max_points=2500,
+            market=market,
+            max_points=4000,
         )
     except FileNotFoundError:
         return DependencyResponse(
