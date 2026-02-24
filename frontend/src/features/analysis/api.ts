@@ -3,6 +3,7 @@ import {
   DependencyMarketKey,
   DependencyMetricsResponse,
   FacilityInput,
+  ForecastResponse,
   HeatPoint,
   RecommendationItem,
   SimulationScenario
@@ -26,6 +27,17 @@ type RecommendationResponse = {
   prefecture: string;
   month: number;
   recommendations: RecommendationItem[];
+};
+
+type ForecastRequest = {
+  prefecture: string;
+  market: DependencyMarketKey;
+  month: number;
+  facility?: FacilityInput;
+  horizon_months: number;
+  scenario_ids?: string[];
+  custom_shock_rate?: number;
+  year?: number;
 };
 
 export async function fetchDependencyPoints(
@@ -94,20 +106,56 @@ export async function fetchSimulation(
 export async function fetchRecommendations(
   prefecture: string,
   month: number,
+  market: DependencyMarketKey,
   facility: FacilityInput,
-  token: string
+  token: string,
+  year?: number
 ): Promise<RecommendationItem[]> {
+  const body: {
+    prefecture: string;
+    month: number;
+    market: DependencyMarketKey;
+    facility: FacilityInput;
+    year?: number;
+  } = {
+    prefecture,
+    month,
+    market,
+    facility
+  };
+  if (year) {
+    body.year = year;
+  }
+
   const response = await fetch(`${API_BASE_URL}/api/analysis/recommendation`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`
     },
-    body: JSON.stringify({ prefecture, month, facility })
+    body: JSON.stringify(body)
   });
   if (!response.ok) {
     throw new Error("提案データの取得に失敗しました");
   }
   const payload = (await response.json()) as RecommendationResponse;
   return payload.recommendations;
+}
+
+export async function fetchForecast(
+  request: ForecastRequest,
+  token: string
+): Promise<ForecastResponse> {
+  const response = await fetch(`${API_BASE_URL}/api/analysis/forecast`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`
+    },
+    body: JSON.stringify(request)
+  });
+  if (!response.ok) {
+    throw new Error("予測データの取得に失敗しました");
+  }
+  return (await response.json()) as ForecastResponse;
 }

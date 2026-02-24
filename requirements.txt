@@ -11,3 +11,4 @@ plotly==6.5.2
 openpyxl==3.1.5
 tqdm==4.67.3
 folium==0.20.0
+lightgbm==4.6.0

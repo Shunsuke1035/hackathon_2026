@@ -96,3 +96,42 @@ export type RecommendationItem = {
   title: string;
   description: string;
 };
+
+export type ForecastPoint = {
+  step: number;
+  year: number;
+  month: number;
+  month_date: string;
+  predicted_growth_rate: number;
+  predicted_guest_count?: number | null;
+  predicted_guest_count_total?: number | null;
+  applied_shock_rate: number;
+  seasonal_component: number;
+};
+
+export type ForecastScenario = {
+  scenario_id: string;
+  scenario_name_ja: string;
+  note: string;
+  points: ForecastPoint[];
+};
+
+export type ForecastScenarioMeta = {
+  event_id: string;
+  event_name_ja: string;
+  note: string;
+};
+
+export type ForecastResponse = {
+  model_version: string;
+  target_metric: string;
+  prefecture: string;
+  market: DependencyMarketKey;
+  base_year: number;
+  base_month: number;
+  horizon_months: number;
+  baseline_growth_rate: number;
+  feature_snapshot: Record<string, number>;
+  available_scenarios: ForecastScenarioMeta[];
+  scenarios: ForecastScenario[];
+};

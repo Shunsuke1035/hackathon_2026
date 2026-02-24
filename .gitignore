@@ -13,3 +13,4 @@ backend/app.db
 
 data/*.parquet
 data/*.feather
+models/
