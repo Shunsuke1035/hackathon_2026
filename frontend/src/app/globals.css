@@ -160,3 +160,72 @@ body {
   margin: 0;
   color: #475569;
 }
+
+.metric-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.metric-item {
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fafc;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.metric-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.metric-chart-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.metric-chart-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.metric-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.metric-chart-axis {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+}
