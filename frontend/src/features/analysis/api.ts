@@ -1,5 +1,12 @@
 ﻿import { API_BASE_URL } from "@/lib/api";
-import { FacilityInput, HeatPoint, RecommendationItem, SimulationScenario } from "@/features/analysis/types";
+import {
+  DependencyMarketKey,
+  DependencyMetricsResponse,
+  FacilityInput,
+  HeatPoint,
+  RecommendationItem,
+  SimulationScenario
+} from "@/features/analysis/types";
 
 export type DependencyResult = {
   prefecture: string;
@@ -39,6 +46,27 @@ export async function fetchDependencyPoints(
     throw new Error("依存度ヒートマップデータの取得に失敗しました");
   }
   return (await response.json()) as DependencyResult;
+}
+
+export async function fetchDependencyMetrics(
+  prefecture: string,
+  month: number,
+  market: DependencyMarketKey,
+  token: string,
+  year?: number
+): Promise<DependencyMetricsResponse> {
+  const params = new URLSearchParams({ prefecture, month: String(month), market });
+  if (year) {
+    params.set("year", String(year));
+  }
+
+  const response = await fetch(`${API_BASE_URL}/api/analysis/dependency-metrics?${params.toString()}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  if (!response.ok) {
+    throw new Error("依存度メトリクスの取得に失敗しました");
+  }
+  return (await response.json()) as DependencyMetricsResponse;
 }
 
 export async function fetchSimulation(

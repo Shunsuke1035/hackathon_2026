@@ -2,12 +2,14 @@
 
 from hashlib import sha256
 from random import Random
+from typing import Literal
 
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel, Field
 
 from app.api.deps import get_current_user
 from app.models.user import User
+from app.services.dependency_metrics import build_dependency_metrics
 from app.services.hotel_dependency import build_dependency_points
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
@@ -80,6 +82,62 @@ class RecommendationResponse(BaseModel):
     recommendations: list[RecommendationItem]
 
 
+MarketKey = Literal["china", "korea", "north_america", "southeast_asia", "europe", "japan"]
+
+
+class DependencyMetricsSeriesPoint(BaseModel):
+    year: int
+    month: int
+    month_date: str
+    market_total: float
+    facility_count_total: int
+    facility_count_active: int
+    facility_hhi: float | None = None
+    facility_entropy: float | None = None
+    facility_entropy_norm_active: float | None = None
+    facility_top1_share: float | None = None
+    foreign_hhi: float | None = None
+    foreign_entropy: float | None = None
+    foreign_entropy_norm: float | None = None
+    all_hhi: float | None = None
+    all_entropy: float | None = None
+    all_entropy_norm: float | None = None
+
+
+class DependencyMetricsCurrent(BaseModel):
+    year: int
+    month: int
+    month_date: str
+    selected_market: MarketKey
+    market_total: float
+    facility_count_total: int
+    facility_count_active: int
+    facility_hhi: float | None = None
+    facility_entropy: float | None = None
+    facility_entropy_norm_active: float | None = None
+    facility_top1_share: float | None = None
+    foreign_hhi: float | None = None
+    foreign_entropy: float | None = None
+    foreign_entropy_norm: float | None = None
+    foreign_top1_market: str | None = None
+    foreign_top1_share: float | None = None
+    all_hhi: float | None = None
+    all_entropy: float | None = None
+    all_entropy_norm: float | None = None
+    all_top1_market: str | None = None
+    all_top1_share: float | None = None
+
+
+class DependencyMetricsResponse(BaseModel):
+    prefecture: str
+    month: int
+    year: int
+    market: MarketKey
+    current: DependencyMetricsCurrent
+    series: list[DependencyMetricsSeriesPoint]
+    note: str | None = None
+
+
 def _seed(prefecture: str, month: int) -> int:
     digest = sha256(f"{prefecture}:{month}".encode("utf-8")).hexdigest()
     return int(digest[:8], 16)
@@ -119,6 +177,55 @@ def get_dependency(
         month=month,
         year=selected_year,
         points=points,
+        note=note,
+    )
+
+
+@router.get("/dependency-metrics", response_model=DependencyMetricsResponse)
+def get_dependency_metrics(
+    prefecture: str,
+    month: int = Query(default=1, ge=1, le=12),
+    market: MarketKey = Query(default="china"),
+    year: int | None = None,
+    _: User = Depends(get_current_user),
+) -> DependencyMetricsResponse:
+    try:
+        payload = build_dependency_metrics(
+            prefecture=prefecture,
+            month=month,
+            market=market,
+            year=year,
+        )
+    except FileNotFoundError:
+        return DependencyMetricsResponse(
+            prefecture=prefecture,
+            month=month,
+            year=year or 0,
+            market=market,
+            current=DependencyMetricsCurrent(
+                year=year or 0,
+                month=month,
+                month_date=f"{year or 0:04d}-{month:02d}-01",
+                selected_market=market,
+                market_total=0.0,
+                facility_count_total=0,
+                facility_count_active=0,
+            ),
+            series=[],
+            note="依存度メトリクスの集計対象データが見つかりませんでした。",
+        )
+
+    note: str | None = None
+    if prefecture != "kyoto" and not payload["series"]:
+        note = "選択地域のデータが不足しているため、表示内容が限定される可能性があります。"
+
+    return DependencyMetricsResponse(
+        prefecture=prefecture,
+        month=month,
+        year=payload["current_year"],
+        market=market,
+        current=DependencyMetricsCurrent(**payload["current"]),
+        series=[DependencyMetricsSeriesPoint(**item) for item in payload["series"]],
         note=note,
     )
 

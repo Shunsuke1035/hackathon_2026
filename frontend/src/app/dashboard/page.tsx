@@ -4,10 +4,18 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
+import DependencyMetricsPanel from "@/components/DependencyMetricsPanel";
 import ResultsPanel from "@/components/ResultsPanel";
-import { fetchDependencyPoints, fetchRecommendations, fetchSimulation } from "@/features/analysis/api";
+import { fetchDependencyMetrics, fetchDependencyPoints, fetchRecommendations, fetchSimulation } from "@/features/analysis/api";
 import { MONTH_OPTIONS, PREFECTURES } from "@/features/analysis/constants";
-import { FacilityInput, HeatPoint, RecommendationItem, SimulationScenario } from "@/features/analysis/types";
+import {
+  DependencyMarketKey,
+  DependencyMetricsResponse,
+  FacilityInput,
+  HeatPoint,
+  RecommendationItem,
+  SimulationScenario
+} from "@/features/analysis/types";
 import { API_BASE_URL } from "@/lib/api";
 
 const DependencyMap = dynamic(() => import("@/components/DependencyMap"), { ssr: false });
@@ -19,7 +27,7 @@ type MeResponse = {
 };
 
 type MarketOption = {
-  value: HeatPoint["market"] | "all";
+  value: DependencyMarketKey | "all";
   label: string;
 };
 
@@ -38,6 +46,7 @@ export default function DashboardPage() {
   const [statusMessage, setStatusMessage] = useState("アカウント情報を読み込み中...");
   const [isError, setIsError] = useState(false);
   const [loadingMap, setLoadingMap] = useState(false);
+  const [loadingMetrics, setLoadingMetrics] = useState(false);
   const [loadingInsights, setLoadingInsights] = useState(false);
 
   const [selectedPrefecture, setSelectedPrefecture] = useState("kyoto");
@@ -58,6 +67,8 @@ export default function DashboardPage() {
   const [heatPoints, setHeatPoints] = useState<HeatPoint[]>([]);
   const [simulations, setSimulations] = useState<SimulationScenario[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
+  const [dependencyMetrics, setDependencyMetrics] = useState<DependencyMetricsResponse | null>(null);
+  const [metricsNote, setMetricsNote] = useState<string | null>(null);
 
   const displayedHeatPoints = useMemo(() => {
     if (selectedMarket === "all") {
@@ -65,6 +76,20 @@ export default function DashboardPage() {
     }
     return heatPoints.filter((point) => point.market === selectedMarket);
   }, [heatPoints, selectedMarket]);
+
+  const metricsMarket = useMemo<DependencyMarketKey>(
+    () => (selectedMarket === "all" ? "china" : selectedMarket),
+    [selectedMarket]
+  );
+
+  const metricsPanelNote = useMemo(() => {
+    const fallbackNote =
+      selectedMarket === "all" ? "市場が「すべて」の場合、メトリクスは「中国」を基準表示します。" : null;
+    if (fallbackNote && metricsNote) {
+      return `${fallbackNote} / ${metricsNote}`;
+    }
+    return fallbackNote ?? metricsNote;
+  }, [selectedMarket, metricsNote]);
 
   useEffect(() => {
     const token = window.localStorage.getItem("access_token");
@@ -129,6 +154,31 @@ export default function DashboardPage() {
     };
     loadDependencyMap();
   }, [selectedPrefecture, selectedMonth, selectedYear]);
+
+  useEffect(() => {
+    const token = window.localStorage.getItem("access_token");
+    if (!token) return;
+
+    const loadMetrics = async () => {
+      setLoadingMetrics(true);
+      try {
+        const payload = await fetchDependencyMetrics(
+          selectedPrefecture,
+          selectedMonth,
+          metricsMarket,
+          token,
+          selectedYear === "latest" ? undefined : selectedYear
+        );
+        setDependencyMetrics(payload);
+        setMetricsNote(payload.note ?? null);
+      } catch (error) {
+        setMetricsNote(error instanceof Error ? error.message : "依存度メトリクスの取得に失敗しました。");
+      } finally {
+        setLoadingMetrics(false);
+      }
+    };
+    loadMetrics();
+  }, [selectedPrefecture, selectedMonth, selectedYear, metricsMarket]);
 
   const handleFacilityApply = () => {
     if (Number.isNaN(facilityInput.lat) || Number.isNaN(facilityInput.lng)) {
@@ -329,6 +379,14 @@ export default function DashboardPage() {
           />
         )}
       </section>
+
+      <DependencyMetricsPanel
+        current={dependencyMetrics?.current ?? null}
+        series={dependencyMetrics?.series ?? []}
+        loading={loadingMetrics}
+        marketLabel={MARKET_OPTIONS.find((m) => m.value === metricsMarket)?.label ?? "中国"}
+        note={metricsPanelNote}
+      />
 
       <ResultsPanel recommendations={recommendations} simulations={simulations} />
 
