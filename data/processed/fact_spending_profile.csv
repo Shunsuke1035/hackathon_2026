@@ -1,0 +1,617 @@
+﻿country_profile_key,profile_scope,metric_category,metric_subcategory,item_path,metric_name,metric_value,unit,source_year,source_file
+korea,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,purchase_rate_pct,6.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,purchase_rate_pct,11.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,purchase_rate_pct,4.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,purchase_rate_pct,1.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,purchase_rate_pct,2.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,purchase_rate_pct,0.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,purchase_rate_pct,3.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,purchase_rate_pct,2.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,purchase_rate_pct,2.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,purchase_rate_pct,90.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,purchase_rate_pct,99.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,purchase_rate_pct,85.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,purchase_rate_pct,93.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,purchase_rate_pct,96.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,宿泊費,,日本滞在中の > 宿泊費,purchase_rate_pct,85.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,宿泊費,,日本滞在中の > 宿泊費,purchase_rate_pct,77.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,宿泊費,,日本滞在中の > 宿泊費,purchase_rate_pct,64.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,宿泊費,,日本滞在中の > 宿泊費,purchase_rate_pct,80.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,宿泊費,,日本滞在中の > 宿泊費,purchase_rate_pct,80.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,飲食費,,費目別支出 > 飲食費,purchase_rate_pct,93.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,飲食費,,費目別支出 > 飲食費,purchase_rate_pct,90.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,飲食費,,費目別支出 > 飲食費,purchase_rate_pct,74.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,飲食費,,費目別支出 > 飲食費,purchase_rate_pct,87.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,飲食費,,費目別支出 > 飲食費,purchase_rate_pct,87.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,,費目別支出 > 交通費,purchase_rate_pct,89.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,,費目別支出 > 交通費,purchase_rate_pct,87.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,,費目別支出 > 交通費,purchase_rate_pct,68.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,,費目別支出 > 交通費,purchase_rate_pct,86.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,,費目別支出 > 交通費,purchase_rate_pct,83.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,purchase_rate_pct,1.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,purchase_rate_pct,6.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,purchase_rate_pct,2.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,purchase_rate_pct,9.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,purchase_rate_pct,6.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,purchase_rate_pct,3.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,purchase_rate_pct,2.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,purchase_rate_pct,7.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,purchase_rate_pct,12.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,purchase_rate_pct,11.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,purchase_rate_pct,71.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,purchase_rate_pct,62.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,purchase_rate_pct,55.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,purchase_rate_pct,68.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,purchase_rate_pct,67.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,バス,費目別支出 > 交通費 > バス,purchase_rate_pct,24.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,バス,費目別支出 > 交通費 > バス,purchase_rate_pct,12.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,バス,費目別支出 > 交通費 > バス,purchase_rate_pct,15.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,バス,費目別支出 > 交通費 > バス,purchase_rate_pct,17.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,バス,費目別支出 > 交通費 > バス,purchase_rate_pct,12.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,purchase_rate_pct,24.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,purchase_rate_pct,14.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,purchase_rate_pct,21.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,purchase_rate_pct,35.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,purchase_rate_pct,34.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,purchase_rate_pct,4.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,purchase_rate_pct,3.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,purchase_rate_pct,4.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,purchase_rate_pct,3.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,purchase_rate_pct,1.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,purchase_rate_pct,0.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,purchase_rate_pct,0.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,purchase_rate_pct,1.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,purchase_rate_pct,0.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,purchase_rate_pct,1.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,purchase_rate_pct,18.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,purchase_rate_pct,3.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,purchase_rate_pct,3.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,purchase_rate_pct,3.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,purchase_rate_pct,41.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,purchase_rate_pct,76.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,purchase_rate_pct,31.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,purchase_rate_pct,42.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,purchase_rate_pct,38.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,purchase_rate_pct,6.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,purchase_rate_pct,1.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,purchase_rate_pct,1.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,purchase_rate_pct,2.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,purchase_rate_pct,2.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,purchase_rate_pct,1.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,purchase_rate_pct,0.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,purchase_rate_pct,1.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,purchase_rate_pct,13.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,purchase_rate_pct,3.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,purchase_rate_pct,12.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,purchase_rate_pct,9.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,purchase_rate_pct,8.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,purchase_rate_pct,2.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,purchase_rate_pct,1.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,purchase_rate_pct,0.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,purchase_rate_pct,2.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,purchase_rate_pct,0.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,purchase_rate_pct,0.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,purchase_rate_pct,1.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,purchase_rate_pct,0.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,purchase_rate_pct,11.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,purchase_rate_pct,6.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,purchase_rate_pct,17.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,purchase_rate_pct,30.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,purchase_rate_pct,26.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,purchase_rate_pct,0.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,purchase_rate_pct,0.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,purchase_rate_pct,0.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,purchase_rate_pct,8.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,purchase_rate_pct,2.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,purchase_rate_pct,3.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,purchase_rate_pct,6.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,purchase_rate_pct,4.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,purchase_rate_pct,4.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,purchase_rate_pct,69.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,purchase_rate_pct,3.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,purchase_rate_pct,4.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,purchase_rate_pct,4.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,purchase_rate_pct,1.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,purchase_rate_pct,0.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,purchase_rate_pct,0.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,purchase_rate_pct,0.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,purchase_rate_pct,0.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,purchase_rate_pct,0.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,purchase_rate_pct,3.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,purchase_rate_pct,11.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,purchase_rate_pct,1.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,purchase_rate_pct,4.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,,費目別支出 > 買物代,purchase_rate_pct,96.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,,費目別支出 > 買物代,purchase_rate_pct,90.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,,費目別支出 > 買物代,purchase_rate_pct,92.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,,費目別支出 > 買物代,purchase_rate_pct,89.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,,費目別支出 > 買物代,purchase_rate_pct,87.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,purchase_rate_pct,76.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,purchase_rate_pct,70.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,purchase_rate_pct,70.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,purchase_rate_pct,44.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,purchase_rate_pct,40.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,purchase_rate_pct,31.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,purchase_rate_pct,19.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,purchase_rate_pct,14.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,purchase_rate_pct,24.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,purchase_rate_pct,25.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,purchase_rate_pct,1.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,purchase_rate_pct,7.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,purchase_rate_pct,4.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,purchase_rate_pct,4.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,purchase_rate_pct,3.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,purchase_rate_pct,40.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,purchase_rate_pct,44.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,purchase_rate_pct,41.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,purchase_rate_pct,41.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,purchase_rate_pct,48.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,purchase_rate_pct,14.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,purchase_rate_pct,49.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,purchase_rate_pct,21.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,purchase_rate_pct,10.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,purchase_rate_pct,6.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,purchase_rate_pct,23.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,purchase_rate_pct,22.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,purchase_rate_pct,9.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,purchase_rate_pct,2.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,purchase_rate_pct,2.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,purchase_rate_pct,6.8,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,purchase_rate_pct,23.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,purchase_rate_pct,6.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,purchase_rate_pct,3.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,purchase_rate_pct,3.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,purchase_rate_pct,22.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,purchase_rate_pct,29.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,purchase_rate_pct,36.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,purchase_rate_pct,34.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,purchase_rate_pct,30.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,purchase_rate_pct,10.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,purchase_rate_pct,23.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,purchase_rate_pct,27.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,purchase_rate_pct,11.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,purchase_rate_pct,12.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,purchase_rate_pct,15.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,purchase_rate_pct,5.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,purchase_rate_pct,5.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,purchase_rate_pct,4.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,purchase_rate_pct,0.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,purchase_rate_pct,6.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,purchase_rate_pct,4.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,purchase_rate_pct,1.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,purchase_rate_pct,1.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,purchase_rate_pct,0.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,purchase_rate_pct,2.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,purchase_rate_pct,1.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,purchase_rate_pct,2.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,purchase_rate_pct,2.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,purchase_rate_pct,1.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,purchase_rate_pct,4.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,purchase_rate_pct,19.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,purchase_rate_pct,13.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,purchase_rate_pct,3.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,purchase_rate_pct,4.9,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,purchase_rate_pct,2.3,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,purchase_rate_pct,11.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,purchase_rate_pct,5.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,purchase_rate_pct,2.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,purchase_rate_pct,2.6,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,purchase_rate_pct,5.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,purchase_rate_pct,3.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,purchase_rate_pct,7.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,purchase_rate_pct,6.5,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,purchase_rate_pct,10.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,purchase_rate_pct,9.4,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,その他,,費目別支出 > その他,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,その他,,費目別支出 > その他,purchase_rate_pct,0.0,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,その他,,費目別支出 > その他,purchase_rate_pct,0.2,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,その他,,費目別支出 > その他,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,その他,,費目別支出 > その他,purchase_rate_pct,0.1,%,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,spender_unit_price_jpy,97512.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,spender_unit_price_jpy,580000.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,spender_unit_price_jpy,263438.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,spender_unit_price_jpy,663502.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,団体パッケージツアー,,旅行前支出 > 団体パッケージツアー,spender_unit_price_jpy,377812.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,spender_unit_price_jpy,83074.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,spender_unit_price_jpy,251975.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,spender_unit_price_jpy,561768.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,個人旅行向けパッケージ商品,,旅行前支出 > 個人旅行向けパッケージ商品,spender_unit_price_jpy,465858.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,spender_unit_price_jpy,47970.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,spender_unit_price_jpy,292345.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,spender_unit_price_jpy,122602.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,spender_unit_price_jpy,228478.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,往復航空（船舶）運賃,,旅行前支出 > 往復航空（船舶）運賃,spender_unit_price_jpy,229371.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,宿泊費,,日本滞在中の > 宿泊費,spender_unit_price_jpy,46251.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,宿泊費,,日本滞在中の > 宿泊費,spender_unit_price_jpy,196148.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,宿泊費,,日本滞在中の > 宿泊費,spender_unit_price_jpy,95097.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,宿泊費,,日本滞在中の > 宿泊費,spender_unit_price_jpy,147553.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,宿泊費,,日本滞在中の > 宿泊費,spender_unit_price_jpy,125143.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,飲食費,,費目別支出 > 飲食費,spender_unit_price_jpy,34500.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,飲食費,,費目別支出 > 飲食費,spender_unit_price_jpy,125044.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,飲食費,,費目別支出 > 飲食費,spender_unit_price_jpy,52299.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,飲食費,,費目別支出 > 飲食費,spender_unit_price_jpy,74664.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,飲食費,,費目別支出 > 飲食費,spender_unit_price_jpy,61819.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,,費目別支出 > 交通費,spender_unit_price_jpy,12228.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,,費目別支出 > 交通費,spender_unit_price_jpy,41976.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,,費目別支出 > 交通費,spender_unit_price_jpy,27367.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,,費目別支出 > 交通費,spender_unit_price_jpy,40903.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,,費目別支出 > 交通費,spender_unit_price_jpy,36801.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,spender_unit_price_jpy,25738.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,spender_unit_price_jpy,37614.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,spender_unit_price_jpy,33396.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,spender_unit_price_jpy,31797.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,航空（日本国内移動のみ）,費目別支出 > 交通費 > 航空（日本国内移動のみ）,spender_unit_price_jpy,42963.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,spender_unit_price_jpy,13582.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,spender_unit_price_jpy,35535.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,spender_unit_price_jpy,28957.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,spender_unit_price_jpy,36425.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,Japan Rail Pass,費目別支出 > 交通費 > Japan Rail Pass,spender_unit_price_jpy,38056.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,spender_unit_price_jpy,7889.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,spender_unit_price_jpy,35279.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,spender_unit_price_jpy,16653.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,spender_unit_price_jpy,23346.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,新幹線・鉄道・地下鉄・モノレール,費目別支出 > 交通費 > 新幹線・鉄道・地下鉄・モノレール,spender_unit_price_jpy,19685.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,バス,費目別支出 > 交通費 > バス,spender_unit_price_jpy,3479.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,バス,費目別支出 > 交通費 > バス,spender_unit_price_jpy,7434.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,バス,費目別支出 > 交通費 > バス,spender_unit_price_jpy,7926.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,バス,費目別支出 > 交通費 > バス,spender_unit_price_jpy,5173.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,バス,費目別支出 > 交通費 > バス,spender_unit_price_jpy,6235.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,spender_unit_price_jpy,8645.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,spender_unit_price_jpy,27055.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,spender_unit_price_jpy,13955.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,spender_unit_price_jpy,32753.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,タクシー,費目別支出 > 交通費 > タクシー,spender_unit_price_jpy,19587.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,spender_unit_price_jpy,24157.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,spender_unit_price_jpy,99205.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,spender_unit_price_jpy,40088.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,spender_unit_price_jpy,41511.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,レンタカー,費目別支出 > 交通費 > レンタカー,spender_unit_price_jpy,59840.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,spender_unit_price_jpy,11789.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,spender_unit_price_jpy,1447.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,spender_unit_price_jpy,10113.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,spender_unit_price_jpy,8907.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,船舶（日本国内移動のみ）,費目別支出 > 交通費 > 船舶（日本国内移動のみ）,spender_unit_price_jpy,5682.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,spender_unit_price_jpy,27408.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,spender_unit_price_jpy,22939.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,spender_unit_price_jpy,33407.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,spender_unit_price_jpy,24058.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,交通費,その他交通費,費目別支出 > 交通費 > その他交通費,spender_unit_price_jpy,62721.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,spender_unit_price_jpy,28304.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,spender_unit_price_jpy,144725.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,spender_unit_price_jpy,18933.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,spender_unit_price_jpy,55195.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,,費目別支出 > 娯楽等サービス費,spender_unit_price_jpy,20587.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,spender_unit_price_jpy,15040.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,spender_unit_price_jpy,23215.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,spender_unit_price_jpy,15564.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,spender_unit_price_jpy,9661.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,現地ツアー・観光ガイド,費目別支出 > 娯楽等サービス費 > 現地ツアー・観光ガイド,spender_unit_price_jpy,29976.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,spender_unit_price_jpy,28342.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,spender_unit_price_jpy,10000.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,spender_unit_price_jpy,107804.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,spender_unit_price_jpy,13258.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,ゴルフ場・スポーツ施設利用料,費目別支出 > 娯楽等サービス費 > ゴルフ場・スポーツ施設利用料,spender_unit_price_jpy,37156.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,spender_unit_price_jpy,14743.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,spender_unit_price_jpy,13875.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,spender_unit_price_jpy,11315.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,spender_unit_price_jpy,10874.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,テーマパーク,費目別支出 > 娯楽等サービス費 > テーマパーク,spender_unit_price_jpy,14110.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,spender_unit_price_jpy,24323.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,spender_unit_price_jpy,45091.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,spender_unit_price_jpy,11625.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,spender_unit_price_jpy,15346.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,舞台・音楽鑑賞,費目別支出 > 娯楽等サービス費 > 舞台・音楽鑑賞,spender_unit_price_jpy,17328.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,spender_unit_price_jpy,10213.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,spender_unit_price_jpy,7672.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,spender_unit_price_jpy,6971.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,spender_unit_price_jpy,5767.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,スポーツ観戦,費目別支出 > 娯楽等サービス費 > スポーツ観戦,spender_unit_price_jpy,16252.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,spender_unit_price_jpy,2821.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,spender_unit_price_jpy,7284.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,spender_unit_price_jpy,4552.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,spender_unit_price_jpy,6021.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,美術館・博物館・動植物園・水族館,費目別支出 > 娯楽等サービス費 > 美術館・博物館・動植物園・水族館,spender_unit_price_jpy,8952.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,spender_unit_price_jpy,34795.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,spender_unit_price_jpy,9781.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,spender_unit_price_jpy,10130.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,spender_unit_price_jpy,13436.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,スキー場リフト,費目別支出 > 娯楽等サービス費 > スキー場リフト,spender_unit_price_jpy,52775.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,spender_unit_price_jpy,5741.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,spender_unit_price_jpy,19536.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,spender_unit_price_jpy,6096.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,spender_unit_price_jpy,13037.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,費目別支出 > 娯楽等サービス費 > 温泉・温浴施設・ｴｽﾃ・ﾘﾗｸｾﾞｰｼｮﾝ,spender_unit_price_jpy,10649.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,spender_unit_price_jpy,15499.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,spender_unit_price_jpy,53985.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,spender_unit_price_jpy,26047.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,spender_unit_price_jpy,22480.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,マッサージ・医療費,費目別支出 > 娯楽等サービス費 > マッサージ・医療費,spender_unit_price_jpy,18159.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,spender_unit_price_jpy,4912.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,spender_unit_price_jpy,800000.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,spender_unit_price_jpy,3330.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,spender_unit_price_jpy,3434.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,展示会・コンベンション参加費,費目別支出 > 娯楽等サービス費 > 展示会・コンベンション参加費,spender_unit_price_jpy,7355.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,spender_unit_price_jpy,9481.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,spender_unit_price_jpy,7121.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,spender_unit_price_jpy,5696.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,レンタル料（レンタカーを除く）,費目別支出 > 娯楽等サービス費 > レンタル料（レンタカーを除く）,spender_unit_price_jpy,11956.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,spender_unit_price_jpy,197941.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,spender_unit_price_jpy,598752.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,spender_unit_price_jpy,122133.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,spender_unit_price_jpy,297775.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,娯楽等サービス費,その他娯楽等サービス費,費目別支出 > 娯楽等サービス費 > その他娯楽等サービス費,spender_unit_price_jpy,79636.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,,費目別支出 > 買物代,spender_unit_price_jpy,33785.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,,費目別支出 > 買物代,spender_unit_price_jpy,181269.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,,費目別支出 > 買物代,spender_unit_price_jpy,61679.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,,費目別支出 > 買物代,spender_unit_price_jpy,50993.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,,費目別支出 > 買物代,spender_unit_price_jpy,50637.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,spender_unit_price_jpy,8444.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,spender_unit_price_jpy,17507.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,spender_unit_price_jpy,13388.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,spender_unit_price_jpy,18860.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,菓子類,費目別支出 > 買物代 > 菓子類,spender_unit_price_jpy,10126.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,spender_unit_price_jpy,10850.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,spender_unit_price_jpy,33360.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,spender_unit_price_jpy,12962.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,spender_unit_price_jpy,9848.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,酒類,費目別支出 > 買物代 > 酒類,spender_unit_price_jpy,15019.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,spender_unit_price_jpy,19110.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,spender_unit_price_jpy,32411.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,spender_unit_price_jpy,25498.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,spender_unit_price_jpy,12475.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,生鮮農産物,費目別支出 > 買物代 > 生鮮農産物,spender_unit_price_jpy,18429.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,spender_unit_price_jpy,8075.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,spender_unit_price_jpy,22463.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,spender_unit_price_jpy,14211.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,spender_unit_price_jpy,15904.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,その他食料品・飲料・たばこ,費目別支出 > 買物代 > その他食料品・飲料・たばこ,spender_unit_price_jpy,19051.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,spender_unit_price_jpy,11929.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,spender_unit_price_jpy,66648.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,spender_unit_price_jpy,19141.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,spender_unit_price_jpy,14497.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,化粧品・香水,費目別支出 > 買物代 > 化粧品・香水,spender_unit_price_jpy,16068.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,spender_unit_price_jpy,9144.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,spender_unit_price_jpy,23110.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,spender_unit_price_jpy,14062.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,spender_unit_price_jpy,9660.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,医薬品,費目別支出 > 買物代 > 医薬品,spender_unit_price_jpy,19954.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,spender_unit_price_jpy,10510.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,spender_unit_price_jpy,23296.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,spender_unit_price_jpy,14140.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,spender_unit_price_jpy,11574.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,健康グッズ・トイレタリー,費目別支出 > 買物代 > 健康グッズ・トイレタリー,spender_unit_price_jpy,10973.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,spender_unit_price_jpy,26429.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,spender_unit_price_jpy,55861.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,spender_unit_price_jpy,24117.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,spender_unit_price_jpy,22837.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,衣類,費目別支出 > 買物代 > 衣類,spender_unit_price_jpy,25765.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,spender_unit_price_jpy,48384.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,spender_unit_price_jpy,144662.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,spender_unit_price_jpy,44951.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,spender_unit_price_jpy,41873.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,靴・かばん・革製品,費目別支出 > 買物代 > 靴・かばん・革製品,spender_unit_price_jpy,29518.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,spender_unit_price_jpy,27175.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,spender_unit_price_jpy,106047.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,spender_unit_price_jpy,42279.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,spender_unit_price_jpy,45603.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,電気製品（デジタルカメラ／PC／家電等）,費目別支出 > 買物代 > 電気製品（デジタルカメラ／PC／家電等）,spender_unit_price_jpy,46499.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,spender_unit_price_jpy,26693.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,spender_unit_price_jpy,232764.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,spender_unit_price_jpy,64877.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,spender_unit_price_jpy,68396.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,時計・フィルムカメラ,費目別支出 > 買物代 > 時計・フィルムカメラ,spender_unit_price_jpy,60348.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,spender_unit_price_jpy,98086.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,spender_unit_price_jpy,172172.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,spender_unit_price_jpy,169219.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,spender_unit_price_jpy,50491.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,宝石・貴金属,費目別支出 > 買物代 > 宝石・貴金属,spender_unit_price_jpy,156918.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,spender_unit_price_jpy,7889.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,spender_unit_price_jpy,20247.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,spender_unit_price_jpy,14792.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,spender_unit_price_jpy,13093.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,民芸品・伝統工芸品,費目別支出 > 買物代 > 民芸品・伝統工芸品,spender_unit_price_jpy,18581.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,spender_unit_price_jpy,6112.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,spender_unit_price_jpy,16768.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,spender_unit_price_jpy,11054.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,spender_unit_price_jpy,10765.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,本･雑誌･ガイドブックなど,費目別支出 > 買物代 > 本･雑誌･ガイドブックなど,spender_unit_price_jpy,8721.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,spender_unit_price_jpy,15444.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,spender_unit_price_jpy,37414.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,spender_unit_price_jpy,21312.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,spender_unit_price_jpy,20228.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,音楽・映像・ゲームなどソフトウェア,費目別支出 > 買物代 > 音楽・映像・ゲームなどソフトウェア,spender_unit_price_jpy,22594.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,spender_unit_price_jpy,17970.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+china,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,spender_unit_price_jpy,147434.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,spender_unit_price_jpy,33348.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,spender_unit_price_jpy,26427.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,買物代,その他買物代,費目別支出 > 買物代 > その他買物代,spender_unit_price_jpy,24144.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+korea,nationality,その他,,費目別支出 > その他,spender_unit_price_jpy,94698.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+southeast_asia,nationality,その他,,費目別支出 > その他,spender_unit_price_jpy,79693.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+europe,nationality,その他,,費目別支出 > その他,spender_unit_price_jpy,7325.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+north_america,nationality,その他,,費目別支出 > その他,spender_unit_price_jpy,17359.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Nationality.csv
+japan,japan_special,全体,全体,全体 > 全体 > 全体,travel_unit_price_jpy,59042.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行前全体,旅行前後 > 旅行前 > 旅行前全体,travel_unit_price_jpy,6927.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行前全体,旅行前後 > 旅行前 > 旅行前全体,purchase_rate_pct,74.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行前全体,旅行前後 > 旅行前 > 旅行前全体,spender_unit_price_jpy,9268.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,菓子類,旅行前後 > 旅行前 > 菓子類,travel_unit_price_jpy,1021.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,菓子類,旅行前後 > 旅行前 > 菓子類,purchase_rate_pct,45.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,菓子類,旅行前後 > 旅行前 > 菓子類,spender_unit_price_jpy,2237.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の食料品・飲料・酒・たばこ,旅行前後 > 旅行前 > その他の食料品・飲料・酒・たばこ,travel_unit_price_jpy,1470.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の食料品・飲料・酒・たばこ,旅行前後 > 旅行前 > その他の食料品・飲料・酒・たばこ,purchase_rate_pct,39.3,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の食料品・飲料・酒・たばこ,旅行前後 > 旅行前 > その他の食料品・飲料・酒・たばこ,spender_unit_price_jpy,3740.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,衣類・帽子・ハンカチなど繊維製品,旅行前後 > 旅行前 > 衣類・帽子・ハンカチなど繊維製品,travel_unit_price_jpy,1343.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,衣類・帽子・ハンカチなど繊維製品,旅行前後 > 旅行前 > 衣類・帽子・ハンカチなど繊維製品,purchase_rate_pct,13.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,衣類・帽子・ハンカチなど繊維製品,旅行前後 > 旅行前 > 衣類・帽子・ハンカチなど繊維製品,spender_unit_price_jpy,9690.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,靴・かばんなど皮革製品,旅行前後 > 旅行前 > 靴・かばんなど皮革製品,travel_unit_price_jpy,543.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,靴・かばんなど皮革製品,旅行前後 > 旅行前 > 靴・かばんなど皮革製品,purchase_rate_pct,4.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,靴・かばんなど皮革製品,旅行前後 > 旅行前 > 靴・かばんなど皮革製品,spender_unit_price_jpy,11812.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,化粧品・医薬品・写真フィルムなど,旅行前後 > 旅行前 > 化粧品・医薬品・写真フィルムなど,travel_unit_price_jpy,169.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,化粧品・医薬品・写真フィルムなど,旅行前後 > 旅行前 > 化粧品・医薬品・写真フィルムなど,purchase_rate_pct,7.0,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,化粧品・医薬品・写真フィルムなど,旅行前後 > 旅行前 > 化粧品・医薬品・写真フィルムなど,spender_unit_price_jpy,2400.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,本・雑誌・ガイドブック,旅行前後 > 旅行前 > 本・雑誌・ガイドブック,travel_unit_price_jpy,89.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,本・雑誌・ガイドブック,旅行前後 > 旅行前 > 本・雑誌・ガイドブック,purchase_rate_pct,6.2,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,本・雑誌・ガイドブック,旅行前後 > 旅行前 > 本・雑誌・ガイドブック,spender_unit_price_jpy,1431.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,電気製品,旅行前後 > 旅行前 > 電気製品,travel_unit_price_jpy,129.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,電気製品,旅行前後 > 旅行前 > 電気製品,purchase_rate_pct,1.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,電気製品,旅行前後 > 旅行前 > 電気製品,spender_unit_price_jpy,7115.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他買物代,旅行前後 > 旅行前 > その他買物代,travel_unit_price_jpy,814.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他買物代,旅行前後 > 旅行前 > その他買物代,purchase_rate_pct,11.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他買物代,旅行前後 > 旅行前 > その他買物代,spender_unit_price_jpy,6991.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行関連用品のレンタル料,旅行前後 > 旅行前 > 旅行関連用品のレンタル料,travel_unit_price_jpy,137.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行関連用品のレンタル料,旅行前後 > 旅行前 > 旅行関連用品のレンタル料,purchase_rate_pct,1.2,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行関連用品のレンタル料,旅行前後 > 旅行前 > 旅行関連用品のレンタル料,spender_unit_price_jpy,11494.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行保険・クレジットカード入会金,旅行前後 > 旅行前 > 旅行保険・クレジットカード入会金,travel_unit_price_jpy,130.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行保険・クレジットカード入会金,旅行前後 > 旅行前 > 旅行保険・クレジットカード入会金,purchase_rate_pct,1.0,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行保険・クレジットカード入会金,旅行前後 > 旅行前 > 旅行保険・クレジットカード入会金,spender_unit_price_jpy,12488.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,美容室・理容室,旅行前後 > 旅行前 > 美容室・理容室,travel_unit_price_jpy,592.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,美容室・理容室,旅行前後 > 旅行前 > 美容室・理容室,purchase_rate_pct,7.0,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,美容室・理容室,旅行前後 > 旅行前 > 美容室・理容室,spender_unit_price_jpy,8411.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行の打ち合わせ等での飲食費,旅行前後 > 旅行前 > 旅行の打ち合わせ等での飲食費,travel_unit_price_jpy,264.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行の打ち合わせ等での飲食費,旅行前後 > 旅行前 > 旅行の打ち合わせ等での飲食費,purchase_rate_pct,3.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,旅行の打ち合わせ等での飲食費,旅行前後 > 旅行前 > 旅行の打ち合わせ等での飲食費,spender_unit_price_jpy,7181.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の旅行前支出,旅行前後 > 旅行前 > その他の旅行前支出,travel_unit_price_jpy,224.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の旅行前支出,旅行前後 > 旅行前 > その他の旅行前支出,purchase_rate_pct,3.3,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行前,その他の旅行前支出,旅行前後 > 旅行前 > その他の旅行前支出,spender_unit_price_jpy,6742.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,旅行後全体,旅行前後 > 旅行後 > 旅行後全体,travel_unit_price_jpy,562.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,旅行後全体,旅行前後 > 旅行後 > 旅行後全体,purchase_rate_pct,8.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,旅行後全体,旅行前後 > 旅行後 > 旅行後全体,spender_unit_price_jpy,6692.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,写真のプリント・現像,旅行前後 > 旅行後 > 写真のプリント・現像,travel_unit_price_jpy,46.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,写真のプリント・現像,旅行前後 > 旅行後 > 写真のプリント・現像,purchase_rate_pct,2.5,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,写真のプリント・現像,旅行前後 > 旅行後 > 写真のプリント・現像,spender_unit_price_jpy,1852.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,衣類のクリーニング,旅行前後 > 旅行後 > 衣類のクリーニング,travel_unit_price_jpy,65.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,衣類のクリーニング,旅行前後 > 旅行後 > 衣類のクリーニング,purchase_rate_pct,2.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,衣類のクリーニング,旅行前後 > 旅行後 > 衣類のクリーニング,spender_unit_price_jpy,2308.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,その他の旅行後支出,旅行前後 > 旅行後 > その他の旅行後支出,travel_unit_price_jpy,451.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,その他の旅行後支出,旅行前後 > 旅行後 > その他の旅行後支出,purchase_rate_pct,3.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行後,その他の旅行後支出,旅行前後 > 旅行後 > その他の旅行後支出,spender_unit_price_jpy,12319.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行中全体,旅行中全体,旅行中 > 旅行中全体 > 旅行中全体,travel_unit_price_jpy,51553.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行中全体,旅行中全体,旅行中 > 旅行中全体 > 旅行中全体,purchase_rate_pct,97.0,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,旅行中全体,旅行中全体,旅行中 > 旅行中全体 > 旅行中全体,spender_unit_price_jpy,53141.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,参加費,参加費,旅行中 > 参加費 > 参加費,travel_unit_price_jpy,3895.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,参加費,参加費,旅行中 > 参加費 > 参加費,purchase_rate_pct,7.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,参加費,参加費,旅行中 > 参加費 > 参加費,spender_unit_price_jpy,50204.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,交通費全体,旅行中 > 交通費 > 交通費全体,travel_unit_price_jpy,15037.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,交通費全体,旅行中 > 交通費 > 交通費全体,purchase_rate_pct,85.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,交通費全体,旅行中 > 交通費 > 交通費全体,spender_unit_price_jpy,17540.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（長距離移動）,旅行中 > 交通費 > 航空（長距離移動）,travel_unit_price_jpy,2411.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（長距離移動）,旅行中 > 交通費 > 航空（長距離移動）,purchase_rate_pct,7.5,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（長距離移動）,旅行中 > 交通費 > 航空（長距離移動）,spender_unit_price_jpy,32356.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,新幹線・鉄道（長距離移動）,旅行中 > 交通費 > 新幹線・鉄道（長距離移動）,travel_unit_price_jpy,3369.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,新幹線・鉄道（長距離移動）,旅行中 > 交通費 > 新幹線・鉄道（長距離移動）,purchase_rate_pct,17.3,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,新幹線・鉄道（長距離移動）,旅行中 > 交通費 > 新幹線・鉄道（長距離移動）,spender_unit_price_jpy,19424.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,長距離バス,旅行中 > 交通費 > 長距離バス,travel_unit_price_jpy,172.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,長距離バス,旅行中 > 交通費 > 長距離バス,purchase_rate_pct,2.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,長距離バス,旅行中 > 交通費 > 長距離バス,spender_unit_price_jpy,6728.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（短距離移動）,旅行中 > 交通費 > 航空（短距離移動）,travel_unit_price_jpy,463.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（短距離移動）,旅行中 > 交通費 > 航空（短距離移動）,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,航空（短距離移動）,旅行中 > 交通費 > 航空（短距離移動）,spender_unit_price_jpy,26868.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,鉄道･モノレール（短距離移動）,旅行中 > 交通費 > 鉄道･モノレール（短距離移動）,travel_unit_price_jpy,868.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,鉄道･モノレール（短距離移動）,旅行中 > 交通費 > 鉄道･モノレール（短距離移動）,purchase_rate_pct,21.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,鉄道･モノレール（短距離移動）,旅行中 > 交通費 > 鉄道･モノレール（短距離移動）,spender_unit_price_jpy,3956.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,近郊バス,旅行中 > 交通費 > 近郊バス,travel_unit_price_jpy,110.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,近郊バス,旅行中 > 交通費 > 近郊バス,purchase_rate_pct,7.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,近郊バス,旅行中 > 交通費 > 近郊バス,spender_unit_price_jpy,1457.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,タクシー・ハイヤー,旅行中 > 交通費 > タクシー・ハイヤー,travel_unit_price_jpy,394.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,タクシー・ハイヤー,旅行中 > 交通費 > タクシー・ハイヤー,purchase_rate_pct,8.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,タクシー・ハイヤー,旅行中 > 交通費 > タクシー・ハイヤー,spender_unit_price_jpy,4536.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,船舶,旅行中 > 交通費 > 船舶,travel_unit_price_jpy,361.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,船舶,旅行中 > 交通費 > 船舶,purchase_rate_pct,2.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,船舶,旅行中 > 交通費 > 船舶,spender_unit_price_jpy,15234.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,レンタカー・カーシェアリング,旅行中 > 交通費 > レンタカー・カーシェアリング,travel_unit_price_jpy,1127.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,レンタカー・カーシェアリング,旅行中 > 交通費 > レンタカー・カーシェアリング,purchase_rate_pct,6.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,レンタカー・カーシェアリング,旅行中 > 交通費 > レンタカー・カーシェアリング,spender_unit_price_jpy,16556.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,ガソリン,旅行中 > 交通費 > ガソリン,travel_unit_price_jpy,2985.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,ガソリン,旅行中 > 交通費 > ガソリン,purchase_rate_pct,47.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,ガソリン,旅行中 > 交通費 > ガソリン,spender_unit_price_jpy,6269.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,その他交通費,旅行中 > 交通費 > その他交通費,travel_unit_price_jpy,2777.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,その他交通費,旅行中 > 交通費 > その他交通費,purchase_rate_pct,36.1,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,交通費,その他交通費,旅行中 > 交通費 > その他交通費,spender_unit_price_jpy,7686.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,宿泊費,宿泊費,旅行中 > 宿泊費 > 宿泊費,travel_unit_price_jpy,13722.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,宿泊費,宿泊費,旅行中 > 宿泊費 > 宿泊費,purchase_rate_pct,57.0,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,宿泊費,宿泊費,旅行中 > 宿泊費 > 宿泊費,spender_unit_price_jpy,24090.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,飲食費,飲食費,旅行中 > 飲食費 > 飲食費,travel_unit_price_jpy,7923.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,飲食費,飲食費,旅行中 > 飲食費 > 飲食費,purchase_rate_pct,70.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,飲食費,飲食費,旅行中 > 飲食費 > 飲食費,spender_unit_price_jpy,11190.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,買物代全体,旅行中 > 買物代 > 買物代全体,travel_unit_price_jpy,7440.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,買物代全体,旅行中 > 買物代 > 買物代全体,purchase_rate_pct,75.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,買物代全体,旅行中 > 買物代 > 買物代全体,spender_unit_price_jpy,9870.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,菓子類,旅行中 > 買物代 > 菓子類,travel_unit_price_jpy,1474.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,菓子類,旅行中 > 買物代 > 菓子類,purchase_rate_pct,44.1,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,菓子類,旅行中 > 買物代 > 菓子類,spender_unit_price_jpy,3341.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,農産物,旅行中 > 買物代 > 農産物,travel_unit_price_jpy,376.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,農産物,旅行中 > 買物代 > 農産物,purchase_rate_pct,9.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,農産物,旅行中 > 買物代 > 農産物,spender_unit_price_jpy,3923.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,水産物,旅行中 > 買物代 > 水産物,travel_unit_price_jpy,391.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,水産物,旅行中 > 買物代 > 水産物,purchase_rate_pct,7.2,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,水産物,旅行中 > 買物代 > 水産物,spender_unit_price_jpy,5469.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他食料品・飲料・酒・たばこ,旅行中 > 買物代 > その他食料品・飲料・酒・たばこ,travel_unit_price_jpy,1019.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他食料品・飲料・酒・たばこ,旅行中 > 買物代 > その他食料品・飲料・酒・たばこ,purchase_rate_pct,26.1,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他食料品・飲料・酒・たばこ,旅行中 > 買物代 > その他食料品・飲料・酒・たばこ,spender_unit_price_jpy,3903.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,衣類・帽子・ハンカチなど繊維製品,旅行中 > 買物代 > 衣類・帽子・ハンカチなど繊維製品,travel_unit_price_jpy,636.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,衣類・帽子・ハンカチなど繊維製品,旅行中 > 買物代 > 衣類・帽子・ハンカチなど繊維製品,purchase_rate_pct,6.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,衣類・帽子・ハンカチなど繊維製品,旅行中 > 買物代 > 衣類・帽子・ハンカチなど繊維製品,spender_unit_price_jpy,9945.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,靴・かばんなど皮革製品,旅行中 > 買物代 > 靴・かばんなど皮革製品,travel_unit_price_jpy,332.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,靴・かばんなど皮革製品,旅行中 > 買物代 > 靴・かばんなど皮革製品,purchase_rate_pct,1.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,靴・かばんなど皮革製品,旅行中 > 買物代 > 靴・かばんなど皮革製品,spender_unit_price_jpy,24462.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,化粧品・医薬品・写真フィルムなど,旅行中 > 買物代 > 化粧品・医薬品・写真フィルムなど,travel_unit_price_jpy,117.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,化粧品・医薬品・写真フィルムなど,旅行中 > 買物代 > 化粧品・医薬品・写真フィルムなど,purchase_rate_pct,2.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,化粧品・医薬品・写真フィルムなど,旅行中 > 買物代 > 化粧品・医薬品・写真フィルムなど,spender_unit_price_jpy,4207.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,陶磁器・ガラス製品,旅行中 > 買物代 > 陶磁器・ガラス製品,travel_unit_price_jpy,121.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,陶磁器・ガラス製品,旅行中 > 買物代 > 陶磁器・ガラス製品,purchase_rate_pct,1.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,陶磁器・ガラス製品,旅行中 > 買物代 > 陶磁器・ガラス製品,spender_unit_price_jpy,6524.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他土産代・買物代,旅行中 > 買物代 > その他土産代・買物代,travel_unit_price_jpy,2973.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他土産代・買物代,旅行中 > 買物代 > その他土産代・買物代,purchase_rate_pct,39.8,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,買物代,その他土産代・買物代,旅行中 > 買物代 > その他土産代・買物代,spender_unit_price_jpy,7475.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,娯楽等サービス費・その他全体,旅行中 > 娯楽等サービス費・その他 > 娯楽等サービス費・その他全体,travel_unit_price_jpy,3537.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,娯楽等サービス費・その他全体,旅行中 > 娯楽等サービス費・その他 > 娯楽等サービス費・その他全体,purchase_rate_pct,42.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,娯楽等サービス費・その他全体,旅行中 > 娯楽等サービス費・その他 > 娯楽等サービス費・その他全体,spender_unit_price_jpy,8241.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,温泉・温浴施設・エステ・リラクゼーション,旅行中 > 娯楽等サービス費・その他 > 温泉・温浴施設・エステ・リラクゼーション,travel_unit_price_jpy,438.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,温泉・温浴施設・エステ・リラクゼーション,旅行中 > 娯楽等サービス費・その他 > 温泉・温浴施設・エステ・リラクゼーション,purchase_rate_pct,9.2,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,温泉・温浴施設・エステ・リラクゼーション,旅行中 > 娯楽等サービス費・その他 > 温泉・温浴施設・エステ・リラクゼーション,spender_unit_price_jpy,4766.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,テーマパーク・遊園地,旅行中 > 娯楽等サービス費・その他 > テーマパーク・遊園地,travel_unit_price_jpy,1188.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,テーマパーク・遊園地,旅行中 > 娯楽等サービス費・その他 > テーマパーク・遊園地,purchase_rate_pct,12.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,テーマパーク・遊園地,旅行中 > 娯楽等サービス費・その他 > テーマパーク・遊園地,spender_unit_price_jpy,9240.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,美術館・博物館・資料館・動植物園・水族館など,旅行中 > 娯楽等サービス費・その他 > 美術館・博物館・資料館・動植物園・水族館など,travel_unit_price_jpy,384.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,美術館・博物館・資料館・動植物園・水族館など,旅行中 > 娯楽等サービス費・その他 > 美術館・博物館・資料館・動植物園・水族館など,purchase_rate_pct,14.2,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,美術館・博物館・資料館・動植物園・水族館など,旅行中 > 娯楽等サービス費・その他 > 美術館・博物館・資料館・動植物園・水族館など,spender_unit_price_jpy,2698.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スキー場リフト,旅行中 > 娯楽等サービス費・その他 > スキー場リフト,travel_unit_price_jpy,79.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スキー場リフト,旅行中 > 娯楽等サービス費・その他 > スキー場リフト,purchase_rate_pct,1.1,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スキー場リフト,旅行中 > 娯楽等サービス費・その他 > スキー場リフト,spender_unit_price_jpy,6974.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ施設利用料,旅行中 > 娯楽等サービス費・その他 > スポーツ施設利用料,travel_unit_price_jpy,285.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ施設利用料,旅行中 > 娯楽等サービス費・その他 > スポーツ施設利用料,purchase_rate_pct,1.7,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ施設利用料,旅行中 > 娯楽等サービス費・その他 > スポーツ施設利用料,spender_unit_price_jpy,16952.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ観戦,旅行中 > 娯楽等サービス費・その他 > スポーツ観戦,travel_unit_price_jpy,88.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ観戦,旅行中 > 娯楽等サービス費・その他 > スポーツ観戦,purchase_rate_pct,1.1,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,スポーツ観戦,旅行中 > 娯楽等サービス費・その他 > スポーツ観戦,spender_unit_price_jpy,7618.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,舞台・音楽鑑賞,旅行中 > 娯楽等サービス費・その他 > 舞台・音楽鑑賞,travel_unit_price_jpy,370.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,舞台・音楽鑑賞,旅行中 > 娯楽等サービス費・その他 > 舞台・音楽鑑賞,purchase_rate_pct,2.9,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,舞台・音楽鑑賞,旅行中 > 娯楽等サービス費・その他 > 舞台・音楽鑑賞,spender_unit_price_jpy,12974.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,展示会・コンベンション参加費,旅行中 > 娯楽等サービス費・その他 > 展示会・コンベンション参加費,travel_unit_price_jpy,52.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,展示会・コンベンション参加費,旅行中 > 娯楽等サービス費・その他 > 展示会・コンベンション参加費,purchase_rate_pct,0.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,展示会・コンベンション参加費,旅行中 > 娯楽等サービス費・その他 > 展示会・コンベンション参加費,spender_unit_price_jpy,9016.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,レンタル料,旅行中 > 娯楽等サービス費・その他 > レンタル料,travel_unit_price_jpy,88.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,レンタル料,旅行中 > 娯楽等サービス費・その他 > レンタル料,purchase_rate_pct,1.4,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,レンタル料,旅行中 > 娯楽等サービス費・その他 > レンタル料,spender_unit_price_jpy,6370.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他娯楽等サービス費,旅行中 > 娯楽等サービス費・その他 > その他娯楽等サービス費,travel_unit_price_jpy,324.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他娯楽等サービス費,旅行中 > 娯楽等サービス費・その他 > その他娯楽等サービス費,purchase_rate_pct,6.3,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他娯楽等サービス費,旅行中 > 娯楽等サービス費・その他 > その他娯楽等サービス費,spender_unit_price_jpy,5173.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他,旅行中 > 娯楽等サービス費・その他 > その他,travel_unit_price_jpy,241.0,JPY_PER_PERSON_TRIP,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他,旅行中 > 娯楽等サービス費・その他 > その他,purchase_rate_pct,4.6,%,2022,2022_Tourism_Spending_Trends_by_Japan.csv
+japan,japan_special,娯楽等サービス費・その他,その他,旅行中 > 娯楽等サービス費・その他 > その他,spender_unit_price_jpy,5270.0,JPY_PER_PERSON,2022,2022_Tourism_Spending_Trends_by_Japan.csv

@@ -1,0 +1,611 @@
+﻿country_profile_key,profile_scope,stay_bin,traveler_count,unit_spend_jpy,source_year,source_file
+korea,nationality,全体 【A1】,3943.0,127273.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,全体 【A1】,853.0,576773.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,全体 【A1】,6135.0,182134.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,全体 【A1】,2767.0,287491.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,全体 【A1】,5309.0,239086.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 3日間以内,742.0,83040.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 3日間以内,15.0,101628.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 3日間以内,1163.0,86169.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 3日間以内,71.0,93871.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 3日間以内,378.0,50501.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 4～6日間,1705.0,101047.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 4～6日間,52.0,210001.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 4～6日間,1785.0,119734.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 4～6日間,500.0,154691.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 4～6日間,858.0,178238.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 7～13日間,694.0,159653.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 7～13日間,140.0,352282.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 7～13日間,1595.0,197414.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 7～13日間,952.0,247165.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 7～13日間,1535.0,250641.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 14～20日間,178.0,211737.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 14～20日間,179.0,335229.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 14～20日間,432.0,251811.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 14～20日間,516.0,263259.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 14～20日間,839.0,297598.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 21～27日間,80.0,197587.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 21～27日間,49.0,393132.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 21～27日間,127.0,209924.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 21～27日間,218.0,282305.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 21～27日間,370.0,323448.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 28～90日間,200.0,323105.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 28～90日間,217.0,648686.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 28～90日間,565.0,243242.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 28～90日間,340.0,341407.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 28～90日間,723.0,406237.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,滞在日数 > 91日間以上1年未満,344.0,825747.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,滞在日数 > 91日間以上1年未満,201.0,1109255.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,滞在日数 > 91日間以上1年未満,468.0,442162.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,滞在日数 > 91日間以上1年未満,170.0,944492.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,滞在日数 > 91日間以上1年未満,606.0,427306.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性,2610.0,131350.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性,621.0,532325.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性,4274.0,185277.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性,2163.0,281463.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性,4103.0,250163.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 15～19歳,76.0,134760.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 15～19歳,19.0,879819.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 15～19歳,48.0,232899.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 15～19歳,33.0,209351.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 15～19歳,72.0,173349.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 20～29歳,741.0,144862.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 20～29歳,163.0,781290.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 20～29歳,1047.0,187957.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 20～29歳,337.0,338175.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 20～29歳,794.0,332518.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 30～39歳,782.0,114529.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 30～39歳,252.0,434174.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 30～39歳,1520.0,175971.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 30～39歳,586.0,250760.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 30～39歳,948.0,237132.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 40～49歳,547.0,137357.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 40～49歳,116.0,463754.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 40～49歳,1014.0,177962.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 40～49歳,556.0,246305.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 40～49歳,970.0,229113.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 50～59歳,319.0,144378.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 50～59歳,45.0,409632.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 50～59歳,488.0,206049.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 50～59歳,473.0,266070.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 50～59歳,825.0,253902.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 60～69歳,120.0,131488.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 60～69歳,24.0,295165.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 60～69歳,137.0,251329.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 60～69歳,148.0,246556.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 60～69歳,413.0,207727.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 男性 > 70歳以上,25.0,52866.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 男性 > 70歳以上,2.0,116163.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 男性 > 70歳以上,20.0,97945.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 男性 > 70歳以上,30.0,232576.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 男性 > 70歳以上,81.0,217691.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性,1333.0,120943.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性,232.0,694074.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性,1861.0,183361.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性,604.0,296775.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性,1206.0,212827.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 15～19歳,87.0,165825.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 15～19歳,11.0,1234863.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 15～19歳,60.0,193065.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 15～19歳,26.0,91892.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 15～19歳,54.0,479186.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 20～29歳,586.0,124755.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 20～29歳,69.0,885175.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 20～29歳,469.0,176239.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 20～29歳,185.0,479831.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 20～29歳,327.0,218610.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 30～39歳,348.0,127432.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 30～39歳,56.0,750555.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 30～39歳,596.0,176904.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 30～39歳,138.0,302278.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 30～39歳,262.0,241942.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 40～49歳,167.0,104709.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 40～49歳,27.0,714556.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 40～49歳,394.0,186266.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 40～49歳,111.0,205756.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 40～49歳,191.0,215264.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 50～59歳,97.0,104291.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 50～59歳,21.0,484939.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 50～59歳,226.0,195073.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 50～59歳,94.0,134843.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 50～59歳,192.0,208771.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 60～69歳,35.0,70973.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 60～69歳,46.0,350199.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 60～69歳,99.0,165561.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 60～69歳,38.0,131231.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 60～69歳,135.0,142041.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,性別・年代 > 女性 > 70歳以上,13.0,54256.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,性別・年代 > 女性 > 70歳以上,2.0,44004.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,性別・年代 > 女性 > 70歳以上,17.0,180423.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,性別・年代 > 女性 > 70歳以上,12.0,101668.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,性別・年代 > 女性 > 70歳以上,45.0,163174.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本への > 1回目,484.0,100684.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本への > 1回目,222.0,571871.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本への > 1回目,1430.0,155936.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本への > 1回目,1002.0,277507.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本への > 1回目,1801.0,224079.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 2回目,478.0,112355.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 2回目,122.0,617647.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 2回目,815.0,171724.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 2回目,346.0,321270.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 2回目,723.0,221021.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 3回目,389.0,112167.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 3回目,147.0,624223.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 3回目,516.0,187285.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 3回目,222.0,356561.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 3回目,477.0,241159.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 4回目,376.0,137965.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 4回目,55.0,786568.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 4回目,392.0,183782.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 4回目,135.0,208633.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 4回目,325.0,187138.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 5回目,372.0,126607.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 5回目,55.0,370940.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 5回目,413.0,206178.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 5回目,156.0,374818.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 5回目,294.0,255926.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 6～9回目,492.0,133589.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 6～9回目,83.0,477011.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 6～9回目,638.0,197964.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 6～9回目,237.0,279560.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 6～9回目,450.0,203831.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 10～19回,615.0,143021.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 10～19回,85.0,573533.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 10～19回,961.0,187223.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 10～19回,319.0,271990.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 10～19回,527.0,361624.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,来訪回数 > 20回以上,737.0,158125.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,来訪回数 > 20回以上,84.0,556363.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,来訪回数 > 20回以上,970.0,200445.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,来訪回数 > 20回以上,350.0,304650.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,来訪回数 > 20回以上,712.0,308375.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,前回の > 今回が初めて,484.0,100684.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,前回の > 今回が初めて,222.0,571871.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,前回の > 今回が初めて,1430.0,155936.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,前回の > 今回が初めて,1002.0,277507.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,前回の > 今回が初めて,1801.0,224079.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降,3459.0,132106.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降,631.0,578479.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降,4705.0,188853.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降,1765.0,293539.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降,3508.0,250206.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降 > 1年以内,506.0,198372.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降 > 1年以内,163.0,464395.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降 > 1年以内,1741.0,176904.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降 > 1年以内,256.0,288627.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降 > 1年以内,851.0,361071.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降 > 3年以内,1941.0,135217.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降 > 3年以内,387.0,569090.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降 > 3年以内,2265.0,200222.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降 > 3年以内,1111.0,300018.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降 > 3年以内,1800.0,247686.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降 > 5年以内,741.0,110464.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降 > 5年以内,66.0,684856.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降 > 5年以内,487.0,204113.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降 > 5年以内,260.0,285055.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降 > 5年以内,489.0,201917.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降 > 10年以内,157.0,97423.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降 > 10年以内,13.0,1564602.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降 > 10年以内,150.0,179081.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降 > 10年以内,92.0,241898.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降 > 10年以内,218.0,265871.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪時期 > 2回目以降 > 10年よりも前,114.0,116542.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪時期 > 2回目以降 > 10年よりも前,2.0,174111.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪時期 > 2回目以降 > 10年よりも前,62.0,199481.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪時期 > 2回目以降 > 10年よりも前,46.0,233069.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪時期 > 2回目以降 > 10年よりも前,150.0,200262.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,過去1年間の > 過去1年間は来訪していない,3437.0,120455.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,過去1年間の > 過去1年間は来訪していない,690.0,602188.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,過去1年間の > 過去1年間は来訪していない,4393.0,187924.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,過去1年間の > 過去1年間は来訪していない,2511.0,286971.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,過去1年間の > 過去1年間は来訪していない,4458.0,230442.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪回数 > 1回,290.0,215773.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪回数 > 1回,124.0,526322.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪回数 > 1回,915.0,186986.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪回数 > 1回,188.0,343360.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪回数 > 1回,616.0,449418.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪回数 > 2回,137.0,185141.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪回数 > 2回,21.0,323007.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪回数 > 2回,325.0,178725.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪回数 > 2回,35.0,214929.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪回数 > 2回,139.0,203209.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪回数 > 3～5回,60.0,181311.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪回数 > 3～5回,6.0,335992.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪回数 > 3～5回,278.0,153483.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪回数 > 3～5回,30.0,170591.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪回数 > 3～5回,70.0,210778.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪回数 > 6～9回,13.0,163112.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪回数 > 6～9回,4.0,6550.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪回数 > 6～9回,92.0,84886.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪回数 > 6～9回,2.0,32524.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪回数 > 6～9回,9.0,146906.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本来訪回数 > 10回以上,6.0,136782.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本来訪回数 > 10回以上,8.0,149723.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本来訪回数 > 10回以上,132.0,139305.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本来訪回数 > 10回以上,1.0,21167.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本来訪回数 > 10回以上,17.0,78593.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > 自分ひとり,1788.0,160741.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > 自分ひとり,456.0,738134.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > 自分ひとり,1766.0,209415.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > 自分ひとり,1667.0,310839.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > 自分ひとり,3538.0,256387.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > 夫婦・パートナー,340.0,100387.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > 夫婦・パートナー,33.0,554062.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > 夫婦・パートナー,378.0,226188.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > 夫婦・パートナー,282.0,292697.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > 夫婦・パートナー,466.0,210095.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > 家族・親族,501.0,96249.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > 家族・親族,36.0,625211.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > 家族・親族,812.0,163616.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > 家族・親族,278.0,261062.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > 家族・親族,368.0,232688.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > 職場の同僚,738.0,145214.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > 職場の同僚,302.0,326763.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > 職場の同僚,2695.0,162760.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > 職場の同僚,449.0,237157.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > 職場の同僚,766.0,281822.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > 友人,535.0,103092.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > 友人,26.0,738094.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > 友人,417.0,217451.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > 友人,74.0,255493.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > 友人,146.0,187661.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,同行者 > その他,41.0,63045.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,同行者 > その他,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,同行者 > その他,67.0,184849.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,同行者 > その他,17.0,128189.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,同行者 > その他,25.0,205988.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 観光・レジャー,1640.0,99241.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 観光・レジャー,18.0,434514.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 観光・レジャー,1462.0,177386.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 観光・レジャー,444.0,317938.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 観光・レジャー,675.0,247622.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 親族・知人訪問,463.0,98177.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 親族・知人訪問,150.0,275101.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 親族・知人訪問,620.0,135827.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 親族・知人訪問,554.0,194511.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 親族・知人訪問,1042.0,190601.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > ハネムーン,6.0,177156.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > ハネムーン,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > ハネムーン,3.0,35768.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > ハネムーン,7.0,97445.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > ハネムーン,9.0,256446.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 学校関連の旅行,11.0,98884.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 学校関連の旅行,2.0,554103.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 学校関連の旅行,18.0,174987.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 学校関連の旅行,5.0,83132.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 学校関連の旅行,25.0,178550.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > スポーツ・スポーツ観戦,19.0,131892.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > スポーツ・スポーツ観戦,1.0,80822.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > スポーツ・スポーツ観戦,26.0,196150.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > スポーツ・スポーツ観戦,13.0,74692.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > スポーツ・スポーツ観戦,24.0,148492.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > イベント,14.0,143446.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > イベント,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > イベント,14.0,151839.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > イベント,12.0,144855.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > イベント,20.0,462275.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 留学,366.0,752440.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 留学,127.0,1342893.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 留学,165.0,489061.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 留学,123.0,791702.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 留学,66.0,535084.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 治療・検診,5.0,181398.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 治療・検診,8.0,4199721.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 治療・検診,10.0,136351.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 治療・検診,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 治療・検診,2.0,207181.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > インセンティブツアー,1.0,125600.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > インセンティブツアー,1.0,489050.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > インセンティブツアー,61.0,78468.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > インセンティブツアー,12.0,142657.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > インセンティブツアー,1.0,239127.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 展示会・見本市,72.0,112755.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 展示会・見本市,6.0,538324.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 展示会・見本市,48.0,220334.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 展示会・見本市,32.0,161068.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 展示会・見本市,16.0,266927.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 国際会議,35.0,129623.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 国際会議,4.0,151237.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 国際会議,72.0,154864.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 国際会議,105.0,204369.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 国際会議,55.0,220509.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 企業ミーティング,395.0,129008.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 企業ミーティング,24.0,404140.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 企業ミーティング,331.0,208039.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 企業ミーティング,330.0,272848.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 企業ミーティング,407.0,276539.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > 研修,35.0,198894.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > 研修,17.0,312555.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > 研修,307.0,173126.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > 研修,46.0,273624.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > 研修,68.0,330200.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > その他ビジネス,828.0,195525.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > その他ビジネス,325.0,619690.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > その他ビジネス,1099.0,223222.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > その他ビジネス,1052.0,261523.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > その他ビジネス,2661.0,384552.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > トランジット,4.0,35484.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > トランジット,3.0,32681.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > トランジット,346.0,51783.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > トランジット,7.0,42203.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > トランジット,172.0,26106.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,主な来訪目的 > その他,49.0,248518.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,主な来訪目的 > その他,167.0,160379.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,主な来訪目的 > その他,1553.0,78703.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,主な来訪目的 > その他,25.0,192968.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,主な来訪目的 > その他,66.0,997453.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,日本滞在中に > ホテル（洋室中心）,3003.0,116254.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,日本滞在中に > ホテル（洋室中心）,519.0,545799.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,日本滞在中に > ホテル（洋室中心）,4910.0,180888.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,日本滞在中に > ホテル（洋室中心）,2250.0,278227.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,日本滞在中に > ホテル（洋室中心）,3730.0,247796.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,利用した > 旅館（和室中心）,253.0,120805.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,利用した > 旅館（和室中心）,87.0,565278.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,利用した > 旅館（和室中心）,539.0,182997.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,利用した > 旅館（和室中心）,318.0,343004.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,利用した > 旅館（和室中心）,391.0,363490.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,宿泊施設 > 自己所有の別荘・コンドミニアム,24.0,405259.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,宿泊施設 > 自己所有の別荘・コンドミニアム,17.0,1154265.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,宿泊施設 > 自己所有の別荘・コンドミニアム,36.0,272082.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,宿泊施設 > 自己所有の別荘・コンドミニアム,20.0,300416.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,宿泊施設 > 自己所有の別荘・コンドミニアム,34.0,203300.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > 学校の寮・会社所有の宿泊施設,212.0,528434.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > 学校の寮・会社所有の宿泊施設,148.0,686245.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > 学校の寮・会社所有の宿泊施設,427.0,257554.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > 学校の寮・会社所有の宿泊施設,125.0,639974.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > 学校の寮・会社所有の宿泊施設,644.0,450740.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > 親族・知人宅,484.0,111607.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > 親族・知人宅,165.0,359731.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > 親族・知人宅,656.0,157280.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > 親族・知人宅,577.0,237070.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > 親族・知人宅,920.0,191819.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > ユースホステル・ゲストハウス,57.0,88060.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > ユースホステル・ゲストハウス,3.0,894762.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > ユースホステル・ゲストハウス,37.0,200851.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > ユースホステル・ゲストハウス,65.0,265440.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > ユースホステル・ゲストハウス,53.0,280515.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > カプセルホテル,22.0,96605.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > カプセルホテル,1.0,289775.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > カプセルホテル,12.0,192325.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > カプセルホテル,20.0,519733.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > カプセルホテル,18.0,300338.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,"（複数回答） > 有料での住宅宿泊（Airbnb, 途家,自在客など）",132.0,170332.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,"（複数回答） > 有料での住宅宿泊（Airbnb, 途家,自在客など）",48.0,791215.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,"（複数回答） > 有料での住宅宿泊（Airbnb, 途家,自在客など）",129.0,257336.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,"（複数回答） > 有料での住宅宿泊（Airbnb, 途家,自在客など）",123.0,599714.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,"（複数回答） > 有料での住宅宿泊（Airbnb, 途家,自在客など）",195.0,301954.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > その他,184.0,667135.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > その他,78.0,1224463.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > その他,943.0,232976.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > その他,125.0,597095.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > その他,539.0,598153.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,（複数回答） > 宿泊せず,2.0,22470.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,（複数回答） > 宿泊せず,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,（複数回答） > 宿泊せず,6.0,17184.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,（複数回答） > 宿泊せず,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,（複数回答） > 宿泊せず,10.0,10354.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,旅行手配方法 > 団体ツアーに参加,283.0,52785.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,旅行手配方法 > 団体ツアーに参加,1.0,80822.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,旅行手配方法 > 団体ツアーに参加,514.0,73997.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,旅行手配方法 > 団体ツアーに参加,81.0,181797.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,旅行手配方法 > 団体ツアーに参加,75.0,68595.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,旅行手配方法 > 個人旅行向けパッケージ商品を利用,123.0,72355.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,旅行手配方法 > 個人旅行向けパッケージ商品を利用,0.0,,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,旅行手配方法 > 個人旅行向けパッケージ商品を利用,191.0,102204.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,旅行手配方法 > 個人旅行向けパッケージ商品を利用,53.0,101143.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,旅行手配方法 > 個人旅行向けパッケージ商品を利用,60.0,115310.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+korea,nationality,旅行手配方法 > 個別手配,3537.0,134585.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+china,nationality,旅行手配方法 > 個別手配,852.0,577286.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+southeast_asia,nationality,旅行手配方法 > 個別手配,5430.0,199868.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+europe,nationality,旅行手配方法 > 個別手配,2633.0,292111.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+north_america,nationality,旅行手配方法 > 個別手配,5174.0,244048.0,2022,2022_Tourism_Stay_Trends_by_Nationality.csv
+japan,japan_special,主目的地 > 全体,232467.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北海道,15328.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 東北,17661.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 関東,59103.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北陸信越,20047.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中部,31771.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 近畿,34068.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中国,12538.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 四国,8244.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 九州,23792.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 沖縄,5904.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 全体,232467.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 自分ひとり,43967.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 夫婦･パートナー,44731.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 家族･親族,99893.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 職場の同僚,13242.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 友人,23581.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > その他,5497.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 全体,232467.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ホテル (洋室主体),124579.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 旅館 (和室主体),36090.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 自己所有の別荘･リゾートマンション,1468.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ペンション･民宿･貸別荘,5609.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > キャンプ場,6350.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 保養所･研修施設,2713.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 会員制の宿泊施設,1880.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 実家や親族･知人宅,48000.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 民泊（有料の住宅宿泊）,1292.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 車中泊,2975.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > その他,2751.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 全体,232467.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 1泊,126668.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 2泊,55338.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 3泊,23731.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 4泊,10277.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 5泊,4493.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 6泊,3088.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 7泊,1929.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 8泊以上,6943.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 全体,232467.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 個人旅行,214431.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > パック・団体旅行,18036.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 全体,36059.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北海道,1936.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 東北,3074.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 関東,8923.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北陸信越,3107.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中部,5287.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 近畿,5273.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中国,1920.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 四国,1311.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 九州,4051.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 沖縄,511.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 全体,36059.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 自分ひとり,8608.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 夫婦･パートナー,5462.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 家族･親族,16125.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 職場の同僚,1444.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 友人,3744.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > その他,338.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 全体,36059.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ホテル (洋室主体),16566.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 旅館 (和室主体),5260.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 自己所有の別荘･リゾートマンション,315.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ペンション･民宿･貸別荘,779.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > キャンプ場,427.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 保養所･研修施設,351.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 会員制の宿泊施設,223.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 実家や親族･知人宅,10285.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 民泊（有料の住宅宿泊）,274.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 車中泊,385.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > その他,542.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 全体,36059.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 1泊,19459.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 2泊,8067.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 3泊,3696.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 4泊,1771.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 5泊,913.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 6泊,359.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 7泊,382.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 8泊以上,1414.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 全体,36059.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 個人旅行,34366.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > パック・団体旅行,1694.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 全体,61496.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北海道,4599.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 東北,4138.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 関東,16621.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北陸信越,5301.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中部,7732.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 近畿,8539.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中国,3811.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 四国,2454.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 九州,6073.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 沖縄,1246.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 全体,61496.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 自分ひとり,12322.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 夫婦･パートナー,12950.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 家族･親族,23921.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 職場の同僚,4134.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 友人,6065.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > その他,1823.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 全体,61496.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ホテル (洋室主体),33068.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 旅館 (和室主体),8983.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 自己所有の別荘･リゾートマンション,429.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ペンション･民宿･貸別荘,1454.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > キャンプ場,1800.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 保養所･研修施設,706.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 会員制の宿泊施設,581.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 実家や親族･知人宅,12761.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 民泊（有料の住宅宿泊）,174.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 車中泊,1028.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > その他,740.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 全体,61496.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 1泊,35014.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 2泊,14398.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 3泊,6035.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 4泊,2002.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 5泊,1240.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 6泊,942.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 7泊,442.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 8泊以上,1423.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 全体,61496.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 個人旅行,56613.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > パック・団体旅行,4883.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 全体,69986.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北海道,5531.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 東北,5401.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 関東,16996.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北陸信越,6499.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中部,9544.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 近畿,9943.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中国,3403.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 四国,2171.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 九州,6871.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 沖縄,2229.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 全体,69986.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 自分ひとり,11085.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 夫婦･パートナー,12423.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 家族･親族,35028.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 職場の同僚,2982.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 友人,6687.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > その他,1401.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 全体,69986.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ホテル (洋室主体),36881.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 旅館 (和室主体),10483.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 自己所有の別荘･リゾートマンション,348.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ペンション･民宿･貸別荘,2051.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > キャンプ場,3033.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 保養所･研修施設,907.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 会員制の宿泊施設,644.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 実家や親族･知人宅,14355.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 民泊（有料の住宅宿泊）,372.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 車中泊,1061.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > その他,884.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 全体,69986.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 1泊,34333.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 2泊,18138.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 3泊,7795.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 4泊,4348.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 5泊,1568.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 6泊,1083.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 7泊,477.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 8泊以上,2244.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 全体,69986.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 個人旅行,65427.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > パック・団体旅行,4559.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 全体,64925.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北海道,3262.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 東北,5048.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 関東,16563.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 北陸信越,5140.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中部,9208.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 近畿,10314.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 中国,3404.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 四国,2308.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 九州,6795.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,主目的地 > 沖縄,1918.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 全体,64925.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 自分ひとり,11953.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 夫婦･パートナー,13897.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 家族･親族,24819.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 職場の同僚,4682.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > 友人,7086.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,同行者 > その他,1935.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 全体,64925.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ホテル (洋室主体),38064.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 旅館 (和室主体),11365.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 自己所有の別荘･リゾートマンション,376.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > ペンション･民宿･貸別荘,1325.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > キャンプ場,1091.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 保養所･研修施設,749.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 会員制の宿泊施設,433.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 実家や親族･知人宅,10600.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 民泊（有料の住宅宿泊）,472.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > 車中泊,501.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊施設 > その他,585.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 全体,64925.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 1泊,37863.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 2泊,14735.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 3泊,6205.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 4泊,2156.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 5泊,773.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 6泊,704.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 7泊,628.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,宿泊数 > 8泊以上,1861.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 全体,64925.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > 個人旅行,58025.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
+japan,japan_special,旅行形態 > パック・団体旅行,6900.0,,2022,2022_Tourism_Stay_Trends_by_Japan.csv
