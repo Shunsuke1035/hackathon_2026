@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -27,6 +27,7 @@ export default function DashboardPage() {
 
   const [selectedPrefecture, setSelectedPrefecture] = useState("kyoto");
   const [selectedMonth, setSelectedMonth] = useState(1);
+  const [selectedYear, setSelectedYear] = useState<number | "latest">("latest");
 
   const selectedPrefectureData = useMemo(
     () => PREFECTURES.find((prefecture) => prefecture.code === selectedPrefecture) ?? PREFECTURES[0],
@@ -58,7 +59,7 @@ export default function DashboardPage() {
         if (!response.ok) throw new Error("認証に失敗しました。");
         const data = (await response.json()) as MeResponse;
         setCurrentUser(data);
-        setStatusMessage("準備完了です。都道府県と月を選択してください。");
+        setStatusMessage("ログイン済みです。地域と月を選択してください。");
         setIsError(false);
       } catch (error) {
         setIsError(true);
@@ -84,8 +85,18 @@ export default function DashboardPage() {
       setLoadingMap(true);
       setIsError(false);
       try {
-        const points = await fetchDependencyPoints(selectedPrefecture, selectedMonth, token);
-        setHeatPoints(points);
+        const payload = await fetchDependencyPoints(
+          selectedPrefecture,
+          selectedMonth,
+          token,
+          selectedYear === "latest" ? undefined : selectedYear
+        );
+        setHeatPoints(payload.points);
+
+        const suffix = payload.note ? ` / ${payload.note}` : "";
+        setStatusMessage(
+          `ヒートマップ更新: ${payload.year}年${selectedMonth}月, ${payload.points.length}点${suffix}`
+        );
       } catch (error) {
         setIsError(true);
         setStatusMessage(error instanceof Error ? error.message : "地図データの取得に失敗しました。");
@@ -94,7 +105,7 @@ export default function DashboardPage() {
       }
     };
     loadDependencyMap();
-  }, [selectedPrefecture, selectedMonth]);
+  }, [selectedPrefecture, selectedMonth, selectedYear]);
 
   const handleFacilityApply = () => {
     if (Number.isNaN(facilityInput.lat) || Number.isNaN(facilityInput.lng)) {
@@ -117,7 +128,7 @@ export default function DashboardPage() {
       lng: Number((selectedPrefectureData.center.lng + lngOffset).toFixed(6))
     }));
     setIsError(false);
-    setStatusMessage("住所補助を適用しました（MVPの簡易推定）。");
+    setStatusMessage("住所から位置補助を反映しました（簡易推定）。");
   };
 
   const handleLoadInsights = async () => {
@@ -180,6 +191,22 @@ export default function DashboardPage() {
           </label>
 
           <label>
+            年
+            <select
+              className="input"
+              value={selectedYear}
+              onChange={(event) => {
+                const next = event.target.value;
+                setSelectedYear(next === "latest" ? "latest" : Number(next));
+              }}
+            >
+              <option value="latest">最新</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+            </select>
+          </label>
+
+          <label>
             月
             <select
               className="input"
@@ -228,7 +255,7 @@ export default function DashboardPage() {
             <input
               className="input"
               value={facilityInput.address ?? ""}
-              placeholder="例: 京都駅周辺"
+              placeholder="例: 京都市下京区"
               onChange={(event) =>
                 setFacilityInput((previous) => ({ ...previous, address: event.target.value }))
               }
@@ -237,10 +264,10 @@ export default function DashboardPage() {
         </div>
         <div className="button-row">
           <button className="button secondary" onClick={handleAddressAssist} type="button">
-            住所補助を適用
+            住所から位置補助
           </button>
           <button className="button" onClick={handleFacilityApply} type="button">
-            施設ピンを更新
+            施設位置を反映
           </button>
           <button className="button" disabled={loadingInsights} onClick={handleLoadInsights} type="button">
             {loadingInsights ? "読み込み中..." : "提案とシミュレーションを取得"}

@@ -1,4 +1,4 @@
-import { PrefectureOption } from "@/features/analysis/types";
+﻿import { PrefectureOption } from "@/features/analysis/types";
 
 export const PREFECTURES: PrefectureOption[] = [
   { code: "kyoto", name: "京都", center: { lat: 35.0116, lng: 135.7681 }, zoom: 11 },

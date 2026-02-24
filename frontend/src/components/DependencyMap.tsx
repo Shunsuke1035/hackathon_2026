@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Circle, CircleMarker, MapContainer, Popup, TileLayer } from "react-leaflet";
 
@@ -17,7 +17,7 @@ function marketLabel(market: string): string {
   if (market === "korea") return "韓国";
   if (market === "europe") return "ヨーロッパ";
   if (market === "southeast_asia") return "東南アジア";
-  if (market === "japan") return "日本";
+  if (market === "japan") return "国内";
   return market;
 }
 
@@ -41,7 +41,7 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
           <CircleMarker
             key={`${point.lat}-${point.lng}-${index}`}
             center={[point.lat, point.lng]}
-            radius={8 + point.dependency_score * 10}
+            radius={6 + point.dependency_score * 10}
             pathOptions={{
               color: scoreColor(point.dependency_score),
               fillColor: scoreColor(point.dependency_score),
@@ -49,7 +49,7 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
             }}
           >
             <Popup>
-              国籍カテゴリ: {marketLabel(point.market)}
+              市場カテゴリ: {marketLabel(point.market)}
               <br />
               依存度スコア: {point.dependency_score.toFixed(2)}
             </Popup>
@@ -60,7 +60,7 @@ export default function DependencyMap({ center, zoom, points, facility }: Props)
           radius={450}
           pathOptions={{ color: "#111827", fillColor: "#f97316", fillOpacity: 0.35, weight: 2.5 }}
         >
-          <Popup>自施設（強調表示）</Popup>
+          <Popup>自施設位置（強調表示）</Popup>
         </Circle>
       </MapContainer>
     </div>

@@ -1,4 +1,4 @@
-import { RecommendationItem, SimulationScenario } from "@/features/analysis/types";
+﻿import { RecommendationItem, SimulationScenario } from "@/features/analysis/types";
 
 type Props = {
   simulations: SimulationScenario[];
@@ -37,7 +37,7 @@ export default function ResultsPanel({ simulations, recommendations }: Props) {
             {simulations.map((scenario) => (
               <li key={scenario.name} className="list-item">
                 <strong>{scenarioLabel(scenario.name)}</strong>
-                <div>想定増減率: {scenario.expected_growth_rate}%</div>
+                <div>想定成長率: {scenario.expected_growth_rate}%</div>
                 <div>リスク: {riskLabel(scenario.risk_level)}</div>
                 <div>{scenario.note}</div>
               </li>
