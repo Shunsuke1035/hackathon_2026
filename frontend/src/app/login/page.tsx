@@ -38,17 +38,17 @@ export default function LoginPage() {
       });
       if (!response.ok) {
         const text = await response.text();
-        throw new Error(text || "Login failed");
+        throw new Error(text || "ログインに失敗しました");
       }
 
       const data = (await response.json()) as LoginResponse;
       window.localStorage.setItem("access_token", data.access_token);
       window.localStorage.setItem("current_user", JSON.stringify(data.user));
-      setMessage("Login successful. Redirecting to dashboard...");
+      setMessage("ログインに成功しました。ダッシュボードへ移動します。");
       router.push("/dashboard");
     } catch (error) {
       setIsError(true);
-      setMessage(error instanceof Error ? error.message : "Login failed");
+      setMessage(error instanceof Error ? error.message : "ログインに失敗しました");
     } finally {
       setLoading(false);
     }
@@ -56,11 +56,11 @@ export default function LoginPage() {
 
   return (
     <main className="container">
-      <h1 className="title">Login</h1>
+      <h1 className="title">ログイン</h1>
       <form className="form" onSubmit={onSubmit}>
         <input
           className="input"
-          placeholder="username"
+          placeholder="ユーザー名"
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           required
@@ -68,18 +68,18 @@ export default function LoginPage() {
         <input
           className="input"
           type="password"
-          placeholder="password"
+          placeholder="パスワード"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           required
         />
         <button className="button" disabled={loading} type="submit">
-          {loading ? "Logging in..." : "Login"}
+          {loading ? "ログイン中..." : "ログイン"}
         </button>
       </form>
       {message ? <p className={`message ${isError ? "error" : "ok"}`}>{message}</p> : null}
       <p className="message">
-        No account? <Link href="/signup">Create one</Link>
+        アカウントをお持ちでない方は <Link href="/signup">新規登録</Link>
       </p>
     </main>
   );

@@ -34,14 +34,14 @@ export default function SignupPage() {
 
       if (!response.ok) {
         const payload = (await response.json().catch(() => ({}))) as RegisterError;
-        throw new Error(payload.detail ?? "Signup failed");
+        throw new Error(payload.detail ?? "サインアップに失敗しました");
       }
 
-      setMessage("Signup successful. Redirecting to login...");
+      setMessage("アカウント作成に成功しました。ログイン画面へ移動します。");
       setTimeout(() => router.push("/login"), 800);
     } catch (error) {
       setIsError(true);
-      setMessage(error instanceof Error ? error.message : "Signup failed");
+      setMessage(error instanceof Error ? error.message : "サインアップに失敗しました");
     } finally {
       setLoading(false);
     }
@@ -49,11 +49,11 @@ export default function SignupPage() {
 
   return (
     <main className="container">
-      <h1 className="title">Sign up</h1>
+      <h1 className="title">新規登録</h1>
       <form className="form" onSubmit={onSubmit}>
         <input
           className="input"
-          placeholder="username"
+          placeholder="ユーザー名"
           value={username}
           onChange={(event) => setUsername(event.target.value)}
           minLength={3}
@@ -63,7 +63,7 @@ export default function SignupPage() {
         <input
           className="input"
           type="email"
-          placeholder="email"
+          placeholder="メールアドレス"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           required
@@ -71,7 +71,7 @@ export default function SignupPage() {
         <input
           className="input"
           type="password"
-          placeholder="password (min 8 chars)"
+          placeholder="パスワード（8文字以上）"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           minLength={8}
@@ -79,12 +79,12 @@ export default function SignupPage() {
           required
         />
         <button className="button" disabled={loading} type="submit">
-          {loading ? "Creating account..." : "Create account"}
+          {loading ? "作成中..." : "アカウント作成"}
         </button>
       </form>
       {message ? <p className={`message ${isError ? "error" : "ok"}`}>{message}</p> : null}
       <p className="message">
-        Already have an account? <Link href="/login">Go to login</Link>
+        すでにアカウントをお持ちですか？ <Link href="/login">ログインへ</Link>
       </p>
     </main>
   );

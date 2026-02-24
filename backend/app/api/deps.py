@@ -25,12 +25,12 @@ def get_current_user(
     if not username:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid authentication credentials",
+            detail="認証情報が無効です",
         )
     user = db.query(User).filter(User.username == username).first()
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="User not found",
+            detail="ユーザーが見つかりません",
         )
     return user

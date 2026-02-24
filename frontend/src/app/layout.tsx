@@ -3,8 +3,8 @@ import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tourism Risk App",
-  description: "MVP for tourism dependency risk analysis"
+  title: "観光依存リスク分析アプリ",
+  description: "国籍依存度を可視化し、戦略提案を行うMVP"
 };
 
 export default function RootLayout({

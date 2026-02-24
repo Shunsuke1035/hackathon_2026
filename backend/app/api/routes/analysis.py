@@ -118,19 +118,19 @@ def post_simulation(
             name="optimistic",
             expected_growth_rate=round(base + rnd.uniform(1.2, 2.8), 2),
             risk_level="low",
-            note="Demand diversification and favorable exchange rates.",
+            note="需要分散が進み、為替も追い風となる想定です。",
         ),
         SimulationScenario(
             name="base",
             expected_growth_rate=round(base, 2),
             risk_level="medium",
-            note="Current trend is sustained with moderate volatility.",
+            note="現在の傾向が継続し、変動は中程度と想定します。",
         ),
         SimulationScenario(
             name="pessimistic",
             expected_growth_rate=round(base - rnd.uniform(1.8, 3.4), 2),
             risk_level="high",
-            note="High dependence segment declines under adverse external factors.",
+            note="外部要因悪化により、高依存セグメントが減速する想定です。",
         ),
     ]
     return SimulationResponse(
@@ -151,18 +151,18 @@ def post_recommendation(
         recommendations=[
             RecommendationItem(
                 type="risk_leverage",
-                title="Focused campaign on high-yield segment",
+                title="高収益セグメントへの集中施策",
                 description=(
-                    "Use monthly promotional bundles for the dominant market while setting "
-                    "a dynamic price floor to control downside risk."
+                    "主要市場向けに月次の訴求プランを設定しつつ、"
+                    "価格下限を運用して下振れリスクを抑制します。"
                 ),
             ),
             RecommendationItem(
                 type="risk_diversification",
-                title="Diversify channels by travel purpose",
+                title="訪問目的別チャネルの分散",
                 description=(
-                    "Increase share from non-dominant markets by creating packages for "
-                    "family and long-stay travelers with localized messaging."
+                    "非主要市場向けに、家族旅行・長期滞在向け商品を展開し、"
+                    "地域特性に合わせた訴求で依存を分散します。"
                 ),
             ),
         ],
