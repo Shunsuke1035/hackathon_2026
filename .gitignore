@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+
+node_modules/
+.next/
+frontend/.next/
+frontend/node_modules/
+
+backend/.env
+backend/app.db
+
+data/*.parquet
+data/*.feather
