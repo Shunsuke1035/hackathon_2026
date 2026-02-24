@@ -18,6 +18,21 @@ type MeResponse = {
   email: string;
 };
 
+type MarketOption = {
+  value: HeatPoint["market"] | "all";
+  label: string;
+};
+
+const MARKET_OPTIONS: MarketOption[] = [
+  { value: "all", label: "すべて" },
+  { value: "china", label: "中国" },
+  { value: "korea", label: "韓国" },
+  { value: "north_america", label: "北米" },
+  { value: "southeast_asia", label: "東南アジア" },
+  { value: "europe", label: "ヨーロッパ" },
+  { value: "japan", label: "国内" }
+];
+
 export default function DashboardPage() {
   const [currentUser, setCurrentUser] = useState<MeResponse | null>(null);
   const [statusMessage, setStatusMessage] = useState("アカウント情報を読み込み中...");
@@ -28,6 +43,7 @@ export default function DashboardPage() {
   const [selectedPrefecture, setSelectedPrefecture] = useState("kyoto");
   const [selectedMonth, setSelectedMonth] = useState(1);
   const [selectedYear, setSelectedYear] = useState<number | "latest">("latest");
+  const [selectedMarket, setSelectedMarket] = useState<MarketOption["value"]>("china");
 
   const selectedPrefectureData = useMemo(
     () => PREFECTURES.find((prefecture) => prefecture.code === selectedPrefecture) ?? PREFECTURES[0],
@@ -42,6 +58,13 @@ export default function DashboardPage() {
   const [heatPoints, setHeatPoints] = useState<HeatPoint[]>([]);
   const [simulations, setSimulations] = useState<SimulationScenario[]>([]);
   const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
+
+  const displayedHeatPoints = useMemo(() => {
+    if (selectedMarket === "all") {
+      return heatPoints;
+    }
+    return heatPoints.filter((point) => point.market === selectedMarket);
+  }, [heatPoints, selectedMarket]);
 
   useEffect(() => {
     const token = window.localStorage.getItem("access_token");
@@ -220,6 +243,21 @@ export default function DashboardPage() {
               ))}
             </select>
           </label>
+
+          <label>
+            市場
+            <select
+              className="input"
+              value={selectedMarket}
+              onChange={(event) => setSelectedMarket(event.target.value as MarketOption["value"])}
+            >
+              {MARKET_OPTIONS.map((market) => (
+                <option key={market.value} value={market.value}>
+                  {market.label}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       </section>
 
@@ -277,6 +315,7 @@ export default function DashboardPage() {
 
       <section>
         <h2 className="panel-title">国籍依存度ヒートマップ</h2>
+        <p className="muted">表示市場: {MARKET_OPTIONS.find((m) => m.value === selectedMarket)?.label ?? "-"}（{displayedHeatPoints.length} 点）</p>
         {loadingMap ? (
           <div className="panel">
             <p className="muted">地図データを読み込み中...</p>
@@ -285,7 +324,7 @@ export default function DashboardPage() {
           <DependencyMap
             center={selectedPrefectureData.center}
             facility={{ lat: facilityInput.lat, lng: facilityInput.lng }}
-            points={heatPoints}
+            points={displayedHeatPoints}
             zoom={selectedPrefectureData.zoom}
           />
         )}
