@@ -33,6 +33,7 @@ type ForecastRequest = {
   prefecture: string;
   market: DependencyMarketKey;
   month: number;
+  facility?: FacilityInput;
   horizon_months: number;
   scenario_ids?: string[];
   custom_shock_rate?: number;
@@ -105,16 +106,34 @@ export async function fetchSimulation(
 export async function fetchRecommendations(
   prefecture: string,
   month: number,
+  market: DependencyMarketKey,
   facility: FacilityInput,
-  token: string
+  token: string,
+  year?: number
 ): Promise<RecommendationItem[]> {
+  const body: {
+    prefecture: string;
+    month: number;
+    market: DependencyMarketKey;
+    facility: FacilityInput;
+    year?: number;
+  } = {
+    prefecture,
+    month,
+    market,
+    facility
+  };
+  if (year) {
+    body.year = year;
+  }
+
   const response = await fetch(`${API_BASE_URL}/api/analysis/recommendation`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`
     },
-    body: JSON.stringify({ prefecture, month, facility })
+    body: JSON.stringify(body)
   });
   if (!response.ok) {
     throw new Error("提案データの取得に失敗しました");

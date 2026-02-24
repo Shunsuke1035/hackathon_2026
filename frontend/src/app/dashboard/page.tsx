@@ -217,13 +217,21 @@ export default function DashboardPage() {
     try {
       const [simData, recommendationData, forecastData] = await Promise.all([
         fetchSimulation(selectedPrefecture, selectedMonth, facilityInput, token),
-        fetchRecommendations(selectedPrefecture, selectedMonth, facilityInput, token),
+        fetchRecommendations(
+          selectedPrefecture,
+          selectedMonth,
+          metricsMarket,
+          facilityInput,
+          token,
+          selectedYear === "latest" ? undefined : selectedYear
+        ),
         fetchForecast(
           {
             prefecture: selectedPrefecture,
             market: metricsMarket,
             month: selectedMonth,
             year: selectedYear === "latest" ? undefined : selectedYear,
+            facility: facilityInput,
             horizon_months: 3
           },
           token

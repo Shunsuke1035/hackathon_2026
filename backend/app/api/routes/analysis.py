@@ -1,19 +1,23 @@
 ﻿from __future__ import annotations
 
 import json
+import logging
 import time
 from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
-from app.api.deps import get_current_user
+from app.api.deps import enforce_rate_limit, get_current_user
+from app.core.config import settings
 from app.models.user import User
 from app.services.dependency_metrics import build_dependency_metrics
-from app.services.forecasting import build_forecast_payload
+from app.services.forecasting import build_forecast_payload, pick_simulation_scenario_ids
 from app.services.hotel_dependency import build_dependency_points
+from app.services.llm_recommendation import LLMRecommendationError, generate_recommendations_with_llm
 
 router = APIRouter(prefix="/analysis", tags=["analysis"])
+logger = logging.getLogger(__name__)
 FORECAST_CACHE_TTL_SECONDS = 300
 _FORECAST_CACHE: dict[str, tuple[float, dict]] = {}
 
@@ -78,6 +82,8 @@ class RecommendationRequest(BaseModel):
     prefecture: str
     month: int = Field(ge=1, le=12)
     facility: FacilityInput
+    market: MarketKey = "china"
+    year: int | None = None
 
 
 class RecommendationResponse(BaseModel):
@@ -152,6 +158,8 @@ class ForecastPoint(BaseModel):
     month: int
     month_date: str
     predicted_growth_rate: float
+    predicted_guest_count: float | None = None
+    predicted_guest_count_total: float | None = None
     applied_shock_rate: float
     seasonal_component: float
 
@@ -174,6 +182,7 @@ class ForecastRequest(BaseModel):
     market: MarketKey = "china"
     year: int | None = None
     month: int = Field(ge=1, le=12)
+    facility: FacilityInput | None = None
     horizon_months: int = Field(default=3, ge=1, le=24)
     scenario_ids: list[str] | None = None
     custom_shock_rate: float = 0.0
@@ -235,6 +244,8 @@ def _get_forecast_payload_cached(
     market: MarketKey,
     base_year: int | None,
     base_month: int,
+    facility_lat: float | None = None,
+    facility_lng: float | None = None,
     horizon_months: int,
     scenario_ids: list[str] | None,
     custom_shock_rate: float,
@@ -246,6 +257,8 @@ def _get_forecast_payload_cached(
             "market": market,
             "base_year": base_year,
             "base_month": base_month,
+            "facility_lat": round(facility_lat, 6) if facility_lat is not None else None,
+            "facility_lng": round(facility_lng, 6) if facility_lng is not None else None,
             "horizon_months": horizon_months,
             "scenario_ids": scenario_ids or [],
             "custom_shock_rate": custom_shock_rate,
@@ -263,6 +276,8 @@ def _get_forecast_payload_cached(
         market=market,
         base_year=base_year,
         base_month=base_month,
+        facility_lat=facility_lat,
+        facility_lng=facility_lng,
         horizon_months=horizon_months,
         scenario_ids=scenario_ids,
         custom_shock_rate=custom_shock_rate,
@@ -381,6 +396,8 @@ def post_forecast(
             market=payload.market,
             base_year=payload.year,
             base_month=payload.month,
+            facility_lat=payload.facility.lat if payload.facility else None,
+            facility_lng=payload.facility.lng if payload.facility else None,
             horizon_months=payload.horizon_months,
             scenario_ids=payload.scenario_ids,
             custom_shock_rate=payload.custom_shock_rate,
@@ -415,7 +432,7 @@ def post_forecast(
 
     return ForecastResponse(
         model_version=str(forecast_payload.get("model_version", "skeleton-v0.1")),
-        target_metric=str(forecast_payload.get("target_metric", "guest_growth_rate")),
+        target_metric=str(forecast_payload.get("target_metric", "guest_count")),
         prefecture=payload.prefecture,
         market=payload.market,
         base_year=int(forecast_payload.get("base_year", payload.year)),
@@ -434,8 +451,12 @@ def post_simulation(
     _: User = Depends(get_current_user),
 ) -> SimulationResponse:
     base_case_ids: list[str] = []
-    optimistic_ids = ["fx_jpy_depreciation", "international_event", "visa_relax_china"]
-    pessimistic_ids = ["infectious_disease_resurgence", "kyoto_disaster", "fx_jpy_appreciation"]
+    optimistic_ids, pessimistic_ids = pick_simulation_scenario_ids(
+        market="china",
+        month=payload.month,
+        optimistic_limit=2,
+        pessimistic_limit=2,
+    )
 
     try:
         base_forecast = _get_forecast_payload_cached(
@@ -443,6 +464,8 @@ def post_simulation(
             market="china",
             base_year=None,
             base_month=payload.month,
+            facility_lat=payload.facility.lat,
+            facility_lng=payload.facility.lng,
             horizon_months=3,
             scenario_ids=base_case_ids,
             custom_shock_rate=0.0,
@@ -452,18 +475,22 @@ def post_simulation(
             market="china",
             base_year=None,
             base_month=payload.month,
+            facility_lat=payload.facility.lat,
+            facility_lng=payload.facility.lng,
             horizon_months=3,
             scenario_ids=optimistic_ids,
-            custom_shock_rate=0.01,
+            custom_shock_rate=0.05,
         )
         pessimistic_forecast = _get_forecast_payload_cached(
             prefecture=payload.prefecture,
             market="china",
             base_year=None,
             base_month=payload.month,
+            facility_lat=payload.facility.lat,
+            facility_lng=payload.facility.lng,
             horizon_months=3,
             scenario_ids=pessimistic_ids,
-            custom_shock_rate=-0.01,
+            custom_shock_rate=-0.05,
         )
     except FileNotFoundError as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
@@ -475,13 +502,20 @@ def post_simulation(
     base_growth = round(_mean(base_values), 2)
     optimistic_growth = round(_mean(optimistic_values), 2) if optimistic_values else round(base_growth + 1.5, 2)
     pessimistic_growth = round(_mean(pessimistic_values), 2) if pessimistic_values else round(base_growth - 1.5, 2)
+    scenario_name_map = {
+        str(meta.get("event_id", "")): str(meta.get("event_name_ja", ""))
+        for meta in base_forecast.get("available_scenarios", [])
+        if isinstance(meta, dict)
+    }
+    optimistic_names = [scenario_name_map.get(sid, sid) for sid in optimistic_ids]
+    pessimistic_names = [scenario_name_map.get(sid, sid) for sid in pessimistic_ids]
 
     scenarios = [
         SimulationScenario(
             name="optimistic",
             expected_growth_rate=optimistic_growth,
             risk_level="low",
-            note="円安・イベント開催・ビザ緩和が重なったケースを想定。",
+            note=f"上振れシナリオ: {' / '.join(optimistic_names)}",
         ),
         SimulationScenario(
             name="base",
@@ -493,7 +527,7 @@ def post_simulation(
             name="pessimistic",
             expected_growth_rate=pessimistic_growth,
             risk_level="high",
-            note="感染症再拡大・災害・円高を重ねた下振れケースを想定。",
+            note=f"下振れシナリオ: {' / '.join(pessimistic_names)}",
         ),
     ]
     return SimulationResponse(
@@ -506,12 +540,19 @@ def post_simulation(
 @router.post("/recommendation", response_model=RecommendationResponse)
 def post_recommendation(
     payload: RecommendationRequest,
-    _: User = Depends(get_current_user),
+    request: Request,
+    current_user: User = Depends(get_current_user),
 ) -> RecommendationResponse:
-    return RecommendationResponse(
-        prefecture=payload.prefecture,
-        month=payload.month,
-        recommendations=[
+    client_host = request.client.host if request.client else "unknown"
+    enforce_rate_limit(
+        scope="recommendation",
+        identity=f"user:{current_user.id}|ip:{client_host}",
+        max_requests=max(1, settings.recommendation_rate_limit_per_minute),
+        window_seconds=60,
+    )
+
+    def fallback_items() -> list[RecommendationItem]:
+        return [
             RecommendationItem(
                 type="risk_leverage",
                 title="依存市場の強みを活かす価格設計",
@@ -528,6 +569,52 @@ def post_recommendation(
                     "広告配分と商品構成を段階的に移行します。"
                 ),
             ),
-        ],
+        ]
+
+    try:
+        forecast_payload = _get_forecast_payload_cached(
+            prefecture=payload.prefecture,
+            market=payload.market,
+            base_year=payload.year,
+            base_month=payload.month,
+            facility_lat=payload.facility.lat,
+            facility_lng=payload.facility.lng,
+            horizon_months=3,
+            scenario_ids=None,
+            custom_shock_rate=0.0,
+        )
+    except Exception:
+        forecast_payload = {}
+
+    try:
+        metrics_payload = build_dependency_metrics(
+            prefecture=payload.prefecture,
+            month=payload.month,
+            market=payload.market,
+            year=payload.year,
+        )
+    except Exception:
+        metrics_payload = None
+
+    try:
+        llm_items = generate_recommendations_with_llm(
+            prefecture=payload.prefecture,
+            month=payload.month,
+            market=payload.market,
+            forecast_payload=forecast_payload,
+            metrics_payload=metrics_payload,
+        )
+        recommendations = [RecommendationItem(**item) for item in llm_items]
+    except LLMRecommendationError as error:
+        logger.warning("LLM recommendation fallback: %s", error)
+        recommendations = fallback_items()
+    except Exception as error:
+        logger.exception("Unexpected recommendation generation error: %s", error)
+        recommendations = fallback_items()
+
+    return RecommendationResponse(
+        prefecture=payload.prefecture,
+        month=payload.month,
+        recommendations=recommendations,
     )
 

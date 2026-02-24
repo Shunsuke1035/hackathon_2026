@@ -42,6 +42,14 @@ Run with backend virtualenv explicitly:
 .\.venv\Scripts\python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
+Optional LLM settings (`backend/.env`):
+
+```env
+GEMINI_API_KEY=your_api_key
+GEMINI_MODEL=gemini-2.5-flash
+RECOMMENDATION_RATE_LIMIT_PER_MINUTE=6
+```
+
 Core endpoints:
 
 - `GET /api/health`

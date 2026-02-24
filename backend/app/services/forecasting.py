@@ -22,6 +22,7 @@ PANEL_FILE_DEFAULTS = {
     "overseas": DATA_DIR / "panel_overseas_2025_with_features.csv",
 }
 MODEL_DIR_DEFAULT = PROJECT_ROOT / "models" / "lightgbm"
+DEFAULT_FORECAST_SHOCK_SCALE = 1.8
 
 MARKET_TO_SHOCK_COL = {
     "china": "shock_china",
@@ -185,6 +186,15 @@ def _clamp_growth(value: float) -> float:
     return max(-0.95, min(2.0, value))
 
 
+def _resolve_shock_scale() -> float:
+    raw = os.getenv("FORECAST_SHOCK_SCALE", str(DEFAULT_FORECAST_SHOCK_SCALE))
+    try:
+        value = float(raw)
+    except ValueError:
+        value = DEFAULT_FORECAST_SHOCK_SCALE
+    return max(0.1, min(5.0, value))
+
+
 @lru_cache(maxsize=1)
 def load_scenarios() -> dict[str, ScenarioShock]:
     path = _resolve_scenario_path()
@@ -273,25 +283,99 @@ def _estimate_baseline(prefecture: str, year: int, month: int, market: str) -> d
 def _shock_for_month(scenario: ScenarioShock, market: str, month: int) -> float:
     if not _month_in_range(month, scenario.start_month, scenario.end_month):
         return 0.0
+    base = float(scenario.shock_values.get(market, 0.0))
+    return base * _resolve_shock_scale()
+
+
+def _raw_shock_for_month(scenario: ScenarioShock, market: str, month: int) -> float:
+    if not _month_in_range(month, scenario.start_month, scenario.end_month):
+        return 0.0
     return float(scenario.shock_values.get(market, 0.0))
+
+
+def _rank_active_scenarios(market: str, month: int) -> list[tuple[str, float]]:
+    rows: list[tuple[str, float]] = []
+    for scenario in load_scenarios().values():
+        shock = _raw_shock_for_month(scenario, market, month)
+        if shock == 0:
+            continue
+        rows.append((scenario.event_id, shock))
+    return rows
+
+
+def pick_default_scenario_ids(market: str, month: int, limit: int = 2) -> list[str]:
+    ranked = _rank_active_scenarios(market, month)
+    if not ranked:
+        return ["fx_jpy_depreciation", "infectious_disease_resurgence"][:limit]
+
+    positives = sorted([row for row in ranked if row[1] > 0], key=lambda row: row[1], reverse=True)
+    negatives = sorted([row for row in ranked if row[1] < 0], key=lambda row: row[1])
+    by_abs = sorted(ranked, key=lambda row: abs(row[1]), reverse=True)
+
+    selected: list[str] = []
+    if positives:
+        selected.append(positives[0][0])
+    if negatives:
+        selected.append(negatives[0][0])
+
+    for scenario_id, _ in by_abs:
+        if scenario_id in selected:
+            continue
+        selected.append(scenario_id)
+        if len(selected) >= limit:
+            break
+
+    return selected[:limit]
+
+
+def pick_simulation_scenario_ids(
+    market: str,
+    month: int,
+    *,
+    optimistic_limit: int = 2,
+    pessimistic_limit: int = 2,
+) -> tuple[list[str], list[str]]:
+    ranked = _rank_active_scenarios(market, month)
+    positives = [scenario_id for scenario_id, _ in sorted(
+        [row for row in ranked if row[1] > 0],
+        key=lambda row: row[1],
+        reverse=True,
+    )]
+    negatives = [scenario_id for scenario_id, _ in sorted(
+        [row for row in ranked if row[1] < 0],
+        key=lambda row: row[1],
+    )]
+
+    optimistic = positives[:optimistic_limit]
+    pessimistic = negatives[:pessimistic_limit]
+
+    if not optimistic:
+        optimistic = ["fx_jpy_depreciation", "international_event"][:optimistic_limit]
+    if not pessimistic:
+        pessimistic = ["infectious_disease_resurgence", "kyoto_disaster"][:pessimistic_limit]
+
+    return optimistic, pessimistic
 
 
 def _build_points_skeleton(
     *,
     base_year: int,
     base_month: int,
+    start_total: float,
     horizon_months: int,
     baseline_growth_rate: float,
     trend_growth_rate: float,
     shock_rate_fn: Callable[[int], float],
 ) -> list[dict[str, Any]]:
     prev_growth = baseline_growth_rate
+    prev_total = max(float(start_total), 0.0)
     points: list[dict[str, Any]] = []
     for step in range(1, horizon_months + 1):
         year, month = _add_months(base_year, base_month, step)
         shock_rate = float(shock_rate_fn(month))
         seasonal = _seasonal_component(month)
         predicted = _clamp_growth(0.55 * prev_growth + 0.45 * (trend_growth_rate + seasonal + shock_rate))
+        predicted_total = max(0.0, prev_total * (1.0 + predicted))
         points.append(
             {
                 "step": step,
@@ -299,11 +383,14 @@ def _build_points_skeleton(
                 "month": month,
                 "month_date": f"{year:04d}-{month:02d}-01",
                 "predicted_growth_rate": predicted,
+                "predicted_guest_count": None,
+                "predicted_guest_count_total": predicted_total,
                 "applied_shock_rate": shock_rate,
                 "seasonal_component": seasonal,
             }
         )
         prev_growth = predicted
+        prev_total = predicted_total
     return points
 
 
@@ -313,6 +400,8 @@ def _build_forecast_payload_skeleton(
     market: str,
     base_year: int | None,
     base_month: int,
+    facility_lat: float | None,
+    facility_lng: float | None,
     horizon_months: int,
     scenario_ids: list[str] | None,
     custom_shock_rate: float,
@@ -323,13 +412,14 @@ def _build_forecast_payload_skeleton(
     baseline = _estimate_baseline(prefecture, base_year, base_month, market)
     scenario_map = load_scenarios()
 
-    selected_ids = scenario_ids or ["fx_jpy_depreciation", "infectious_disease_resurgence"]
+    selected_ids = scenario_ids or pick_default_scenario_ids(market=market, month=base_month, limit=2)
     selected_ids = [scenario_id for scenario_id in selected_ids if scenario_id in scenario_map]
 
     scenarios: list[dict[str, Any]] = []
     base_points = _build_points_skeleton(
         base_year=base_year,
         base_month=base_month,
+        start_total=float(baseline["current_total"]),
         horizon_months=horizon_months,
         baseline_growth_rate=float(baseline["baseline_growth_rate"]),
         trend_growth_rate=float(baseline["trend_growth_rate"]),
@@ -349,6 +439,7 @@ def _build_forecast_payload_skeleton(
         points = _build_points_skeleton(
             base_year=base_year,
             base_month=base_month,
+            start_total=float(baseline["current_total"]),
             horizon_months=horizon_months,
             baseline_growth_rate=float(baseline["baseline_growth_rate"]),
             trend_growth_rate=float(baseline["trend_growth_rate"]),
@@ -365,14 +456,18 @@ def _build_forecast_payload_skeleton(
 
     return {
         "model_version": "skeleton-v0.1",
-        "target_metric": "guest_growth_rate",
+        "target_metric": "guest_count",
         "prefecture": prefecture,
         "market": market,
         "base_year": base_year,
         "base_month": base_month,
         "horizon_months": horizon_months,
         "baseline_growth_rate": float(baseline["baseline_growth_rate"]),
-        "feature_snapshot": baseline,
+        "feature_snapshot": {
+            **baseline,
+            "shock_scale": _resolve_shock_scale(),
+        },
+        "focus_facility_id": None,
         "available_scenarios": list_available_scenarios(),
         "scenarios": scenarios,
     }
@@ -555,6 +650,35 @@ def _build_step_features(
     return feat
 
 
+def _select_focus_facility(
+    base_rows: Any,
+    *,
+    target_col: str,
+    facility_lat: float | None,
+    facility_lng: float | None,
+) -> tuple[Any | None, float | None]:
+    if facility_lat is None or facility_lng is None:
+        return None, None
+    if "latitude" not in base_rows.columns or "longitude" not in base_rows.columns:
+        return None, None
+
+    pd = _pd()
+    candidates = base_rows[["facility_id", "latitude", "longitude", target_col]].copy()
+    candidates["latitude"] = pd.to_numeric(candidates["latitude"], errors="coerce")
+    candidates["longitude"] = pd.to_numeric(candidates["longitude"], errors="coerce")
+    candidates[target_col] = pd.to_numeric(candidates[target_col], errors="coerce").fillna(0.0)
+    candidates = candidates.dropna(subset=["latitude", "longitude"])
+    if candidates.empty:
+        return None, None
+
+    candidates["distance_deg"] = (
+        (candidates["latitude"] - float(facility_lat)) ** 2
+        + (candidates["longitude"] - float(facility_lng)) ** 2
+    ) ** 0.5
+    selected = candidates.sort_values(["distance_deg", target_col], ascending=[True, False]).iloc[0]
+    return selected["facility_id"], float(selected["distance_deg"])
+
+
 def _predict_recursive_points(
     *,
     history: Any,
@@ -563,10 +687,12 @@ def _predict_recursive_points(
     scenario: ScenarioShock | None,
     market: str,
     base_date: Any,
+    facility_lat: float | None,
+    facility_lng: float | None,
     horizon_months: int,
     custom_shock_rate: float,
     target_config: dict[str, str],
-) -> tuple[list[dict[str, Any]], float, dict[str, float | int]]:
+) -> tuple[list[dict[str, Any]], float, dict[str, float | int], Any | None]:
     pd = _pd()
     target_col = target_config["target_col"]
     lag1_col = target_config["lag1_col"]
@@ -583,6 +709,17 @@ def _predict_recursive_points(
         raise ValueError("no history rows are available for forecast base")
 
     base_total = float(base_rows.groupby("date")[target_col].sum().iloc[-1])
+    focus_facility_id, focus_distance_deg = _select_focus_facility(
+        base_rows,
+        target_col=target_col,
+        facility_lat=facility_lat,
+        facility_lng=facility_lng,
+    )
+    prev_focus_total: float | None = None
+    if focus_facility_id is not None:
+        focus_rows = base_rows.loc[base_rows["facility_id"] == focus_facility_id]
+        if not focus_rows.empty:
+            prev_focus_total = float(_pd().to_numeric(focus_rows[target_col], errors="coerce").fillna(0.0).sum())
 
     prev_date = (base_date - pd.offsets.MonthBegin(1)).normalize()
     prev_rows = working.loc[working["date"] == prev_date]
@@ -645,10 +782,17 @@ def _predict_recursive_points(
             x[col] = _pd().to_numeric(x[col], errors="coerce").fillna(0.0)
 
         pred = model.predict(x, num_iteration=getattr(model, "best_iteration_", None))
-        pred_series = _pd().Series(pred).fillna(0.0).clip(lower=0.0)
+        pred_series = _pd().Series(pred, index=feature_frame["facility_id"]).fillna(0.0).clip(lower=0.0)
+        if scenario is not None and abs(shock_rate) > 0:
+            direct_effect = max(0.1, min(3.0, 1.0 + shock_rate))
+            pred_series = (pred_series * direct_effect).clip(lower=0.0)
 
         predicted_total = float(pred_series.sum())
         growth_rate = _safe_growth(predicted_total, prev_total_for_growth)
+        predicted_guest_count: float | None = None
+        if focus_facility_id is not None and focus_facility_id in pred_series.index:
+            predicted_guest_count = float(pred_series.loc[focus_facility_id])
+            prev_focus_total = predicted_guest_count if predicted_guest_count >= 0 else prev_focus_total
 
         points.append(
             {
@@ -657,6 +801,8 @@ def _predict_recursive_points(
                 "month": int(forecast_date.month),
                 "month_date": f"{forecast_date.year:04d}-{forecast_date.month:02d}-01",
                 "predicted_growth_rate": growth_rate,
+                "predicted_guest_count": predicted_guest_count,
+                "predicted_guest_count_total": predicted_total,
                 "applied_shock_rate": shock_rate,
                 "seasonal_component": 0.0,
             }
@@ -676,8 +822,11 @@ def _predict_recursive_points(
         "prev_total": prev_total,
         "facility_count": int(base_rows["facility_id"].nunique()),
         "baseline_growth_rate": baseline_growth,
+        "focus_facility_matched": 1 if focus_facility_id is not None else 0,
+        "focus_distance_deg": float(focus_distance_deg or 0.0),
+        "focus_base_count": float(prev_focus_total or 0.0),
     }
-    return points, baseline_growth, snapshot
+    return points, baseline_growth, snapshot, focus_facility_id
 
 
 def _build_forecast_payload_lightgbm(
@@ -686,6 +835,8 @@ def _build_forecast_payload_lightgbm(
     market: str,
     base_year: int | None,
     base_month: int,
+    facility_lat: float | None,
+    facility_lng: float | None,
     horizon_months: int,
     scenario_ids: list[str] | None,
     custom_shock_rate: float,
@@ -704,16 +855,18 @@ def _build_forecast_payload_lightgbm(
 
     model, metadata = _load_model_artifact(target_config["model_key"])
     scenario_map = load_scenarios()
-    selected_ids = scenario_ids or ["fx_jpy_depreciation", "infectious_disease_resurgence"]
+    selected_ids = scenario_ids or pick_default_scenario_ids(market=market, month=resolved_month, limit=2)
     selected_ids = [scenario_id for scenario_id in selected_ids if scenario_id in scenario_map]
 
-    base_points, baseline_growth, base_snapshot = _predict_recursive_points(
+    base_points, baseline_growth, base_snapshot, focus_facility_id = _predict_recursive_points(
         history=filtered,
         model=model,
         metadata=metadata,
         scenario=None,
         market=market,
         base_date=base_date,
+        facility_lat=facility_lat,
+        facility_lng=facility_lng,
         horizon_months=horizon_months,
         custom_shock_rate=custom_shock_rate,
         target_config=target_config,
@@ -730,13 +883,15 @@ def _build_forecast_payload_lightgbm(
 
     for scenario_id in selected_ids:
         scenario = scenario_map[scenario_id]
-        scenario_points, _, _ = _predict_recursive_points(
+        scenario_points, _, _, _ = _predict_recursive_points(
             history=filtered,
             model=model,
             metadata=metadata,
             scenario=scenario,
             market=market,
             base_date=base_date,
+            facility_lat=facility_lat,
+            facility_lng=facility_lng,
             horizon_months=horizon_months,
             custom_shock_rate=custom_shock_rate,
             target_config=target_config,
@@ -756,11 +911,15 @@ def _build_forecast_payload_lightgbm(
         "facility_count": int(base_snapshot["facility_count"]),
         "target_key": 1 if target_key == "china" else 2,
         "used_prefecture_fallback": used_prefecture_fallback,
+        "focus_facility_matched": int(base_snapshot.get("focus_facility_matched", 0)),
+        "focus_distance_deg": float(base_snapshot.get("focus_distance_deg", 0.0)),
+        "focus_base_count": float(base_snapshot.get("focus_base_count", 0.0)),
+        "shock_scale": _resolve_shock_scale(),
     }
 
     return {
         "model_version": "lightgbm-v1",
-        "target_metric": "guest_growth_rate",
+        "target_metric": "guest_count",
         "prefecture": prefecture,
         "market": market,
         "base_year": resolved_year,
@@ -768,6 +927,7 @@ def _build_forecast_payload_lightgbm(
         "horizon_months": horizon_months,
         "baseline_growth_rate": float(baseline_growth),
         "feature_snapshot": feature_snapshot,
+        "focus_facility_id": str(focus_facility_id) if focus_facility_id is not None else None,
         "available_scenarios": list_available_scenarios(),
         "scenarios": scenarios,
     }
@@ -779,6 +939,8 @@ def build_forecast_payload(
     market: str,
     base_year: int | None,
     base_month: int,
+    facility_lat: float | None = None,
+    facility_lng: float | None = None,
     horizon_months: int,
     scenario_ids: list[str] | None = None,
     custom_shock_rate: float = 0.0,
@@ -790,6 +952,8 @@ def build_forecast_payload(
                 market=market,
                 base_year=base_year,
                 base_month=base_month,
+                facility_lat=facility_lat,
+                facility_lng=facility_lng,
                 horizon_months=horizon_months,
                 scenario_ids=scenario_ids,
                 custom_shock_rate=custom_shock_rate,
@@ -803,6 +967,8 @@ def build_forecast_payload(
         market=market,
         base_year=base_year,
         base_month=base_month,
+        facility_lat=facility_lat,
+        facility_lng=facility_lng,
         horizon_months=horizon_months,
         scenario_ids=scenario_ids,
         custom_shock_rate=custom_shock_rate,

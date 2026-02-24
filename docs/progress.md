@@ -68,3 +68,38 @@
 - Trained local model artifacts under `models/lightgbm/` and confirmed `/api/analysis/forecast` returns `model_version=lightgbm-v1`.
 - Switched forecast default horizon to 3 months (kept configurable via request).
 - Added in-memory TTL cache (5 minutes) for forecast payload generation in `backend/app/api/routes/analysis.py`.
+- Added Gemini-based recommendation generation with fallback in `backend/app/services/llm_recommendation.py`.
+- `/api/analysis/recommendation` now builds context from forecast/metrics/profile mart and attempts LLM output normalization.
+- Added recommendation request fields: `market`, `year` and wired frontend request payload accordingly.
+- Added user/IP-based recommendation rate limiting (`429`) with configurable `RECOMMENDATION_RATE_LIMIT_PER_MINUTE`.
+
+## 2026-02-25 Update (Issue #13 LLM recommendation hardening)
+- Replaced recommendation generation implementation with official Gemini Python SDK (`google-genai`) path in `backend/app/services/llm_recommendation.py`.
+- Normalized LLM input context with explicit sections:
+  - dependency metrics (current + recent trend)
+  - forecast summary (includes model version and scenario averages; uses LightGBM output when available)
+  - country profile mart summary from `data/mart/mart_country_profile_for_llm.jsonl`
+- Enforced JSON-only output contract and strict normalization for `risk_leverage` / `risk_diversification`.
+- Added warning/error logs in recommendation route when fallback text is used, to identify runtime causes quickly.
+- Added backend dependency: `google-genai==1.31.0`.
+- Added server-side recommendation guardrails:
+  - deduplicate same evidence scenario in one response
+  - enforce at least one `risk_leverage` and one `risk_diversification`
+  - auto-append metric evidence (HHI / entropy / top1 share) to diversification text if missing
+  - synthesize missing type when LLM output is imbalanced
+
+## 2026-02-25 Update (Forecast UI/API alignment)
+- Changed forecast API to accept facility coordinates and return guest count-oriented points:
+  - `predicted_guest_count` (selected facility)
+  - `predicted_guest_count_total` (regional total)
+- Updated LightGBM recursive forecast path to resolve nearest facility from input lat/lng and emit per-step predicted人数.
+- Updated dashboard forecast request to send facility lat/lng.
+- Updated forecast panel to display 人数 by default (falls back to growth-rate display only when count is unavailable).
+
+## 2026-02-25 Update (Scenario simulation tuning)
+- Added dynamic scenario selection by `market + month` (no longer fixed IDs):
+  - default forecast scenarios: strongest positive + strongest negative active scenario
+  - simulation scenarios: top positive set and top negative set
+- Added forecast shock scaling via env: `FORECAST_SHOCK_SCALE` (default `1.8`).
+- Increased simulation custom shock offsets (`+0.05 / -0.05`) to make scenario gaps easier to observe in demo.
+- Applied direct shock factor on LightGBM predictions (`pred *= 1 + shock_rate`, clamped) to avoid under-responsive scenario deltas.

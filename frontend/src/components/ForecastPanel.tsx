@@ -8,12 +8,12 @@ type Props = {
 
 const COLORS = ["#0f766e", "#1d4ed8", "#b91c1c", "#7c3aed", "#ea580c"];
 
-function toPercent(value: number): number {
-  return value * 100;
+function formatGuestCount(value: number): string {
+  return `${Math.round(value).toLocaleString("ja-JP")}人`;
 }
 
 function formatPercent(value: number): string {
-  return `${value.toFixed(2)}%`;
+  return `${(value * 100).toFixed(2)}%`;
 }
 
 function buildPath(values: number[], width: number, height: number, minY: number, maxY: number): string {
@@ -44,18 +44,30 @@ export default function ForecastPanel({ forecast, loading, marketLabel }: Props)
     return (
       <section className="panel">
         <h2 className="panel-title">LightGBM予測</h2>
-        <p className="muted">予測データはまだありません。</p>
+        <p className="muted">予測データがありません。</p>
       </section>
     );
   }
 
   const xLabels = forecast.scenarios[0]?.points.map((point) => point.month_date) ?? [];
+  const hasFacilityGuestCount = forecast.scenarios.some((scenario) =>
+    scenario.points.some((point) => point.predicted_guest_count != null)
+  );
+
+  const chartUnitLabel = hasFacilityGuestCount ? "対象施設の予測人数" : "予測増減率";
+
   const series = forecast.scenarios.map((scenario) => ({
     id: scenario.scenario_id,
     name: scenario.scenario_name_ja,
     note: scenario.note,
-    values: scenario.points.map((point) => toPercent(point.predicted_growth_rate))
+    values: scenario.points.map((point) =>
+      hasFacilityGuestCount
+        ? (point.predicted_guest_count ?? point.predicted_guest_count_total ?? 0)
+        : point.predicted_growth_rate
+    ),
+    points: scenario.points
   }));
+
   const allValues = series.flatMap((item) => item.values);
   const minY = Math.min(...allValues, 0);
   const maxY = Math.max(...allValues, 0);
@@ -67,10 +79,11 @@ export default function ForecastPanel({ forecast, loading, marketLabel }: Props)
         <span>市場: {marketLabel}</span>
         <span>基準: {forecast.base_year}年{forecast.base_month}月</span>
         <span>モデル: {forecast.model_version}</span>
+        <span>表示: {chartUnitLabel}</span>
       </div>
 
       <div className="metric-chart-card">
-        <div className="metric-chart-title">月次成長率予測（%）</div>
+        <div className="metric-chart-title">{chartUnitLabel}（3か月）</div>
         <svg className="metric-chart-svg" viewBox="0 0 720 220" preserveAspectRatio="none">
           <line x1="0" y1="220" x2="720" y2="220" stroke="#cbd5e1" strokeWidth="1" />
           <line x1="0" y1="110" x2="720" y2="110" stroke="#e2e8f0" strokeWidth="1" />
@@ -96,15 +109,27 @@ export default function ForecastPanel({ forecast, loading, marketLabel }: Props)
             <strong style={{ color: COLORS[index % COLORS.length] }}>{item.name}</strong>
             <div>{item.note}</div>
             <div>
-              {item.values.map((value, valueIndex) => (
-                <span key={`${item.id}-${valueIndex}`} style={{ marginRight: 8 }}>
-                  {xLabels[valueIndex]?.slice(5, 7)}月: {formatPercent(value)}
-                </span>
-              ))}
+              {item.points.map((point, valueIndex) => {
+                const label = xLabels[valueIndex]?.slice(5, 7) ?? "-";
+                const text =
+                  hasFacilityGuestCount
+                    ? formatGuestCount(point.predicted_guest_count ?? point.predicted_guest_count_total ?? 0)
+                    : formatPercent(point.predicted_growth_rate);
+                return (
+                  <span key={`${item.id}-${valueIndex}`} style={{ marginRight: 8 }}>
+                    {label}月: {text}
+                  </span>
+                );
+              })}
             </div>
           </li>
         ))}
       </ul>
+      {hasFacilityGuestCount ? null : (
+        <p className="muted" style={{ marginTop: 8 }}>
+          施設人数の算出条件が不足しているため、増減率表示にフォールバックしています。
+        </p>
+      )}
     </section>
   );
 }

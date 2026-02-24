@@ -103,6 +103,8 @@ export type ForecastPoint = {
   month: number;
   month_date: string;
   predicted_growth_rate: number;
+  predicted_guest_count?: number | null;
+  predicted_guest_count_total?: number | null;
   applied_shock_rate: number;
   seasonal_component: number;
 };
